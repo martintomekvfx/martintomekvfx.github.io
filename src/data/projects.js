@@ -1,5 +1,5 @@
 // Project data - organized by medium
-// Order: Guerilla → Analog → Digital → Photography → Collective
+// Order: Guerilla → Analog → Games → Photography → Collective
 
 export const guerillaProjects = [
   {
@@ -69,12 +69,12 @@ Po delší době: Celý kovový mobiliář sušáků byl obroušen a nově natř
     title: 'Street Art Gallery',
     subtitle: 'Obrazy v ulicích',
     category: 'guerilla',
-    description: 'Pouliční galerie využívající prázdné plochy města - paste-upy, stickery, postery a neoficiální výstavy.',
+    description: 'Pouliční galerie využívající prázdné plochy města - paste-upy, stickery, postery, linoryty a neoficiální výstavy.',
     artist: 'Ptáček + další umělci',
     status: 'in-progress',
-    year: '2025',
+    year: '2024-2025',
     location: 'Palmovka, Kolbenka, Anifilm Třeboň',
-    details: ['Paste-upy', 'Sticker bombing', 'Poster bombing', 'Neoficiální galerie'],
+    details: ['Paste-upy', 'Sticker bombing', 'Linoryt', 'Poster bombing', 'Neoficiální galerie'],
     fullDescription: `Město jako galerie — prázdné plochy jako výstavní prostor.
 
 PRÁZDNÉ PLOCHY:
@@ -85,6 +85,12 @@ TECHNIKY:
 • Sticker bombing – série linoritových samolepek s unikátním číslem
 • Poster bombing – plakáty a grafiky
 • Spray art – malba sprejem
+• Linoryt – autorské tisky z linoritových matric
+
+STICKER ART - Participativní linoryt:
+Participativní sticker art z linorytu, který se šíří městem rukama diváků a vrcholí videem pro otevřenou projekci „Prasení" — hybrid happeningu, site-specific a videa.
+
+Projekt rozšiřuje linoryt do roviny post-graffiti sticker artu a pracuje s participací publika. Autorské motivy digitalizuji, tisknu jako samolepky a uvádím do oběhu ve veřejném prostoru i na festivalu Anifilm.
 
 LINORITOVÉ SAMOLEPKY - Stop Motion projekt:
 Vytvořil jsem sérii samolepek s natiskem linoritu, kde každá samolepka má své unikátní číslo.
@@ -96,8 +102,8 @@ GUERILLOVÁ GALERIE:
 Připravil jsem vlastní grafické tisky a díla od přátel. Tyto výtisky jsem vylepil do vybraných rámů a na plochy, kde nic nebylo. Tak vznikla malá venkovní galerie: obrazy v ulici, které denně míjely desítky lidí.
 
 → Viz také projekt ChompAR – AR hra propojená se street artem`,
-    materials: ['Linoritové samolepky', 'Paste-upy', 'Postery', 'Spray barvy', 'Lepidlo'],
-    budget: '~750 Kč',
+    materials: ['Linoryt matrice', 'Samolepky', 'Paste-upy', 'Postery', 'Spray barvy', 'Lepidlo'],
+    budget: '~1750 Kč',
     timeline: 'Průběžně',
     videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
     image: '/projects/streetart/IMG_4740_thumb.jpg',
@@ -247,33 +253,57 @@ Důraz je kladen na performativní charakter, improvizaci a zapojení publika do
     thumbs: [],
   },
   {
-    id: 'sticker-art',
-    title: 'Sticker Art',
-    subtitle: 'Participativní linoryt',
+    id: 'original-copy',
+    title: 'Original Copy',
+    subtitle: 'Bakalářský film',
     category: 'analog',
-    description: 'Participativní sticker art z linorytu, který se šíří městem rukama diváků.',
+    description: 'Bakalářský film kombinující prvky 3D animace a glitch art.',
     artist: 'Martin Tomek',
     status: 'done',
-    year: '2024-2025',
-    location: 'Veřejný prostor, Anifilm, Prasení',
-    details: ['Linoryt', 'Sticker art', 'Happening', 'Site-specific'],
-    fullDescription: `Participativní sticker art z linorytu, který se šíří městem rukama diváků a vrcholí videem pro otevřenou projekci „Prasení" — hybrid happeningu, site-specific a videa.
+    year: '2023',
+    location: 'FAMU',
+    details: ['3D animace', 'Glitch art', 'Experimentální film'],
+    fullDescription: `Original Copy je bakalářský film kombinující prvky 3D animace a glitch art.
 
-Projekt rozšiřuje linoryt do roviny post-graffiti sticker artu a pracuje s participací publika. Autorské motivy digitalizuji, tisknu jako samolepky a uvádím do oběhu ve veřejném prostoru i na festivalu Anifilm.
+Film zkoumá hranice mezi originálem a kopií, digitalitou a analogem, chybou a záměrem.
 
-Společenskou distribuci završuje video-sestřih z motivů stickerek uvedený v otevřené projekci „Prasení". Výsledkem je hybrid mezi happeningem, site-specific intervencí a videem.
-
-Média: linoryt (matrice), samolepky (sticker art), video (projekce)
-Formát: happening / site-specific / participativní distribuce
-Kontext uvedení: veřejný prostor; Anifilm; otevřená projekce „Prasení"
-Role autora: koncept, tisk, distribuce, kamera, střih, projekce`,
-    materials: ['Linoryt matrice', 'Samolepky', 'Video projekce'],
-    budget: '~1000 Kč',
-    timeline: '2024-2025',
-    image: '/projects/sticker-art.jpg',
+Vizuální styl využívá glitch estetiku jako tvůrčí nástroj, kde technické chyby a artefakty se stávají součástí výtvarného jazyka.`,
+    materials: ['3D animace', 'Glitch processing', 'Video editing'],
+    budget: 'N/A',
+    timeline: '2023',
+    image: '/projects/original-copy.jpg',
     images: [],
     thumbs: [],
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=M6bm6yRKshA',
+  },
+  {
+    id: '35mm-photo',
+    title: '35mm Photography',
+    subtitle: 'Analog Film',
+    category: 'analog',
+    description: 'Analogová fotografie na 35mm film s vlastním vyvoláváním a zpracováním.',
+    artist: 'Martin Tomek',
+    status: 'in-progress',
+    year: '2024-2025',
+    location: 'Praha, cestování',
+    details: ['35mm film', 'Vlastní vyvolávání', 'Darkroom', 'B&W / Color'],
+    fullDescription: `Analogová fotografie na 35mm film.
+
+PROCES:
+Celý proces od expozice po finální obraz dělám sám:
+• Focení na 35mm film (Kodak, Ilford, Fuji)
+• Vlastní vyvolávání v domácí temné komoře
+• Skenování negativů
+• Případný darkroom print
+
+PROČ ANALOG:
+Omezený počet snímků na roli nutí k promyšlenějšímu přístupu. Čekání na vyvolání přináší překvapení a učí trpělivosti. Fyzický proces vyvolávání je meditativní a propojuje s materiálem.`,
+    materials: ['35mm fotoaparát', 'Chemikálie na vyvolávání', 'Temná komora', 'Scanner'],
+    budget: '~500 Kč/měsíc',
+    timeline: 'Průběžně',
+    image: '/projects/35mm.jpg',
+    images: [],
+    thumbs: [],
   },
   {
     id: 'betonove-banany',
@@ -325,29 +355,73 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
   },
 ];
 
-export const digitalProjects = [
+export const gamesProjects = [
   {
-    id: 'game-jams',
-    title: 'Game Jams',
-    subtitle: 'Game Development',
-    category: 'digital',
-    description: 'Účast na game jamech s důrazem na animaci a vizuální styl.',
+    id: 'untitled-roach-game',
+    title: 'Untitled Roach Game',
+    subtitle: 'Ludum Dare 54',
+    category: 'games',
+    description: 'Game jam hra s důrazem na animaci a vizuální styl. Dvoučlenný tým.',
+    artist: 'Martin Tomek + tým',
+    status: 'done',
+    year: '2024',
+    location: 'Ludum Dare 54',
+    details: ['Animation', 'Visual design', '48h jam'],
+    fullDescription: `Untitled Roach Game — Ludum Dare 54
+
+Dvoučlenný tým. Kompletní animace a vizuální styl.
+
+Hra vznikla během 48hodinového game jamu Ludum Dare, kde je téma odhaleno na začátku a týmy mají omezený čas na vytvoření kompletní hry.
+
+Role: Animace, vizuální styl, art direction.`,
+    materials: ['Godot', 'Animation', 'Game design'],
+    budget: 'N/A',
+    timeline: '48 hodin',
+    image: '/projects/roach-game.jpg',
+    images: [],
+    thumbs: [],
+  },
+  {
+    id: 'profesor-chaos',
+    title: 'Profesor Chaos',
+    subtitle: 'FAMU Game Jam',
+    category: 'games',
+    description: 'Game jam hra vytvořená na FAMU. Technický ředitel a animace.',
+    artist: 'Martin Tomek + tým',
+    status: 'done',
+    year: '2024',
+    location: 'FAMU Game Jam',
+    details: ['Technical direction', 'Animation', 'Team collaboration'],
+    fullDescription: `Profesor Chaos — FAMU Game Jam
+
+Technický ředitel a animace.
+
+Mezioborová spolupráce studentů FAMU na vytvoření hry během game jamu. Projekt demonstruje spojení animačních dovedností s game designem a technickou realizací.`,
+    materials: ['Unity', 'Animation', 'Game design'],
+    budget: 'N/A',
+    timeline: '2024',
+    image: '/projects/profesor-chaos.jpg',
+    images: [],
+    thumbs: [],
+  },
+  {
+    id: 'besneni',
+    title: 'Běsnění',
+    subtitle: 'Experimentální hra',
+    category: 'games',
+    description: 'Experimentální herní projekt.',
     artist: 'Martin Tomek',
     status: 'done',
     year: '2024',
-    location: 'Ludum Dare, FAMU Game Jam',
-    details: ['Animation', 'Visual design', 'Technical direction'],
-    fullDescription: `Untitled Roach Game — Ludum Dare 54
-Dvoučlenný tým. Kompletní animace a vizuální styl.
+    location: 'FAMU',
+    details: ['Experimental', 'Animation', 'Narrative'],
+    fullDescription: `Běsnění — experimentální herní projekt.
 
-Agent Chaos — FAMU Game Jam
-Technický ředitel a animace.
-
-Obě hry demonstrují spojení animačních dovedností s game designem a technickou realizací.`,
-    materials: ['Unity/Godot', 'Animation', 'Game design'],
+Projekt zkoumá hranice mezi hrou a interaktivním uměním.`,
+    materials: ['Game engine', 'Animation', 'Sound design'],
     budget: 'N/A',
     timeline: '2024',
-    image: '/projects/game-jams.jpg',
+    image: '/projects/besneni.jpg',
     images: [],
     thumbs: [],
   },
@@ -355,7 +429,7 @@ Obě hry demonstrují spojení animačních dovedností s game designem a techni
     id: 'kamerova-hra',
     title: 'Interaktivní kamerová hra',
     subtitle: 'Game Design x Veřejný prostor',
-    category: 'digital',
+    category: 'games',
     description: 'Spolupráce s game designem na vytvoření interaktivní hry s kamerou. Témata: internetová bezpečnost a veřejný prostor.',
     artist: 'Martin Tomek, Michal Tancjura',
     status: 'planned',
@@ -374,11 +448,6 @@ Herní mechaniky pomohou lidem zážitkově pochopit digitální témata v offli
     images: [],
     thumbs: [],
   },
-];
-
-export const photographyProjects = [
-  // TODO: Add analog photography projects
-  // Placeholder for FAMU analog films
 ];
 
 export const collectiveProjects = [
@@ -404,14 +473,12 @@ Projekt byl představen na festivalu Anifilm a demonstruje sílu kolektivní tvo
     thumbs: [],
     videoUrl: '',
   },
-  // TODO: Add FAMU analog films here
 ];
 
 export const allProjects = [
   ...guerillaProjects,
   ...analogProjects,
-  ...digitalProjects,
-  ...photographyProjects,
+  ...gamesProjects,
   ...collectiveProjects,
 ];
 
@@ -427,7 +494,6 @@ export const getProjectsByCategory = (category) => {
 export const categoryLabels = {
   guerilla: 'Guerilla',
   analog: 'Analog',
-  digital: 'Digital',
-  photography: 'Photography',
+  games: 'Games',
   collective: 'Collective',
 };
