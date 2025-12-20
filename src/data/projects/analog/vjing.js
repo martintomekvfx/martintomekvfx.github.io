@@ -20,21 +20,33 @@ export default {
 
 Site-specific vizuální partitury pro jeviště, galerie a výstavy využívají interaktivní systémy převádějící pohyb a zvuk na obraz v reálném čase. Důraz je kladen na performativní charakter, improvizaci a zapojení publika do kompozice výsledného obrazu.
 
-Technicky pracuji s autorskými GLSL shadery v prostředí Resolume, které umožňují přímou manipulaci s obrazem v GPU. Využívám také počítačové vidění a rozpoznávání objektů pomocí YOLO pro reaktivní vizuály reagující na dění před kamerou.
-
-Zvláštní zájem věnuji propojování analogového videa s digitální pipeline. Pracuji s CRT monitory, VHS technologií a video feedback loops, které vnášejí do digitálního obrazu organickou nepředvídatelnost a estetiku analogových médií.`,
+Technicky pracuji s autorskými GLSL shadery v prostředí Resolume, které umožňují přímou manipulaci s obrazem v GPU. Využívám také počítačové vidění a rozpoznávání objektů pomocí YOLO pro reaktivní vizuály reagující na dění před kamerou.`,
 
     // Events / Performances
     events: [
         {
             title: 'AI Party',
             description: 'Vizuály generované pomocí machine learning v reálném čase.',
-            image: '/projects/vjing/ai_party.jpg'
+            image: '/projects/vjing/ai_party.jpg',
+            videos: [
+                '/projects/vjing/ai_1.mp4',
+                '/projects/vjing/ai_2.mp4',
+                '/projects/vjing/ai_3.mp4'
+            ]
         },
         {
             title: 'Future Party',
             description: 'Projekce a live visuals pro klubovou akci.',
-            image: '/projects/vjing/future_party.jpg'
+            image: '/projects/vjing/future_party.jpg',
+            videos: ['/projects/vjing/future.mp4']
+        },
+        {
+            title: 'Kontatk Festival',
+            description: 'Projekce a workshop na festivalu v Ostravě.',
+            videos: [
+                '/projects/vjing/kontatk_projekce_1.mp4',
+                '/projects/vjing/kontatk_workshop.mp4'
+            ]
         },
         {
             title: 'VJ Workshop',
@@ -61,6 +73,14 @@ Zvláštní zájem věnuji propojování analogového videa s digitální pipeli
         '/projects/vjing/future_party.jpg',
         '/projects/vjing/workshop_1.jpg',
         '/projects/vjing/workshop_2.jpg'
+    ],
+    videos: [
+        '/projects/vjing/ai_1.mp4',
+        '/projects/vjing/ai_2.mp4',
+        '/projects/vjing/ai_3.mp4',
+        '/projects/vjing/future.mp4',
+        '/projects/vjing/kontatk_projekce_1.mp4',
+        '/projects/vjing/kontatk_workshop.mp4'
     ],
     thumbs: [],
 };
