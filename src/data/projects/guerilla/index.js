@@ -84,9 +84,9 @@ Pro ověření efektivity je plánován kontrolovaný experiment. Na dvou srovna
 
 export const guerillaProjects = [
     slunecnice,
+    streetArtGallery,
     houpacka,
     panak,
-    streetArtGallery,
     chompar,
     parklety,
     solarniSvetla,
