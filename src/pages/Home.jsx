@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     guerillaProjects,
     analogProjects,
-    gamesProjects,
+    gamejamProjects,
     collectiveProjects
 } from '../data/projects';
 
@@ -15,7 +15,7 @@ function Home() {
 
     const activeGuerilla = filterActive(guerillaProjects);
     const activeAnalog = filterActive(analogProjects);
-    const activeGames = filterActive(gamesProjects);
+    const activeGamejam = filterActive(gamejamProjects);
     const activeCollective = filterActive(collectiveProjects);
 
     const CategorySection = ({ title, projects }) => (
@@ -210,7 +210,7 @@ function Home() {
 
                     <CategorySection title="GUERILLA" projects={activeGuerilla} />
                     <CategorySection title="ANALOG" projects={activeAnalog} />
-                    <CategorySection title="GAMES" projects={activeGames} />
+                    <CategorySection title="GAME JAM" projects={activeGamejam} />
                     <CategorySection title="COLLECTIVE" projects={activeCollective} />
                 </div>
             </section>

@@ -355,7 +355,7 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
   },
 ];
 
-export const gamesProjects = [
+export const gamejamProjects = [
   {
     id: 'untitled-roach-game',
     title: 'Untitled Roach Game',
@@ -478,7 +478,7 @@ Projekt byl představen na festivalu Anifilm a demonstruje sílu kolektivní tvo
 export const allProjects = [
   ...guerillaProjects,
   ...analogProjects,
-  ...gamesProjects,
+  ...gamejamProjects,
   ...collectiveProjects,
 ];
 
@@ -494,6 +494,6 @@ export const getProjectsByCategory = (category) => {
 export const categoryLabels = {
   guerilla: 'Guerilla',
   analog: 'Analog',
-  games: 'Games',
+  gamejam: 'Games',
   collective: 'Collective',
 };
