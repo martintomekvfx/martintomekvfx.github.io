@@ -49,6 +49,14 @@ Zajímavou okolností je blízkost mnoha intervencí ke Galerii Pragovka. Vznik�
         '/projects/gallery/IMG_5449_web.jpg',
         '/projects/gallery/IMG_5462_web.jpg',
         '/projects/gallery/IMG_5464_web.jpg',
+        '/projects/gallery/E168AFDE-5124-411C-BCE3-3EEF4737634B_web.jpg',
+        '/projects/gallery/IMG_4342_2_web.jpg',
+        '/projects/gallery/IMG_4788_web.jpg',
+        '/projects/gallery/IMG_4842_web.jpg',
+        '/projects/gallery/IMG_5016_web.jpg',
+        '/projects/gallery/IMG_5134_web.jpg',
+        '/projects/gallery/IMG_5760_web.jpg',
+        '/projects/gallery/IMG_5776_web.jpg',
       ]
     },
     {
