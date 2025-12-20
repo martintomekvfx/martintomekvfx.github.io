@@ -90,8 +90,22 @@ function Project() {
                 <section className="project-video">
                     <div className="video-container">
                         <iframe
-                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/')}
+                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
                             title={project.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+                </section>
+            )}
+
+            {/* Second Video */}
+            {project.videoUrl2 && (
+                <section className="project-video">
+                    <div className="video-container">
+                        <iframe
+                            src={project.videoUrl2.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                            title={`${project.title} - video 2`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         />

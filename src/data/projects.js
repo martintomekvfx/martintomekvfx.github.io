@@ -35,6 +35,7 @@ Jedna slunečnice dosáhla úžasných 3 metrů výšky - byla viditelná z cel�
       '/projects/slunecnice/IMG_4702_thumb.jpg',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=AKgS2maI94k',
+    videoUrl2: 'https://www.youtube.com/watch?v=7WQ9C9qa8vk',
   },
   {
     id: 'houpacka',
@@ -126,28 +127,49 @@ Tak vznikla malá venkovní galerie: obrazy v ulici, které denně míjely desí
     ],
   },
   {
-    id: 'street-art-ctf',
-    title: 'Street Art CTF',
-    subtitle: 'AR Game',
+    id: 'chompar',
+    title: 'ChompAR',
+    subtitle: 'Street Art AR Game',
     category: 'guerilla',
-    description: 'Interaktivní AR hra pro objevování street artu v reálném prostoru.',
+    description: 'Street artová AR hra využívající gamifikaci ke cvičení pozornosti a apropriaci veřejného prostoru.',
     artist: 'Martin Tomek',
     status: 'in-progress',
     year: '2025',
-    location: 'Praha',
-    details: ['Augmented Reality', 'Street Art', 'Team Game'],
-    fullDescription: `Street Art CTF je interaktivní AR hra, která spojuje svět street artu s herními mechanikami Capture The Flag.
+    location: 'Praha, Anifilm 2026',
+    details: ['Augmented Reality', 'Gamifikace', 'Privacy-first', 'Ekologie pozornosti'],
+    fullDescription: `ChompAR je street artová AR hra, která využívá gamifikaci ke cvičení pozornosti a apropriaci veřejného prostoru.
 
-Hráči prozkoumávají reálné městské prostředí a pomocí AR technologie objevují umělecká díla, sbírají body a soupeří v týmech.
+TŘI PILÍŘE:
+• Ekologie pozornosti – Lidé se nedívají okolo sebe
+• Právo na město – Lidé nepovažují město za jejich
+• Détournement – Využívání technologie proti technologii
 
-Hra podporuje objevování street artu v místech, kam by se běžný návštěvník nedostal.`,
-    materials: ['Web app', 'AR technologie', 'GPS'],
+DVA MÓDY:
+
+Solo mód (Ambientní)
+Sbírej Chompy do osobní sbírky. Vlastnictví zůstává navždy. Žádný tlak – cesta je cíl.
+= Cvičení pozornosti
+
+Battle mód (Kompetitivní)
+Red vs Blue. Claimni = tenhle kus města je tvůj. Dá se přebírat.
+= Apropriace veřejného prostoru
+
+PRIVACY-FIRST DESIGN:
+• Žádná GPS – netrackujeme polohu
+• Lokální profil – data v prohlížeči, žádná registrace
+• 20min delay – anti-predator ochrana na mapě
+• Mobil jako sekundární nástroj
+
+ANIFILM 2026:
+AR Treasure Hunt – 12 paste-upů po festivalu, sbírání „framů" animace, kompletní = 2s animace na kolektivním CRT display.`,
+    materials: ['Web app', 'AR MindAR', 'Paste-upy', 'Street art markers'],
     budget: 'N/A',
-    timeline: '2025',
-    image: '/projects/street-art-ctf.jpg',
+    timeline: '2025-2026',
+    image: '/projects/chomps/chomp.png',
     images: [],
     thumbs: [],
-    externalUrl: 'http://localhost:5173',
+    videoUrl: 'https://www.youtube.com/watch?v=10wKtTf7WmA',
+    externalUrl: 'https://chompar.vercel.app',
     isAR: true,
   },
   {
