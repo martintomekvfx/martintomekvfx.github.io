@@ -7,7 +7,7 @@ export default {
     subtitle: 'Live Video Performance',
     category: 'analog',
 
-    description: 'Dva roky kontinuální praxe na 30+ klubových, festivalových a galerijních scénách.',
+    description: 'Dva roky kontinuální praxe na více než třiceti klubových, festivalových a galerijních scénách.',
 
     artist: 'Martin Tomek',
     status: 'in-progress',
@@ -16,38 +16,24 @@ export default {
 
     details: ['Live cinema', 'Videoperformance', 'GLSL', 'Computer Vision'],
 
-    fullDescription: `VJING — Live Video Performance
+    fullDescription: `Má tvorba v oblasti živého videa se pohybuje na pomezí intermediální performance, videoperformance, live cinema a VJingu. Za dva roky kontinuální praxe jsem odehrál více než třicet vystoupení na klubových, festivalových a galerijních scénách.
 
-Dva roky kontinuální praxe na klubových, festivalových a galerijních scénách — více než 30 shows.
+Site-specific vizuální partitury pro jeviště, galerie a výstavy využívají interaktivní systémy převádějící pohyb a zvuk na obraz v reálném čase. Důraz je kladen na performativní charakter, improvizaci a zapojení publika do kompozice výsledného obrazu.
 
-═══════════════════════════════════════════
+Technicky pracuji s autorskými GLSL shadery v prostředí Resolume, které umožňují přímou manipulaci s obrazem v GPU. Využívám také počítačové vidění a rozpoznávání objektů pomocí YOLO pro reaktivní vizuály reagující na dění před kamerou.
 
-PRAXE:
+Zvláštní zájem věnuji propojování analogového videa s digitální pipeline. Pracuji s CRT monitory, VHS technologií a video feedback loops, které vnášejí do digitálního obrazu organickou nepředvídatelnost a estetiku analogových médií.
 
-Tvorba spadá do oblasti živého videa na pomezí intermediální performance, videoperformance, live cinema a VJingu.
+V rámci své praxe se věnuji také vývoji vlastních open-source nástrojů, které rozšiřují možnosti živé vizuální performance.`,
 
-Site-specific vizuální partitury pro jeviště, galerie a výstavy využívají interaktivní systémy převádějící pohyb a zvuk na obraz v reálném čase.
-
-═══════════════════════════════════════════
-
-NÁSTROJE:
-
-• GLSL ResolumeFX — autorské shadery
-• CV/YOLO ComputerVision — rozpoznávání objektů
-• Analog video — CRT, VHS, feedback loops
-• Open-source vývoj vlastních nástrojů
-
-═══════════════════════════════════════════
-
-PŘÍSTUP:
-
-Důraz je kladen na performativní charakter, improvizaci a zapojení publika do kompozice výsledného obrazu.
-
-Propojování analogového videa s digitální pipeline.`,
-
-    materials: ['Resolume', 'GLSL shaders', 'Computer Vision', 'Analog video'],
+    materials: [
+        'Resolume Arena',
+        'GLSL shadery',
+        'Computer Vision a YOLO',
+        'Analogové video a CRT'
+    ],
     budget: 'N/A',
-    timeline: '2023-present',
+    timeline: '2023 až současnost',
 
     image: '/projects/vjing.jpg',
     images: [],

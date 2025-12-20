@@ -7,44 +7,26 @@ export default {
     subtitle: 'Ludum Dare 54',
     category: 'gamejam',
 
-    description: 'Game jam hra s důrazem na animaci a vizuální styl. Dvoučlenný tým.',
+    description: 'Hra vytvořená během 48hodinového globálního game jamu Ludum Dare 54 s důrazem na animaci a vizuální styl.',
 
-    artist: 'Martin Tomek + tým',
+    artist: 'Martin Tomek a tým',
     status: 'done',
     year: '2024',
     location: 'Ludum Dare 54',
 
     details: ['Animation', 'Visual design', '48h jam'],
 
-    fullDescription: `UNTITLED ROACH GAME — Ludum Dare 54
+    fullDescription: `Ludum Dare patří mezi nejstarší a největší game jamy na světě. Téma je odhaleno na začátku akce a týmy mají pouhých 48 hodin na vytvoření kompletní hry od konceptu po finální produkt.
 
-48hodinový globální game jam.
+Untitled Roach Game vznikl v dvoučlenném týmu, kde jsem měl na starosti kompletní animaci, vizuální styl a art direction. Omezený čas game jamu nutí k rychlým rozhodnutím a efektivní spolupráci, což představuje cennou zkušenost pro budoucí projekty.
 
-═══════════════════════════════════════════
+Výsledná hra demonstruje možnosti spojení animačních dovedností s interaktivním médiem a ukazuje, jak lze během krátkého času vytvořit funkční a vizuálně koherentní herní zážitek.`,
 
-FORMÁT:
-
-Ludum Dare je jeden z nejstarších a největších game jamů na světě. Téma je odhaleno na začátku a týmy mají 48 hodin na vytvoření kompletní hry.
-
-═══════════════════════════════════════════
-
-TÝM:
-
-Dvoučlenný tým.
-
-═══════════════════════════════════════════
-
-ROLE:
-
-• Kompletní animace
-• Vizuální styl
-• Art direction
-
-═══════════════════════════════════════════
-
-🎮 HREJ NA ITCH.IO`,
-
-    materials: ['Godot', 'Animation', 'Game design'],
+    materials: [
+        'Godot Engine',
+        'Ruční animace',
+        'Game design'
+    ],
     budget: 'N/A',
     timeline: '48 hodin',
 

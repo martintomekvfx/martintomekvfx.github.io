@@ -7,7 +7,7 @@ export default {
     subtitle: 'Analog Print Series',
     category: 'analog',
 
-    description: 'Série experimentálních skenů vytištěná ve formátu A3. 14 unikátních tisků.',
+    description: 'Série čtrnácti experimentálních skenů vytištěná ve formátu A3 jako limitovaná edice.',
 
     artist: 'Martin Tomek',
     status: 'done',
@@ -16,32 +16,20 @@ export default {
 
     details: ['Flatbed scanner', 'A3 print', '14 tisků', 'Limitovaná edice'],
 
-    fullDescription: `SCANNER SERIES — Experimentální skeny
+    fullDescription: `Projekt Scanner Series využívá běžný flatbed scanner jako kreativní nástroj pro tvorbu unikátních vizuálních artefaktů. Objekty, textury a materiály skenované v pohybu vytvářejí neopakovatelné obrazy, kde technické parametry zařízení určují estetický výsledek.
 
-Série 14 experimentálních skenů vytištěná ve formátu A3.
+Série zahrnuje čtrnáct experimentálních skenů, z nichž každý zachycuje specifickou kombinaci objektů a pohybu. Výsledné obrazy jsou vytištěny ve formátu A3 v archivní kvalitě, což zaručuje jejich dlouhodobou životnost a barevnou stálost.
 
-═══════════════════════════════════════════
+Celá série byla koncipována jako kompletní celek, kde jednotlivé tisky fungují samostatně, ale současně vytvářejí koherentní vizuální narativ. Při vystavení jako celku vzniká prostor pro dialog mezi jednotlivými pracemi.
 
-PROCES:
+Série byla fyzicky vytištěna a prezentována jako ucelená výstava. Každý tisk představuje unikátní originál, neboť pohybové skeny nelze přesně reprodukovat.`,
 
-Flatbed scanner jako kreativní nástroj. Objekty, textury a materiály skenované v pohybu vytváří unikátní vizuální artefakty.
-
-═══════════════════════════════════════════
-
-VÝSTUP:
-
-• 14 unikátních tisků formátu A3
-• Archivní kvalita tisku
-• Limitovaná edice
-
-═══════════════════════════════════════════
-
-VYSTAVENO:
-
-Série byla vytištěna a vystavena jako kompletní celek. Každý tisk funguje samostatně i jako součást série.`,
-
-    materials: ['Flatbed scanner', 'A3 archivní tisk', 'Různé objekty a materiály'],
-    budget: '~2000 Kč (tisk)',
+    materials: [
+        'Flatbed scanner',
+        'A3 archivní tisk',
+        'Různé objekty a materiály'
+    ],
+    budget: 'přibližně 2000 Kč za tisk',
     timeline: 'Červen 2025',
 
     image: '/projects/scanner/20250612_IMAG0067_A3PRINT_v001_preview.jpg',

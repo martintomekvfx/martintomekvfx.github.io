@@ -7,41 +7,27 @@ export default {
     subtitle: 'Analog Film Collective',
     category: 'collective',
 
-    description: 'Kolektivní projekt pracující s analogovým filmem na kamerách Bolex.',
+    description: 'Kolektivní projekt pracující s analogovým 16mm filmem na kamerách Bolex a sdílející znalosti o práci s filmovým materiálem.',
 
-    artist: 'Martin Tomek + collective',
+    artist: 'Martin Tomek a kolektiv',
     status: 'done',
     year: '2024',
     location: 'FAMU',
 
     details: ['16mm film', 'Bolex', 'Analog', 'Collaboration'],
 
-    fullDescription: `BOLEX MODULE — Analog Film Collective
+    fullDescription: `Bolex Module představuje kolektiv filmařů pracujících s analogovým 16mm filmem na kamerách Bolex H16 a H8. Projekt vznikl jako platforma pro sdílení technik, materiálu a zkušeností s analogovým filmem v době, kdy tyto znalosti postupně mizí.
 
-Kolektivní projekt pracující s analogovým filmem.
+Kolektiv podporuje návrat k analogovým metodám a uchovávání know-how spojeného s filmovým médiem. Členové se vzájemně učí práci s mechanickými kamerami, ruční vyvolávání filmového materiálu a tvorbu optického zvuku.
 
-═══════════════════════════════════════════
+Praktická povaha projektu umožňuje získávání dovedností, které jsou v současném digitálním prostředí čím dál vzácnější. Sdílení filmového materiálu a vybavení také snižuje finanční bariéry spojené s prací na analogovém filmu.`,
 
-KONCEPT:
-
-Skupina filmařů pracujících na 16mm kamerách Bolex, sdílející techniky, materiál a zkušenosti s analogovým filmem.
-
-═══════════════════════════════════════════
-
-CÍLE:
-
-Projekt podporuje návrat k analogovým metodám a sdílení znalostí o práci s filmem.
-
-═══════════════════════════════════════════
-
-TECHNIKY:
-
-• 16mm film
-• Bolex H16 / H8
-• Ruční vyvolávání
-• Optický zvuk`,
-
-    materials: ['Bolex kamera', '16mm film', 'Analog processing'],
+    materials: [
+        'Bolex kamery H16 a H8',
+        '16mm filmový materiál',
+        'Analog processing',
+        'Optický zvuk'
+    ],
     budget: 'N/A',
     timeline: '2024',
 

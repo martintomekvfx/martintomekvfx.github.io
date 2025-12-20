@@ -7,32 +7,25 @@ export default {
     subtitle: 'Collaborative Animation',
     category: 'collective',
 
-    description: 'Kolaborativní animovaný film vytvořený ve spolupráci s dalšími animátory.',
+    description: 'Kolaborativní animovaný film vytvořený ve spolupráci s dalšími animátory z různých škol a prostředí.',
 
-    artist: 'Martin Tomek + collective',
+    artist: 'Martin Tomek a kolektiv',
     status: 'done',
     year: '2024',
     location: 'Anifilm Festival',
 
     details: ['Animation', 'Collaboration', 'Festival screening'],
 
-    fullDescription: `ANIJAM — Kolaborativní animace
+    fullDescription: `AniJam představuje kolaborativní animovaný projekt, kde každý účastník přispívá svou unikátní sekvencí. Formát vychází z principu exquisite corpse, kdy každý animátor dostane poslední snímek předchozí sekce a na něj navazuje vlastní prací.
 
-Kolaborativní animovaný projekt, kde každý účastník přispívá svou unikátní sekvencí.
+Výsledkem je organický, nepředvídatelný a přesto kontinuální film, který demonstruje sílu kolektivní tvorby v animaci. Různorodost stylů a přístupů jednotlivých autorů vytváří dynamický vizuální zážitek, který by nemohl vzniknout v rámci individuální tvorby.
 
-═══════════════════════════════════════════
+Projekt byl uveden na festivalu Anifilm a představuje model spolupráce, který může propojovat animátory z různých škol a prostředí bez ohledu na geografickou vzdálenost.`,
 
-KONCEPT:
-
-Každý animátor dostane předchozí frame a vytvoří návaznou sekvenci. Výsledek je organický, nepředvídatelný a přesto kontinuální.
-
-═══════════════════════════════════════════
-
-UVEDENÍ:
-
-Projekt byl představen na festivalu Anifilm a demonstruje sílu kolektivní tvorby v animaci.`,
-
-    materials: ['Animace', 'Video editing'],
+    materials: [
+        'Různé animační techniky',
+        'Video editing'
+    ],
     budget: 'N/A',
     timeline: '2024',
 

@@ -7,51 +7,30 @@ export default {
     subtitle: 'Analog Film',
     category: 'analog',
 
-    description: 'Analogová fotografie na 35mm film s vlastním vyvoláváním a zpracováním.',
+    description: 'Analogová fotografie na 35mm film s vlastním vyvoláváním a zpracováním v domácí temné komoře.',
 
     artist: 'Martin Tomek',
     status: 'in-progress',
     year: '2024-2025',
-    location: 'Praha, cestování',
+    location: 'Praha a cestování',
 
-    details: ['35mm film', 'Vlastní vyvolávání', 'Darkroom', 'B&W / Color'],
+    details: ['35mm film', 'Vlastní vyvolávání', 'Darkroom', 'Černobílá i barevná fotografie'],
 
-    fullDescription: `35MM PHOTOGRAPHY — Analog Film
+    fullDescription: `Analogová fotografie představuje návrat k základům média a vědomé zpomalení procesu tvorby obrazu. Celý workflow od expozice po finální snímek realizuji samostatně v domácí temné komoře.
 
-Analogová fotografie na 35mm film.
+Proces zahrnuje focení na 35mm film různých značek a citlivostí, následné vyvolávání v domácích podmínkách, skenování negativů a případně i klasický darkroom print. Mezi používané materiály patří barevné filmy Kodak Portra 400 a Kodak Gold 200, černobílý Ilford HP5+ a barevný Fuji Superia.
 
-═══════════════════════════════════════════
+Omezený počet snímků na každé roli nutí k promyšlenějšímu přístupu k fotografování. Oproti digitální fotografii zde neexistuje možnost okamžité kontroly výsledku, což vede k hlubšímu soustředění v okamžiku expozice. Čekání na vyvolání přináší prvek překvapení a učí trpělivosti.
 
-PROCES:
+Fyzický proces vyvolávání má meditativní charakter a vytváří intimnější vztah k výslednému obrazu. Práce s chemikáliemi, sledování postupného objevování obrazu na papíře či negativu propojuje autora s materiální podstatou fotografie způsobem, který digitální technologie neumožňuje.`,
 
-Celý proces od expozice po finální obraz dělám sám:
-
-• Focení na 35mm film (Kodak, Ilford, Fuji)
-• Vlastní vyvolávání v domácí temné komoře
-• Skenování negativů
-• Případný darkroom print
-
-═══════════════════════════════════════════
-
-PROČ ANALOG:
-
-Omezený počet snímků na roli nutí k promyšlenějšímu přístupu. 
-
-Čekání na vyvolání přináší překvapení a učí trpělivosti. 
-
-Fyzický proces vyvolávání je meditativní a propojuje s materiálem.
-
-═══════════════════════════════════════════
-
-FILMY:
-
-• Kodak Portra 400 (color)
-• Kodak Gold 200 (color)
-• Ilford HP5+ (B&W)
-• Fuji Superia (color)`,
-
-    materials: ['35mm fotoaparát', 'Chemikálie na vyvolávání', 'Temná komora', 'Scanner'],
-    budget: '~500 Kč/měsíc',
+    materials: [
+        '35mm fotoaparát',
+        'Chemikálie na vyvolávání',
+        'Temná komora',
+        'Filmový scanner'
+    ],
+    budget: 'přibližně 500 Kč měsíčně',
     timeline: 'Průběžně',
 
     image: '/projects/35mm.jpg',

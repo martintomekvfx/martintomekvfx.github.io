@@ -16,23 +16,17 @@ export default {
 
     details: ['Experimental', 'Animation', 'Narrative'],
 
-    fullDescription: `BĚSNĚNÍ — Experimentální hra
+    fullDescription: `Běsnění představuje experimentální herní projekt zkoumající hranice mezi hrou a interaktivním uměním. Projekt vznikl s cílem testovat, kde končí tradiční chápání hry a začíná umělecká instalace.
 
-Projekt zkoumající hranice mezi hrou a interaktivním uměním.
+Hra je hratelná přímo v prohlížeči díky integraci na platformě itch.io. Pro optimální zážitek doporučuji fullscreen verzi dostupnou na stránce projektu.
 
-═══════════════════════════════════════════
+Vizuální stránka projektu kombinuje animované prvky s interaktivními mechanikami, přičemž narativ vzniká prostřednictvím hráčovy interakce s prostředím. Projekt tak stírá hranice mezi pasivním divákem a aktivním účastníkem.`,
 
-KONCEPT:
-
-Kde končí hra a začíná umění? Běsnění testuje tyto hranice.
-
-═══════════════════════════════════════════
-
-🎮 HREJ PŘÍMO ZDE
-
-Nebo otevři na itch.io pro fullscreen verzi.`,
-
-    materials: ['Game engine', 'Animation', 'Sound design'],
+    materials: [
+        'Game engine',
+        'Animace',
+        'Sound design'
+    ],
     budget: 'N/A',
     timeline: '2024',
 
@@ -40,7 +34,6 @@ Nebo otevři na itch.io pro fullscreen verzi.`,
     images: [],
     thumbs: [],
 
-    // Itch.io integration
     externalUrl: 'https://jamiiethetrashman.itch.io/besneni',
     itchEmbed: 'https://itch.io/embed-upload/12207206?color=333333',
 };

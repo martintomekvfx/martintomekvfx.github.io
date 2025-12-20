@@ -7,40 +7,26 @@ export default {
     subtitle: 'FAMU Game Jam',
     category: 'gamejam',
 
-    description: 'Game jam hra vytvořená na FAMU. Technický ředitel a animace.',
+    description: 'Mezioborový projekt vzniklý na FAMU Game Jam spojující studenty z různých kateder.',
 
-    artist: 'Martin Tomek + tým',
+    artist: 'Martin Tomek a tým',
     status: 'done',
     year: '2024',
     location: 'FAMU Game Jam',
 
     details: ['Technical direction', 'Animation', 'Team collaboration'],
 
-    fullDescription: `AGENT CHAOS — FAMU Game Jam
+    fullDescription: `Agent Chaos představuje výsledek mezioborové spolupráce studentů FAMU v rámci interního game jamu. Projekt spojil studenty z různých kateder a umožnil praktické vyzkoušení týmové práce na herním projektu.
 
-Mezioborová spolupráce studentů FAMU.
+V rámci týmu jsem zastával pozici technického ředitele a měl jsem na starosti animace a celkovou art direction. Tato role vyžadovala koordinaci vizuální stránky projektu s technickými možnostmi a omezeními daného herního enginu.
 
-═══════════════════════════════════════════
+Projekt demonstruje potenciál propojení animačních dovedností s game designem a technickou realizací. Zkušenost z FAMU Game Jam potvrdila hodnotu mezioborové spolupráce a schopnost rychle reagovat na výzvy vznikající během vývoje.`,
 
-ROLE:
-
-• Technický ředitel
-• Animace
-• Art direction
-
-═══════════════════════════════════════════
-
-TÝM:
-
-Projekt demonstruje spojení animačních dovedností s game designem a technickou realizací.
-
-Spolupráce studentů z různých kateder FAMU.
-
-═══════════════════════════════════════════
-
-🎮 HREJ NA ITCH.IO`,
-
-    materials: ['Unity', 'Animation', 'Game design'],
+    materials: [
+        'Unity Engine',
+        'Animace',
+        'Game design'
+    ],
     budget: 'N/A',
     timeline: '2024',
 
