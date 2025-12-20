@@ -1310,13 +1310,51 @@ a:hover {
   margin-bottom: var(--space-lg);
 }
 
-.project-game-embed-full iframe {
+.project-game-embed-full .game-frame {
   border: 2px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-game-embed-full iframe {
+  display: block;
 }
 
 .project-game-embed-full .game-link {
   text-align: center;
   margin-top: var(--space-md);
+}
+
+/* Mobile game embed - phone width */
+.mobile-game-embed {
+  max-width: 450px;
+}
+
+.mobile-game-embed .game-frame {
+  border-color: #802020;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Phone gallery - horizontal scroll for portrait images */
+.gallery-phone {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding: var(--space-lg);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-phone .gallery-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.gallery-phone .gallery-item img {
+  max-height: 500px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* ==================== STREET ART LAYOUT ==================== */

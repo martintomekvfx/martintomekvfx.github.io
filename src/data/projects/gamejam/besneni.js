@@ -16,6 +16,9 @@ export default {
 
     details: ['Pixel art', '2D ilustrace', 'Plošková animace', '6 konců', 'Mobilní webová hra'],
 
+    // Flag for mobile game layout
+    mobileGame: true,
+
     fullDescription: `Běsnění je česká interaktivní hra, která se odehrává v noci a sleduje příběh člověka, který se snaží dostat domů z hospody. Příběh není lineární a hra nabízí šest různých možných konců v závislosti na rozhodnutích hráče.
 
 Hra vznikla v třičlenném týmu s cílem naučit se něco o tvorbě her a herním designu. Vizuální stránka kombinuje pixelaci s 2D kreslenou ilustrací a využívá techniku ploškové animace, kterou jsem měl na starosti.
@@ -36,7 +39,7 @@ Hra je optimalizovaná pro mobilní telefony a běží přímo v prohlížeči b
     // Cover image for hero
     image: '/projects/besneni/cover.png',
 
-    // Gameplay screenshots
+    // Gameplay screenshots - phone resolution
     images: [
         '/projects/besneni/screenshots/1.png',
         '/projects/besneni/screenshots/2.png',
@@ -47,5 +50,5 @@ Hra je optimalizovaná pro mobilní telefony a běží přímo v prohlížeči b
     thumbs: [],
 
     externalUrl: 'https://jamiiethetrashman.itch.io/besneni',
-    itchEmbed: 'https://itch.io/embed-upload/12207206?color=333333',
+    itchEmbed: 'https://itch.io/embed-upload/15110547?color=802020',
 };

@@ -112,9 +112,9 @@ function Project() {
                 </motion.div>
             </section>
 
-            {/* Gallery */}
+            {/* Gallery - use phone gallery for mobile games */}
             {project.images && project.images.length > 0 && (
-                <section className={`project-gallery ${getGalleryClass()}`}>
+                <section className={`project-gallery ${project.mobileGame ? 'gallery-phone' : getGalleryClass()}`}>
                     {project.images.map((image, index) => (
                         <motion.div
                             key={index}
@@ -134,19 +134,20 @@ function Project() {
                 </section>
             )}
 
-            {/* Itch.io Embed - at the bottom for games */}
+            {/* Itch.io Embed - centered phone-width for mobile games */}
             {project.itchEmbed && (
-                <section className="project-game-embed-full">
+                <section className={`project-game-embed-full ${project.mobileGame ? 'mobile-game-embed' : ''}`}>
                     <h2 className="embed-title">Zahraj si</h2>
-                    <iframe
-                        src={project.itchEmbed}
-                        width="100%"
-                        height="700"
-                        frameBorder="0"
-                        allowFullScreen
-                        title={`${project.title} - Play Game`}
-                        style={{ display: 'block' }}
-                    />
+                    <div className="game-frame">
+                        <iframe
+                            src={project.itchEmbed}
+                            width="100%"
+                            height="660"
+                            frameBorder="0"
+                            allowFullScreen
+                            title={`${project.title} - Play Game`}
+                        />
+                    </div>
                     {project.externalUrl && (
                         <p className="game-link">
                             <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
