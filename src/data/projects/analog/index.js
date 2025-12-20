@@ -5,6 +5,7 @@ import vjing from './vjing.js';
 import originalCopy from './original-copy.js';
 import photo35mm from './35mm-photo.js';
 import scannerSeries from './scanner-series.js';
+import glitchArt from './glitch-art.js';
 
 // Planned projects
 const betonoveBanany = {
@@ -36,5 +37,6 @@ export const analogProjects = [
     originalCopy,
     photo35mm,
     scannerSeries,
+    glitchArt,
     betonoveBanany,
 ];
