@@ -6,7 +6,6 @@ import houpacka from './houpacka.js';
 import streetArtGallery from './street-art-gallery.js';
 import chompar from './chompar.js';
 import panak from './panak.js';
-import lavicka from './lavicka.js';
 
 // Planned projects
 const parklety = {
@@ -87,7 +86,6 @@ export const guerillaProjects = [
     slunecnice,
     houpacka,
     panak,
-    lavicka,
     streetArtGallery,
     chompar,
     parklety,

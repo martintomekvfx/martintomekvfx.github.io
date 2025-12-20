@@ -4,34 +4,40 @@
 export default {
     id: 'besneni',
     title: 'Běsnění',
-    subtitle: 'Experimentální hra',
+    subtitle: 'Interaktivní příběhová hra',
     category: 'gamejam',
 
-    description: 'Experimentální herní projekt zkoumající hranice mezi hrou a interaktivním uměním.',
+    description: 'Česká příběhová hra o cestě domů z hospody. Šest různých konců, kombinace pixel artu a 2D ilustrace.',
 
-    artist: 'Martin Tomek',
+    artist: 'Jamiie, Martin Tomek, Themolx',
     status: 'done',
     year: '2024',
-    location: 'FAMU',
+    location: 'Třičlenný tým',
 
-    details: ['Experimental', 'Animation', 'Narrative'],
+    details: ['Pixel art', '2D ilustrace', 'Plošková animace', '6 konců', 'Mobilní webová hra'],
 
-    fullDescription: `Běsnění představuje experimentální herní projekt zkoumající hranice mezi hrou a interaktivním uměním. Projekt vznikl s cílem testovat, kde končí tradiční chápání hry a začíná umělecká instalace.
+    fullDescription: `Běsnění je česká interaktivní hra, která se odehrává v noci a sleduje příběh člověka, který se snaží dostat domů z hospody. Příběh není lineární a hra nabízí šest různých možných konců v závislosti na rozhodnutích hráče.
 
-Hra je hratelná přímo v prohlížeči díky integraci na platformě itch.io. Pro optimální zážitek doporučuji fullscreen verzi dostupnou na stránce projektu.
+Hra vznikla v třičlenném týmu s cílem naučit se něco o tvorbě her a herním designu. Vizuální stránka kombinuje pixelaci s 2D kreslenou ilustrací a využívá techniku ploškové animace, kterou jsem měl na starosti.
 
-Vizuální stránka projektu kombinuje animované prvky s interaktivními mechanikami, přičemž narativ vzniká prostřednictvím hráčovy interakce s prostředím. Projekt tak stírá hranice mezi pasivním divákem a aktivním účastníkem.`,
+Je zajímavé pozorovat, jak se různí hráči rozhodují a jakými cestami procházejí příběhem. Každé rozhodnutí ovlivňuje další vývoj a vede k odlišnému konci.
+
+Hra je optimalizovaná pro mobilní telefony a běží přímo v prohlížeči bez nutnosti instalace. Jedná se o ukázku toho, jak lze propojit animační dovednosti s interaktivním médiem.`,
 
     materials: [
-        'Game engine',
-        'Animace',
-        'Sound design'
+        'Pixel art',
+        '2D ilustrace',
+        'Plošková animace',
+        'Web technologie'
     ],
     budget: 'N/A',
     timeline: '2024',
 
-    image: '/projects/besneni.jpg',
-    images: [],
+    image: '/projects/besneni/header.png',
+    images: [
+        '/projects/besneni/header.png',
+        '/projects/besneni/screenshots.png',
+    ],
     thumbs: [],
 
     externalUrl: 'https://jamiiethetrashman.itch.io/besneni',

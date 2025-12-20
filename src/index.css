@@ -1064,11 +1064,12 @@ a:hover {
 }
 
 .chompar-hero {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--space-2xl);
+  background: #FAFAFA;
 }
 
 .chompar-hero-grid {
@@ -1117,6 +1118,11 @@ a:hover {
   color: white;
   padding: var(--space-2xl);
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-meta {
@@ -1169,6 +1175,11 @@ a:hover {
   color: white;
   padding: var(--space-2xl);
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .chompar-modes .section-title {
@@ -1238,6 +1249,11 @@ a:hover {
   color: white;
   padding: var(--space-2xl);
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .chompar-privacy .section-title {
