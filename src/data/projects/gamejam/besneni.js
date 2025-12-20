@@ -1,4 +1,4 @@
-// Běsnění - Experimentální hra
+// Běsnění - Interaktivní příběhová hra
 // https://martintomekvfx.github.io/work/besneni
 
 export default {
@@ -22,7 +22,7 @@ Hra vznikla v třičlenném týmu s cílem naučit se něco o tvorbě her a hern
 
 Je zajímavé pozorovat, jak se různí hráči rozhodují a jakými cestami procházejí příběhem. Každé rozhodnutí ovlivňuje další vývoj a vede k odlišnému konci.
 
-Hra je optimalizovaná pro mobilní telefony a běží přímo v prohlížeči bez nutnosti instalace. Jedná se o ukázku toho, jak lze propojit animační dovednosti s interaktivním médiem.`,
+Hra je optimalizovaná pro mobilní telefony a běží přímo v prohlížeči bez nutnosti instalace.`,
 
     materials: [
         'Pixel art',
@@ -33,10 +33,16 @@ Hra je optimalizovaná pro mobilní telefony a běží přímo v prohlížeči b
     budget: 'N/A',
     timeline: '2024',
 
-    image: '/projects/besneni/header.png',
+    // Cover image for hero
+    image: '/projects/besneni/cover.png',
+
+    // Gameplay screenshots
     images: [
-        '/projects/besneni/header.png',
-        '/projects/besneni/screenshots.png',
+        '/projects/besneni/screenshots/1.png',
+        '/projects/besneni/screenshots/2.png',
+        '/projects/besneni/screenshots/3.png',
+        '/projects/besneni/screenshots/4.png',
+        '/projects/besneni/screenshots/5.png',
     ],
     thumbs: [],
 

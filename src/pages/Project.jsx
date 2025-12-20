@@ -84,8 +84,8 @@ function Project() {
                 </motion.div>
             </section>
 
-            {/* Hero Image */}
-            {project.image && !project.itchEmbed && (
+            {/* Hero Image - show for all projects including games */}
+            {project.image && (
                 <section className="project-hero-image">
                     <motion.img
                         src={project.image}
@@ -94,28 +94,6 @@ function Project() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6 }}
                     />
-                </section>
-            )}
-
-            {/* Itch.io Embed - FULL WIDTH for games */}
-            {project.itchEmbed && (
-                <section className="project-game-embed-full">
-                    <iframe
-                        src={project.itchEmbed}
-                        width="100%"
-                        height="700"
-                        frameBorder="0"
-                        allowFullScreen
-                        title={`${project.title} - Play Game`}
-                        style={{ display: 'block' }}
-                    />
-                    {project.externalUrl && (
-                        <p className="game-link">
-                            <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
-                                🎮 Fullscreen na itch.io →
-                            </a>
-                        </p>
-                    )}
                 </section>
             )}
 
@@ -153,6 +131,29 @@ function Project() {
                             />
                         </motion.div>
                     ))}
+                </section>
+            )}
+
+            {/* Itch.io Embed - at the bottom for games */}
+            {project.itchEmbed && (
+                <section className="project-game-embed-full">
+                    <h2 className="embed-title">Zahraj si</h2>
+                    <iframe
+                        src={project.itchEmbed}
+                        width="100%"
+                        height="700"
+                        frameBorder="0"
+                        allowFullScreen
+                        title={`${project.title} - Play Game`}
+                        style={{ display: 'block' }}
+                    />
+                    {project.externalUrl && (
+                        <p className="game-link">
+                            <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
+                                🎮 Fullscreen na itch.io →
+                            </a>
+                        </p>
+                    )}
                 </section>
             )}
 
