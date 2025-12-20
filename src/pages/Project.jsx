@@ -34,6 +34,7 @@ function Project() {
 
     // Determine gallery layout based on image count
     const getGalleryClass = () => {
+        if (project.galleryLayout) return `gallery-${project.galleryLayout}`;
         if (!project.images) return '';
         if (project.images.length >= 10) return 'gallery-grid';
         if (project.images.length >= 4) return 'gallery-masonry';

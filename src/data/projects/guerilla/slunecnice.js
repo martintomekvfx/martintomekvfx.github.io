@@ -44,22 +44,25 @@ Pro většinu obyvatel jsou tyto květináče zcela neviditelné. Jedná se o p�
     budget: '~800 Kč',
     timeline: 'Jaro 2025 → Léto 2025',
 
-    image: '/projects/slunecnice/IMG_4417_thumb.jpg',
+    // Dynamic gallery layout
+    galleryLayout: 'mixed',
+
+    image: '/projects/slunecnice/IMG_4415_thumb.jpg',
     images: [
-        '/projects/slunecnice/IMG_3459_web.jpg',
-        '/projects/slunecnice/IMG_4093_web.jpg',
-        '/projects/slunecnice/IMG_4280_web.jpg',
-        '/projects/slunecnice/IMG_4415_web.jpg',
-        '/projects/slunecnice/IMG_4417_web.jpg',
-        '/projects/slunecnice/IMG_4421_web.jpg',
-        '/projects/slunecnice/IMG_4702_web.jpg',
-        '/projects/slunecnice/IMG_4722_web.jpg',
-        '/projects/slunecnice/IMG_4789_web.jpg',
-        '/projects/slunecnice/IMG_4872_web.jpg',
-        '/projects/slunecnice/IMG_4927_web.jpg',
-        '/projects/slunecnice/IMG_4936_web.jpg',
-        '/projects/slunecnice/IMG_5009_web.jpg',
-        '/projects/slunecnice/IMG_5011_web.jpg',
+        '/projects/slunecnice/IMG_4415_web.jpg', // Full
+        '/projects/slunecnice/IMG_5009_web.jpg', // Small 1
+        '/projects/slunecnice/IMG_5011_web.jpg', // Small 2
+        '/projects/slunecnice/IMG_4789_web.jpg', // Wide
+        '/projects/slunecnice/IMG_4872_web.jpg', // Portrait 1
+        '/projects/slunecnice/IMG_4280_web.jpg', // Portrait 2
+        '/projects/slunecnice/IMG_4417_web.jpg', // Full
+        '/projects/slunecnice/IMG_4421_web.jpg', // Small
+        '/projects/slunecnice/IMG_4702_web.jpg', // Small
+        '/projects/slunecnice/IMG_3459_web.jpg', // Wide
+        '/projects/slunecnice/IMG_4093_web.jpg', // Portrait
+        '/projects/slunecnice/IMG_4722_web.jpg', // Portrait
+        '/projects/slunecnice/IMG_4927_web.jpg', // Full
+        '/projects/slunecnice/IMG_4936_web.jpg', // Small
     ],
     thumbs: [
         '/projects/slunecnice/IMG_3459_thumb.jpg',
