@@ -1032,10 +1032,10 @@ a:hover {
   transform: scale(1.02);
 }
 
-/* Pattern: One full width, then smaller ones */
+/* Pattern: One full width, then smaller ones - all square */
 .gallery-mixed .gallery-item:nth-child(6n + 1) {
   grid-column: span 2;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1;
 }
 
 .gallery-mixed .gallery-item:nth-child(6n + 2),
@@ -1046,13 +1046,13 @@ a:hover {
 
 .gallery-mixed .gallery-item:nth-child(6n + 4) {
   grid-column: span 2;
-  aspect-ratio: 21/9;
+  aspect-ratio: 1;
 }
 
 .gallery-mixed .gallery-item:nth-child(6n + 5),
 .gallery-mixed .gallery-item:nth-child(6n + 6) {
   grid-column: span 1;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1;
 }
 
 @media (max-width: 768px) {
