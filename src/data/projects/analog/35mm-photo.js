@@ -31,6 +31,9 @@ Série zachycuje momenty z každodenního života, cestování a experimentáln�
     budget: 'cca 300 Kč za roli + vyvolání',
     timeline: 'Průběžně od 2024',
 
+    // Use photo gallery - natural aspect ratios, no cropping
+    galleryLayout: 'photo',
+
     image: '/projects/35mm/NegativeScan_0001_insta.jpg',
     images: [
         '/projects/35mm/NegativeScan_0001_insta.jpg',

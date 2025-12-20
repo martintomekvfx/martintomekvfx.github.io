@@ -1029,6 +1029,65 @@ a:hover {
   transform: scale(1.05);
 }
 
+/* Photo gallery - natural aspect ratios, no cropping */
+.gallery-photo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+.gallery-photo .gallery-item {
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.gallery-photo .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-photo .gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Video masonry gallery - mixed images and videos */
+.gallery-video-masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-md);
+}
+
+.gallery-video-masonry .gallery-item {
+  overflow: hidden;
+  background: #000;
+  border-radius: 4px;
+}
+
+.gallery-video-masonry .gallery-item img,
+.gallery-video-masonry .gallery-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-video-masonry .gallery-item video {
+  max-height: 400px;
+  object-fit: contain;
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .gallery-photo {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-video-masonry {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Mixed layout (Dynamic grid) */
 .gallery-mixed {
   display: grid;

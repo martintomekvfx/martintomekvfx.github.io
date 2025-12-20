@@ -116,8 +116,11 @@ function Project() {
 
             {/* Media Rendering Helper */}
             {(() => {
+                // For video-masonry layout, combine images and videos in one gallery
+                const isVideoMasonry = project.galleryLayout === 'video-masonry';
+
                 const gallerySection = (
-                    project.images && project.images.length > 0 && (
+                    (project.images && project.images.length > 0) && (
                         <section className={`project-gallery ${project.mobileGame ? 'gallery-phone' : getGalleryClass()}`}>
                             {project.images.map((image, index) => {
                                 const imgUrl = typeof image === 'string' ? image : image.url;
@@ -125,11 +128,11 @@ function Project() {
 
                                 return (
                                     <motion.div
-                                        key={index}
+                                        key={`img-${index}`}
                                         className="gallery-item"
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.4, delay: index * 0.05 }}
+                                        transition={{ duration: 0.4, delay: index * 0.02 }}
                                         viewport={{ once: true }}
                                     >
                                         <img
@@ -141,12 +144,41 @@ function Project() {
                                     </motion.div>
                                 );
                             })}
+
+                            {/* Include videos in the same gallery for video-masonry layout */}
+                            {isVideoMasonry && project.videos && project.videos.map((video, idx) => {
+                                const videoPath = typeof video === 'string' ? video : video.url;
+                                const isLocalVideo = videoPath.endsWith('.mp4') || videoPath.endsWith('.webm');
+
+                                if (!isLocalVideo) return null;
+
+                                return (
+                                    <motion.div
+                                        key={`vid-${idx}`}
+                                        className="gallery-item"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.4, delay: (project.images.length + idx) * 0.02 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <video
+                                            controls
+                                            preload="metadata"
+                                            playsInline
+                                            muted
+                                        >
+                                            <source src={videoPath} type="video/mp4" />
+                                        </video>
+                                    </motion.div>
+                                );
+                            })}
                         </section>
                     )
                 );
 
+                // Skip separate video section for video-masonry (videos are in gallery)
                 const videoSection = (
-                    (project.videoUrl || (project.videos && project.videos.length > 0)) && (
+                    !isVideoMasonry && (project.videoUrl || (project.videos && project.videos.length > 0)) && (
                         <section className="project-videos">
                             {/* Render legacy videoUrl if no videos array */}
                             {project.videoUrl && !project.videos && (
