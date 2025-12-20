@@ -1,11 +1,60 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { allProjects } from '../data/projects';
+import { analogProjects, digitalProjects, guerillaProjects, categoryLabels } from '../data/projects';
 
 function Home() {
     // Filter out planned projects - only show done or in-progress
-    const activeProjects = allProjects.filter(p =>
+    const filterActive = (projects) => projects.filter(p =>
         p.status === 'done' || p.status === 'in-progress'
+    );
+
+    const activeAnalog = filterActive(analogProjects);
+    const activeDigital = filterActive(digitalProjects);
+    const activeGuerilla = filterActive(guerillaProjects);
+
+    const CategorySection = ({ title, projects }) => (
+        projects.length > 0 && (
+            <div style={{ marginBottom: 'var(--space-2xl)' }}>
+                <motion.h3
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}
+                    style={{
+                        marginBottom: 'var(--space-md)',
+                        fontSize: '0.875rem',
+                        letterSpacing: '0.15em',
+                        opacity: 0.6
+                    }}
+                >
+                    {title}
+                </motion.h3>
+                <div className="projects-list">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={project.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4, delay: index * 0.05 }}
+                            viewport={{ once: true }}
+                        >
+                            <Link
+                                to={`/work/${project.id}`}
+                                className="project-row"
+                            >
+                                <div className="project-row-info">
+                                    <h3 className="project-row-title">{project.title}</h3>
+                                    <span className="project-row-subtitle">{project.subtitle}</span>
+                                </div>
+                                <div className="project-row-meta">
+                                    <span className="project-row-year">{project.year}</span>
+                                </div>
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+        )
     );
 
     return (
@@ -137,30 +186,9 @@ function Home() {
                         WORK
                     </motion.h2>
 
-                    <div className="projects-list">
-                        {activeProjects.map((project, index) => (
-                            <motion.div
-                                key={project.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.4, delay: index * 0.05 }}
-                                viewport={{ once: true }}
-                            >
-                                <Link
-                                    to={`/work/${project.id}`}
-                                    className="project-row"
-                                >
-                                    <div className="project-row-info">
-                                        <h3 className="project-row-title">{project.title}</h3>
-                                        <span className="project-row-subtitle">{project.subtitle}</span>
-                                    </div>
-                                    <div className="project-row-meta">
-                                        <span className="project-row-year">{project.year}</span>
-                                    </div>
-                                </Link>
-                            </motion.div>
-                        ))}
-                    </div>
+                    <CategorySection title="ANALOG" projects={activeAnalog} />
+                    <CategorySection title="DIGITAL" projects={activeDigital} />
+                    <CategorySection title="GUERILLA" projects={activeGuerilla} />
                 </div>
             </section>
         </div>
