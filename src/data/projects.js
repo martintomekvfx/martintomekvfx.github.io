@@ -65,66 +65,57 @@ Po delší době: Celý kovový mobiliář sušáků byl obroušen a nově natř
     thumbs: ['/projects/houpacka/IMG_2332_thumb.jpg'],
   },
   {
-    id: 'street-art',
-    title: 'Street Art',
+    id: 'street-art-gallery',
+    title: 'Street Art Gallery',
     subtitle: 'Obrazy v ulicích',
     category: 'guerilla',
-    description: 'Street art, spray art, malba na různých materiálech, poster bombing a sticker bombing ve veřejném prostoru',
-    artist: 'Ptáček',
-    status: 'in-progress',
-    year: '2025',
-    location: 'Palmovka, Anifilm Třeboň',
-    details: ['Různé techniky', 'Linoritové samolepky', 'Stop motion animace'],
-    fullDescription: `Komplexní přístup k street artu zahrnující různé techniky: spray art, malbu, poster bombing a sticker bombing.
-
-Linoritové samolepky - Stop Motion projekt:
-Vytvořil jsem sérii samolepek s natiskem linoritu, kde každá samolepka má své unikátní číslo.
-
-1. Digitalizace - Všechny samolepky jsou naskenované
-2. Projekce - Stop motion animace byla promítána na Anifest
-3. Distribuce - Samolepky jsou lepeny do ulic`,
-    materials: ['Linoritové samolepky', 'Spray barvy', 'Postery', 'Lepidlo'],
-    budget: '~400 Kč',
-    timeline: 'Průběžně',
-    videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
-    image: '/projects/streetart/IMG_4740_thumb.jpg',
-    images: ['/projects/streetart/IMG_4740_web.jpg'],
-    thumbs: ['/projects/streetart/IMG_4740_thumb.jpg'],
-  },
-  {
-    id: 'guerillova-galerie',
-    title: 'Guerillová galerie',
-    subtitle: 'Neoficiální výstava',
-    category: 'guerilla',
-    description: 'Výlep uměleckých děl do prázdných městských rámů, vývěsek a prázdných ploch',
+    description: 'Pouliční galerie využívající prázdné plochy města - paste-upy, stickery, postery a neoficiální výstavy.',
     artist: 'Ptáček + další umělci',
     status: 'in-progress',
     year: '2025',
-    location: 'Okolí Kolbenky, Palmovka',
-    details: ['Prázdné plochy', 'Kolektivní akce', 'Neoficiální galerie'],
-    fullDescription: `Vytváření improvizované pouliční galerie v místech, jež kdysi sloužila k informování veřejnosti.
+    location: 'Palmovka, Kolbenka, Anifilm Třeboň',
+    details: ['Paste-upy', 'Sticker bombing', 'Poster bombing', 'Neoficiální galerie'],
+    fullDescription: `Město jako galerie — prázdné plochy jako výstavní prostor.
 
-Mnoho zastávek MHD má například rámy na vývěsky - pokud se dlouho žádná výluka nekonala, zůstává v rámech prázdný papír nebo nic.
+PRÁZDNÉ PLOCHY:
+Mnoho zastávek MHD má rámy na vývěsky - pokud se dlouho žádná výluka nekonala, zůstává v rámech prázdný papír nebo nic. Tyto prázdné plochy využívám jako neoficiální výstavní prostor.
 
-Připravil jsem vlastní grafické tisky a díla od přátel. Tyto výtisky jsem vylepil do vybraných rámů a na plochy, kde nic nebylo.
+TECHNIKY:
+• Paste-upy – velkoformátové tisky lepené na zdi
+• Sticker bombing – série linoritových samolepek s unikátním číslem
+• Poster bombing – plakáty a grafiky
+• Spray art – malba sprejem
 
-Tak vznikla malá venkovní galerie: obrazy v ulici, které denně míjely desítky lidí.`,
-    materials: ['Vlastní tisky/grafiky', 'Díla od přátel', 'Lepidlo'],
-    budget: '~350 Kč',
+LINORITOVÉ SAMOLEPKY - Stop Motion projekt:
+Vytvořil jsem sérii samolepek s natiskem linoritu, kde každá samolepka má své unikátní číslo.
+1. Digitalizace - Všechny samolepky jsou naskenované
+2. Projekce - Stop motion animace byla promítána na Anifest
+3. Distribuce - Samolepky jsou lepeny do ulic
+
+GUERILLOVÁ GALERIE:
+Připravil jsem vlastní grafické tisky a díla od přátel. Tyto výtisky jsem vylepil do vybraných rámů a na plochy, kde nic nebylo. Tak vznikla malá venkovní galerie: obrazy v ulici, které denně míjely desítky lidí.
+
+→ Viz také projekt ChompAR – AR hra propojená se street artem`,
+    materials: ['Linoritové samolepky', 'Paste-upy', 'Postery', 'Spray barvy', 'Lepidlo'],
+    budget: '~750 Kč',
     timeline: 'Průběžně',
-    image: '/projects/gallery/IMG_1694_thumb.jpg',
+    videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
+    image: '/projects/streetart/IMG_4740_thumb.jpg',
     images: [
+      '/projects/streetart/IMG_4740_web.jpg',
       '/projects/gallery/IMG_1694_web.jpg',
       '/projects/gallery/IMG_1719_web.jpg',
       '/projects/gallery/IMG_2332_web.jpg',
       '/projects/gallery/IMG_4702_web.jpg',
     ],
     thumbs: [
+      '/projects/streetart/IMG_4740_thumb.jpg',
       '/projects/gallery/IMG_1694_thumb.jpg',
       '/projects/gallery/IMG_1719_thumb.jpg',
       '/projects/gallery/IMG_2332_thumb.jpg',
       '/projects/gallery/IMG_4702_thumb.jpg',
     ],
+    relatedProject: 'chompar',
   },
   {
     id: 'chompar',
