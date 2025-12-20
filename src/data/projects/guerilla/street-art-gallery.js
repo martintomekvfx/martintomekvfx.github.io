@@ -28,12 +28,17 @@ Zajímavou okolností je blízkost mnoha intervencí ke Galerii Pragovka. Vznik�
   // Subcategories for different techniques
   subcategories: [
     {
-      title: 'Paste-upy a Chomps',
+      title: 'Paste-upy, Stickers a Chomps',
       description: 'Vylepované grafické práce a animované Chompy propojené s AR hrou ChompAR. Každý paste-up funguje jako AR marker pro rozšířenou realitu.',
       images: [
         '/projects/streetart/IMG_4740_web.jpg',
         '/projects/gallery/IMG_1694_web.jpg',
         '/projects/gallery/IMG_1719_web.jpg',
+        '/projects/gallery/F6A9BAC1-8AB4-4E93-9032-B338D0CE4676_web.jpg',
+        '/projects/gallery/IMG_5328_web.jpg',
+        '/projects/gallery/IMG_5335_web.jpg',
+        '/projects/gallery/IMG_5565_web.jpg',
+        '/projects/gallery/IMG_5568_web.jpg',
       ]
     },
     {
@@ -41,6 +46,9 @@ Zajímavou okolností je blízkost mnoha intervencí ke Galerii Pragovka. Vznik�
       description: 'Využití nalezeného materiálu k vytvoření site-specific instalací. Práce s tím, co město samo nabízí.',
       images: [
         '/projects/gallery/IMG_2332_web.jpg',
+        '/projects/gallery/IMG_5449_web.jpg',
+        '/projects/gallery/IMG_5462_web.jpg',
+        '/projects/gallery/IMG_5464_web.jpg',
       ]
     },
     {
@@ -48,17 +56,19 @@ Zajímavou okolností je blízkost mnoha intervencí ke Galerii Pragovka. Vznik�
       description: 'Transformace vyhozeného odpadu na umělecké objekty. Karton, dřevo, cokoli co čeká na popelnice.',
       images: [
         '/projects/gallery/IMG_4702_web.jpg',
+        '/projects/gallery/IMG_5975_web.jpg',
+        '/projects/gallery/IMG_5976_web.jpg',
       ]
     },
     {
-      title: 'Sticker art',
-      description: 'Samolepky jako nejdostupnější forma guerilla artu. Rychlé, nenápadné, všudypřítomné.',
-      images: []
-    },
-    {
-      title: 'Spray art',
-      description: 'Klasická forma street artu. Šablony a freehand práce na legálních i šedých plochách.',
-      images: []
+      title: 'Sticker art & Spray art',
+      description: 'Samolepky a spreje jako nejdostupnější formy guerilla artu. Rychlé, nenápadné, všudypřítomné.',
+      images: [
+        '/projects/gallery/IMG_6184_2_web.jpg',
+        '/projects/gallery/IMG_6190_web.jpg',
+        '/projects/gallery/IMG_6192_web.jpg',
+        '/projects/gallery/IMG_6203_web.jpg',
+      ]
     }
   ],
 
