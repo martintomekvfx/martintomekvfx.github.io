@@ -32,8 +32,15 @@ Projekt byl obhájen v roce 2023 jako bakalářská práce na Filmové a televiz
     budget: 'N/A',
     timeline: '2023',
 
-    image: '/projects/original-copy.jpg',
-    images: [],
+    image: '/projects/original-copy/frame_03.jpg',
+    images: [
+        '/projects/original-copy/frame_01.jpg',
+        '/projects/original-copy/frame_02.jpg',
+        '/projects/original-copy/frame_03.jpg',
+        '/projects/original-copy/frame_04.jpg',
+        '/projects/original-copy/frame_05.jpg',
+        '/projects/original-copy/frame_06.jpg',
+    ],
     thumbs: [],
 
     videoUrl: 'https://www.youtube.com/watch?v=M6bm6yRKshA',
