@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getProjectById } from '../data/projects';
+import ChompMap from '../components/ChompMap';
 
 function Project() {
     const { projectId } = useParams();
@@ -113,33 +114,95 @@ function Project() {
                 </motion.div>
             </section>
 
-            {/* Gallery - use phone gallery for mobile games */}
-            {project.images && project.images.length > 0 && (
-                <section className={`project-gallery ${project.mobileGame ? 'gallery-phone' : getGalleryClass()}`}>
-                    {project.images.map((image, index) => {
-                        const imgUrl = typeof image === 'string' ? image : image.url;
-                        const imgTitle = typeof image === 'string' ? null : image.title;
+            {/* Media Rendering Helper */}
+            {(() => {
+                const gallerySection = (
+                    project.images && project.images.length > 0 && (
+                        <section className={`project-gallery ${project.mobileGame ? 'gallery-phone' : getGalleryClass()}`}>
+                            {project.images.map((image, index) => {
+                                const imgUrl = typeof image === 'string' ? image : image.url;
+                                const imgTitle = typeof image === 'string' ? null : image.title;
 
-                        return (
-                            <motion.div
-                                key={index}
-                                className="gallery-item"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.4, delay: index * 0.05 }}
-                                viewport={{ once: true }}
-                            >
-                                <img
-                                    src={imgUrl}
-                                    alt={imgTitle || `${project.title} ${index + 1}`}
-                                    loading="lazy"
-                                />
-                                {imgTitle && <div className="gallery-caption">{imgTitle}</div>}
-                            </motion.div>
-                        );
-                    })}
-                </section>
-            )}
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        className="gallery-item"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.4, delay: index * 0.05 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <img
+                                            src={imgUrl}
+                                            alt={imgTitle || `${project.title} ${index + 1}`}
+                                            loading="lazy"
+                                        />
+                                        {imgTitle && <div className="gallery-caption">{imgTitle}</div>}
+                                    </motion.div>
+                                );
+                            })}
+                        </section>
+                    )
+                );
+
+                const videoSection = (
+                    (project.videoUrl || (project.videos && project.videos.length > 0)) && (
+                        <section className="project-videos">
+                            {/* Render legacy videoUrl if no videos array */}
+                            {project.videoUrl && !project.videos && (
+                                <div className="project-video">
+                                    <div className="video-container">
+                                        <iframe
+                                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                                            title={project.title}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        />
+                                    </div>
+                                    {project.videoDescription && (
+                                        <p className="video-description">{project.videoDescription}</p>
+                                    )}
+                                </div>
+                            )}
+
+                            {/* Render multiple videos from array */}
+                            {project.videos && project.videos.map((video, idx) => (
+                                <div key={idx} className="project-video-item">
+                                    <div className="project-video">
+                                        <div className="video-container">
+                                            <iframe
+                                                src={video.url.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                                                title={`${project.title} video ${idx + 1}`}
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                            />
+                                        </div>
+                                        {video.description && (
+                                            <p className="video-description">{video.description}</p>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </section>
+                    )
+                );
+
+                if (project.videoFirst) {
+                    return (
+                        <>
+                            {videoSection}
+                            {gallerySection}
+                        </>
+                    );
+                } else {
+                    return (
+                        <>
+                            {gallerySection}
+                            {videoSection}
+                        </>
+                    );
+                }
+            })()}
 
             {/* Itch.io Embed - centered phone-width for mobile games */}
             {project.itchEmbed && (
@@ -179,23 +242,6 @@ function Project() {
                 </section>
             )}
 
-            {/* Video */}
-            {project.videoUrl && (
-                <section className="project-video">
-                    <div className="video-container">
-                        <iframe
-                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
-                            title={project.title}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
-                    </div>
-                    {project.videoDescription && (
-                        <p className="video-description">{project.videoDescription}</p>
-                    )}
-                </section>
-            )}
-
             {/* Related Project */}
             {project.relatedProject && (
                 <section className="project-related">
@@ -208,11 +254,11 @@ function Project() {
     );
 }
 
-// ChompAR Presentation-style Layout
+// ChompAR - Simple, Clean Layout
 function ChompARLayout({ project, getStatusLabel }) {
     return (
         <div className="project-detail chompar-layout">
-            {/* Hero Section */}
+            {/* Hero Section - White background, clean */}
             <section className="chompar-hero">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -223,150 +269,165 @@ function ChompARLayout({ project, getStatusLabel }) {
                     <Link to="/#work" className="back-link">← Back</Link>
 
                     <div className="chompar-hero-grid">
-                        <div className="chompar-hero-image">
+                        <div className="chompar-hero-visual">
                             <motion.img
-                                src={project.heroImage || project.image}
-                                alt="AR Scanning"
+                                src={project.heroAnimation || project.image}
+                                alt="Chomp Animation"
+                                className="chompar-eat-anim"
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
                             />
                         </div>
                         <div className="chompar-hero-text">
-                            <p className="chompar-meta">FAMU • {project.year}</p>
+                            <p className="chompar-meta">{project.year} • {project.location}</p>
                             <h1 className="chompar-title">{project.title}</h1>
                             <p className="chompar-description">{project.description}</p>
 
-                            <a
-                                href={project.externalUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="cta-button chompar-cta"
-                            >
-                                🚀 Launch AR Experience
-                            </a>
+                            {project.gameUrl && (
+                                <a
+                                    href={project.gameUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="chompar-play-btn"
+                                >
+                                    ▶ HRÁT
+                                </a>
+                            )}
                         </div>
                     </div>
                 </motion.div>
             </section>
 
-            {/* Three Pillars */}
-            {project.pillars && (
-                <section className="chompar-pillars">
-                    <p className="section-meta">TEORETICKÝ RÁMEC</p>
-                    <h2 className="section-title">Tři pilíře</h2>
-
-                    <div className="pillars-grid">
-                        {project.pillars.map((pillar, i) => (
-                            <motion.div
-                                key={i}
-                                className="pillar-card"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.2 }}
-                                viewport={{ once: true }}
-                            >
-                                <img src={pillar.icon} alt={pillar.title} className="pillar-icon" />
-                                <h3>{pillar.title}</h3>
-                                <p>{pillar.description}</p>
-                            </motion.div>
-                        ))}
+            {/* Lore Section */}
+            {project.lore && (
+                <section className="chompar-lore">
+                    <div className="chompar-container">
+                        <h2 className="chompar-section-title">{project.lore.title}</h2>
+                        <div className="chompar-lore-content">
+                            {project.lore.paragraphs.map((para, i) => (
+                                <motion.p
+                                    key={i}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                    viewport={{ once: true }}
+                                >
+                                    {para}
+                                </motion.p>
+                            ))}
+                        </div>
+                        {project.stats && (
+                            <div className="chompar-stats">
+                                <div className="chompar-stat">
+                                    <span className="chompar-stat-number">{project.stats.totalChomps}</span>
+                                    <span className="chompar-stat-label">Chompů</span>
+                                </div>
+                                <div className="chompar-stat">
+                                    <span className="chompar-stat-number">{project.stats.areas.length}</span>
+                                    <span className="chompar-stat-label">Oblastí</span>
+                                </div>
+                                <div className="chompar-stat">
+                                    <span className="chompar-stat-number">2</span>
+                                    <span className="chompar-stat-label">Týmy</span>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </section>
             )}
 
-            {/* Game Modes */}
-            {project.modes && (
-                <section className="chompar-modes">
-                    <p className="section-meta">HERNÍ DESIGN</p>
-                    <h2 className="section-title">Dva módy</h2>
-
-                    <div className="modes-grid">
-                        {project.modes.map((mode, i) => (
-                            <motion.div
-                                key={i}
-                                className={`mode-card ${i === 0 ? 'mode-light' : 'mode-dark'}`}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.2 }}
-                                viewport={{ once: true }}
-                            >
-                                <h3>{mode.title}</h3>
-                                <p className="mode-type">{mode.type}</p>
-                                <div className="mode-points">
-                                    {mode.points.map((point, j) => (
-                                        <p key={j}>{point}</p>
-                                    ))}
-                                </div>
-                                <div className="mode-meaning">
-                                    = {mode.meaning}
-                                </div>
-                            </motion.div>
-                        ))}
+            {/* Map Section */}
+            {project.chompLocations && project.chompLocations.length > 0 && (
+                <section className="chompar-map-section">
+                    <div className="chompar-container">
+                        <h2 className="chompar-section-title">Mapa Chompů</h2>
+                        <p className="chompar-map-subtitle">
+                            {project.stats?.totalChomps} lokací v Praze a okolí
+                        </p>
+                        <div className="chompar-map-wrapper">
+                            <ChompMap />
+                        </div>
                     </div>
                 </section>
             )}
 
-            {/* Privacy Features */}
-            {project.privacy && (
-                <section className="chompar-privacy">
-                    <p className="section-meta">DESIGN</p>
-                    <h2 className="section-title">Privacy-first</h2>
-
-                    <div className="privacy-grid">
-                        {project.privacy.map((feature, i) => (
-                            <motion.div
-                                key={i}
-                                className="privacy-card"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }}
-                                viewport={{ once: true }}
-                            >
-                                <h3>{feature.title}</h3>
-                                <p>{feature.description}</p>
-                            </motion.div>
-                        ))}
+            {/* How It Works - 3 simple steps */}
+            {project.howItWorks && (
+                <section className="chompar-how">
+                    <div className="chompar-container">
+                        <h2 className="chompar-section-title">Jak to funguje</h2>
+                        <div className="chompar-steps">
+                            {project.howItWorks.map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    className="chompar-step"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.4, delay: i * 0.15 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <img src={item.icon} alt={item.step} className="chompar-step-icon" />
+                                    <h3>{item.step}</h3>
+                                    <p>{item.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
-                    <p className="privacy-note">Mobil jako <strong>sekundární nástroj</strong>.</p>
+                </section>
+            )}
+
+            {/* Gallery - Street Chomps + App Screenshots */}
+            {project.galleryImages && project.galleryImages.length > 0 && (
+                <section className="chompar-gallery-section">
+                    <div className="chompar-container">
+                        <h2 className="chompar-section-title">Galerie</h2>
+                        <div className="chompar-gallery-grid">
+                            {project.galleryImages.map((img, i) => (
+                                <motion.div
+                                    key={i}
+                                    className="chompar-gallery-item"
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <img src={img.url} alt={img.title} />
+                                    <span className="chompar-gallery-caption">{img.title}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </section>
             )}
 
             {/* Video */}
             {project.videoUrl && (
-                <section className="project-video">
-                    <div className="video-container">
-                        <iframe
-                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
-                            title={project.title}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
+                <section className="chompar-video-section">
+                    <div className="chompar-container">
+                        <div className="chompar-video-wrapper">
+                            <iframe
+                                src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                                title={project.title}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        </div>
+                        {project.videoDescription && (
+                            <p className="chompar-video-desc">{project.videoDescription}</p>
+                        )}
                     </div>
                 </section>
             )}
 
-            {/* Full Description */}
-            <section className="project-content-styled">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="project-description-content"
-                >
-                    {project.fullDescription.split('\n\n').map((para, i) => (
-                        <p key={i} className="project-paragraph">{para}</p>
-                    ))}
-                </motion.div>
-            </section>
-
-            {/* Related Project */}
+            {/* Related */}
             {project.relatedProject && (
-                <section className="project-related">
-                    <Link to={`/work/${project.relatedProject}`} className="related-link">
-                        → Street Art Gallery
-                    </Link>
+                <section className="chompar-related">
+                    <div className="chompar-container">
+                        <Link to={`/work/${project.relatedProject}`} className="chompar-related-link">
+                            → Street Art Gallery
+                        </Link>
+                    </div>
                 </section>
             )}
         </div>
@@ -447,20 +508,44 @@ function StreetArtLayout({ project, getStatusLabel, getGalleryClass }) {
                 </section>
             ))}
 
-            {/* Video */}
-            {project.videoUrl && (
-                <section className="project-video">
-                    <div className="video-container">
-                        <iframe
-                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
-                            title={project.title}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
-                    </div>
-                    {project.videoDescription && (
-                        <p className="video-description">{project.videoDescription}</p>
+            {/* Videos */}
+            {(project.videoUrl || (project.videos && project.videos.length > 0)) && (
+                <section className="project-videos">
+                    {/* Render legacy videoUrl if no videos array */}
+                    {project.videoUrl && !project.videos && (
+                        <div className="project-video">
+                            <div className="video-container">
+                                <iframe
+                                    src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                                    title={project.title}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </div>
+                            {project.videoDescription && (
+                                <p className="video-description">{project.videoDescription}</p>
+                            )}
+                        </div>
                     )}
+
+                    {/* Render multiple videos from array */}
+                    {project.videos && project.videos.map((video, idx) => (
+                        <div key={idx} className="project-video-item">
+                            <div className="project-video">
+                                <div className="video-container">
+                                    <iframe
+                                        src={video.url.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                                        title={`${project.title} video ${idx + 1}`}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    />
+                                </div>
+                                {video.description && (
+                                    <p className="video-description">{video.description}</p>
+                                )}
+                            </div>
+                        </div>
+                    ))}
                 </section>
             )}
 

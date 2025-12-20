@@ -14,7 +14,7 @@ export default {
   year: '2024-2025',
   location: 'Palmovka, Kolbenka, Anifilm Třeboň',
 
-  details: ['Paste-upy', 'Stickery', 'Instalace', 'AR integrace', 'Anifilm Scans'],
+  details: ['Chomps', 'Paste-upy', 'Stickery', 'Instalace', 'Spray art', 'AR integrace'],
 
   // Custom layout flag
   customLayout: 'street-art',
@@ -32,9 +32,10 @@ Výrazným prvkem projektu jsou "Chomps" – postavičky, které propojují fyzi
       title: 'Paste-upy a Chomps',
       description: 'Vylepované grafické práce a postavičky Chomp. Tato sekce je přímo propojena s AR hrou Chomp AR. Každý paste-up funguje jako marker pro rozšířenou realitu.',
       images: [
-        { url: '/projects/streetart/IMG_4740_web.jpg', title: 'Klasický street art v interakci s městem' },
         { url: '/projects/gallery/IMG_5449_web.jpg', title: 'Chomp v urbanistickém detailu' },
         { url: '/projects/gallery/IMG_5462_web.jpg', title: 'Vylepování postaviček' },
+        { url: '/projects/gallery/IMG_5464_web.jpg', title: 'Chomp v instalaci' }, // Moved from Instalace
+        { url: '/projects/gallery/F6A9BAC1-8AB4-4E93-9032-B338D0CE4676_web.jpg', title: 'Digitální Chomp' }, // Moved from Skener
         { url: '/projects/gallery/IMG_6184_2_web.jpg', title: 'Chomp stencil v šedé zóně' },
         { url: '/projects/gallery/IMG_6190_web.jpg', title: 'Detail sprejového artu' },
         { url: '/projects/gallery/IMG_6192_web.jpg', title: 'Barevná intervence' },
@@ -46,18 +47,9 @@ Výrazným prvkem projektu jsou "Chomps" – postavičky, které propojují fyzi
       ]
     },
     {
-      title: 'Skener - Anifilm',
-      description: 'Stickers naskenované pro návštěvníky festivalu Anifilm. Projekt zkoumá přenos syrového street artu do formátu festivalového dárku.',
-      images: [
-        { url: '/projects/gallery/IMG_1719_web.jpg', title: 'Skenování jako metoda zachování artu' },
-        { url: '/projects/gallery/F6A9BAC1-8AB4-4E93-9032-B338D0CE4676_web.jpg', title: 'Digitální archivace nálepky' }
-      ]
-    },
-    {
       title: 'Instalace z recyklovaných materiálů',
       description: 'Site-specific intervence z nalezených materiálů. Práce s nálezovými objekty a geometrickými strukturami.',
       images: [
-        { url: '/projects/gallery/IMG_5464_web.jpg', title: 'Recyklovaná instalace' },
         { url: '/projects/gallery/E168AFDE-5124-411C-BCE3-3EEF4737634B_web.jpg', title: 'Textilní zásah do plotu' },
         { url: '/projects/gallery/IMG_4788_web.jpg', title: 'Nalezený objekt jako umění' },
         { url: '/projects/gallery/IMG_4842_web.jpg', title: 'Intervence v detailu' },
@@ -66,6 +58,18 @@ Výrazným prvkem projektu jsou "Chomps" – postavičky, které propojují fyzi
         { url: '/projects/gallery/IMG_5760_web.jpg', title: 'Instalace na Palmovce' },
         { url: '/projects/gallery/IMG_5776_web.jpg', title: 'Urbanistický dialog' }
       ]
+    },
+    {
+      title: 'Spray art',
+      description: 'Práce se sprejem a šablonami přímo na městský povrch. První kontakt s ulicí.',
+      images: [
+        { url: '/projects/streetart/IMG_4740_web.jpg', title: 'Klasický street art v interakci s městem' }
+      ]
+    },
+    {
+      title: 'Skener - Anifilm',
+      description: 'Stickers naskenované pro návštěvníky festivalu Anifilm. Projekt zkoumá přenos syrového street artu do formátu festivalového dárku. Více o procesu skenování naleznete v projektu [Scanner Series](/work/scanner-series).',
+      images: [] // IMG_1719 moved to scanner-series project
     }
   ],
 

@@ -32,6 +32,9 @@ Série byla fyzicky vytištěna a prezentována jako ucelená výstava. Každý 
     budget: 'přibližně 2000 Kč za tisk',
     timeline: 'Červen 2025',
 
+    // Mixed layout for prominent last image
+    galleryLayout: 'mixed',
+
     image: '/projects/scanner/20250612_IMAG0067_A3PRINT_v001_preview.jpg',
     images: [
         '/projects/scanner/20250612_IMAG0067_A3PRINT_v001_preview.jpg',
@@ -48,6 +51,7 @@ Série byla fyzicky vytištěna a prezentována jako ucelená výstava. Každý 
         '/projects/scanner/20250612_IMAG0556_A3PRINT_v001_preview.jpg',
         '/projects/scanner/20250612_IMAG0630_A3PRINT_v001_preview.jpg',
         '/projects/scanner/20250612_IMAG0921_A3PRINT_v001_preview.jpg',
+        { url: '/projects/gallery/IMG_1719_web.jpg', title: 'Venkovní instalace - Anifilm' }
     ],
     thumbs: [
         '/projects/scanner/20250612_IMAG0067_A3PRINT_v001_preview.jpg',

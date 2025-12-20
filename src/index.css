@@ -1075,6 +1075,11 @@ a:hover {
   aspect-ratio: 1;
 }
 
+.gallery-mixed .gallery-item:last-child {
+  grid-column: span 2;
+  aspect-ratio: 1;
+}
+
 @media (max-width: 768px) {
   .gallery-mixed {
     grid-template-columns: 1fr;
@@ -1149,7 +1154,8 @@ a:hover {
 /* ==================== CHOMPAR LAYOUT ==================== */
 
 .chompar-layout {
-  background: #FAFAFA;
+  background: #0a0a0a;
+  color: #fff;
 }
 
 .chompar-hero {
@@ -1158,7 +1164,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   padding: var(--space-2xl);
-  background: #FAFAFA;
+  background: #0a0a0a;
 }
 
 .chompar-hero-grid {
@@ -1173,13 +1179,14 @@ a:hover {
   width: 280px;
   height: 280px;
   object-fit: contain;
-  border: 2px solid black;
+  border: 2px solid #333;
+  filter: grayscale(100%);
 }
 
 .chompar-meta {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
   margin-bottom: var(--space-md);
 }
 
@@ -1188,11 +1195,12 @@ a:hover {
   font-weight: 900;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-md);
+  color: #fff;
 }
 
 .chompar-description {
   font-size: 1.25rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   margin-bottom: var(--space-lg);
 }
@@ -1495,5 +1503,369 @@ a:hover {
 
   .chompar-title {
     font-size: 2.5rem;
+  }
+}
+
+/* ==================== CHOMPAR LAYOUT - CLEAN REDESIGN ==================== */
+
+.chompar-layout {
+  background: #FAFAFA;
+  color: #000;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.chompar-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero */
+.chompar-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #FAFAFA;
+}
+
+.chompar-hero-content {
+  width: 100%;
+  max-width: 900px;
+}
+
+.chompar-hero .back-link {
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.chompar-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.chompar-hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.chompar-eat-anim {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.chompar-meta {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.chompar-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  color: #000;
+  line-height: 1;
+}
+
+.chompar-description {
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.chompar-play-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.chompar-play-btn:hover {
+  background: #E53935;
+  transform: translateY(-2px);
+}
+
+/* Lore Section */
+.chompar-lore {
+  padding: 6rem 2rem;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chompar-lore-content {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.chompar-lore-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.chompar-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chompar-stat {
+  text-align: center;
+}
+
+.chompar-stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 1;
+}
+
+.chompar-stat-label {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Map Section */
+.chompar-map-section {
+  padding: 6rem 2rem;
+  background: #FAFAFA;
+}
+
+.chompar-map-subtitle {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.chompar-map-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.chompar-map-iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+.chompar-map-overlay-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  text-align: center;
+}
+
+.chompar-map-overlay-hint a {
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.chompar-map-overlay-hint a:hover {
+  color: #E53935;
+}
+
+/* How It Works */
+.chompar-how {
+  padding: 6rem 2rem;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chompar-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #000;
+}
+
+.chompar-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.chompar-step {
+  text-align: center;
+  padding: 2rem;
+}
+
+.chompar-step-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+}
+
+.chompar-step h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #000;
+}
+
+.chompar-step p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+}
+
+/* Gallery */
+.chompar-gallery-section {
+  padding: 6rem 2rem;
+  background: #FAFAFA;
+}
+
+.chompar-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.chompar-gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.chompar-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.chompar-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.chompar-gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chompar-gallery-item:hover .chompar-gallery-caption {
+  opacity: 1;
+}
+
+/* Video */
+.chompar-video-section {
+  padding: 6rem 2rem;
+  background: #fff;
+}
+
+.chompar-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.chompar-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.chompar-video-desc {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Related */
+.chompar-related {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chompar-related-link {
+  display: inline-block;
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+  background: transparent;
+  border: 2px solid #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.chompar-related-link:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .chompar-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .chompar-eat-anim {
+    width: 200px;
+    height: 200px;
+  }
+
+  .chompar-title {
+    font-size: 2.5rem;
+  }
+
+  .chompar-steps {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .chompar-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

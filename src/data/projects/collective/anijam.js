@@ -29,8 +29,16 @@ Projekt byl uveden na festivalu Anifilm a představuje model spolupráce, který
     budget: 'N/A',
     timeline: '2024',
 
-    image: '/projects/anijam.jpg',
-    images: [],
+    image: '/projects/anijam/frame_03.jpg',
+    images: [
+        '/projects/anijam/frame_01.jpg',
+        '/projects/anijam/frame_02.jpg',
+        '/projects/anijam/frame_03.jpg',
+        '/projects/anijam/frame_04.jpg',
+        '/projects/anijam/frame_05.jpg',
+        '/projects/anijam/frame_06.jpg',
+    ],
     thumbs: [],
-    videoUrl: '',
+
+    videoUrl: 'https://youtu.be/4_1Ed4Ys1UE',
 };

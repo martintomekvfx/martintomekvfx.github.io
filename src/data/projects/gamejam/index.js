@@ -31,8 +31,8 @@ Cílem je vytvořit herní zážitek přístupný široké veřejnosti bez nutno
 };
 
 export const gamejamProjects = [
+    besneni,
     untitledRoachGame,
     agentChaos,
-    besneni,
     kamerovaHra,
 ];

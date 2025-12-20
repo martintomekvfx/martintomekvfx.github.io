@@ -22,9 +22,29 @@ Site-specific vizuální partitury pro jeviště, galerie a výstavy využívaj�
 
 Technicky pracuji s autorskými GLSL shadery v prostředí Resolume, které umožňují přímou manipulaci s obrazem v GPU. Využívám také počítačové vidění a rozpoznávání objektů pomocí YOLO pro reaktivní vizuály reagující na dění před kamerou.
 
-Zvláštní zájem věnuji propojování analogového videa s digitální pipeline. Pracuji s CRT monitory, VHS technologií a video feedback loops, které vnášejí do digitálního obrazu organickou nepředvídatelnost a estetiku analogových médií.
+Zvláštní zájem věnuji propojování analogového videa s digitální pipeline. Pracuji s CRT monitory, VHS technologií a video feedback loops, které vnášejí do digitálního obrazu organickou nepředvídatelnost a estetiku analogových médií.`,
 
-V rámci své praxe se věnuji také vývoji vlastních open-source nástrojů, které rozšiřují možnosti živé vizuální performance.`,
+    // Events / Performances
+    events: [
+        {
+            title: 'AI Party',
+            description: 'Vizuály generované pomocí machine learning v reálném čase.',
+            image: '/projects/vjing/ai_party.jpg'
+        },
+        {
+            title: 'Future Party',
+            description: 'Projekce a live visuals pro klubovou akci.',
+            image: '/projects/vjing/future_party.jpg'
+        },
+        {
+            title: 'VJ Workshop',
+            description: 'Workshop live video performance pro začátečníky i pokročilé.',
+            images: [
+                '/projects/vjing/workshop_1.jpg',
+                '/projects/vjing/workshop_2.jpg'
+            ]
+        }
+    ],
 
     materials: [
         'Resolume Arena',
@@ -35,7 +55,12 @@ V rámci své praxe se věnuji také vývoji vlastních open-source nástrojů, 
     budget: 'N/A',
     timeline: '2023 až současnost',
 
-    image: '/projects/vjing.jpg',
-    images: [],
+    image: '/projects/vjing/ai_party.jpg',
+    images: [
+        '/projects/vjing/ai_party.jpg',
+        '/projects/vjing/future_party.jpg',
+        '/projects/vjing/workshop_1.jpg',
+        '/projects/vjing/workshop_2.jpg'
+    ],
     thumbs: [],
 };

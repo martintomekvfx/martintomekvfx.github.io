@@ -7,32 +7,24 @@ export default {
     subtitle: 'Guerilla Gardening',
     category: 'guerilla',
 
-    description: 'Guerillová výsadba 120 sazenic do zanedbaných betonových květináčů. Projekt zkoumající vztah lidí k veřejnému prostoru a fenomén selektivní slepoty.',
+    description: 'Talentový film postavený na guerillové výsadbě 120 slunečnic do zanedbaných betonových květináčů. Projekt zkoumající vztah lidí k prostoru skrze rozhovory s ulicí.',
 
     artist: 'Martin Tomek',
     status: 'done',
     year: '2025',
     location: '12 betonových záhonů, Palmovka, Praha 8',
 
-    details: ['120 sazenic', 'Recyklace', '12 lokalit', 'Antropologický výzkum', 'Komunitní dialog'],
+    details: ['Talentový film', 'Rozhovory s ulicí', '120 sazenic', 'Recyklace', 'Antropologický výzkum', 'Komunitní dialog'],
 
-    fullDescription: `Palmovka představuje oproti ostatním částem Prahy výrazně zanedbané území. Navzdory své geografické blízkosti k revitalizovaným čtvrtím jako Holešovice či Karlín působí jako zcela odlišný svět. Nachází se zde množství míst určených pro výsadbu květin či keřů, kde však roste pouze tráva, která po pravidelném sekání usychá.
+    fullDescription: `Projekt „Slunečnice na Palmovce“ vznikl jako můj talentový film pro přijímací řízení na katedru herního designu na FAMU. Celá intervence je zarámována jako pokus o navázání dialogu se zanedbaným veřejným prostorem Palmovky a jeho obyvateli – jde o doslovné i obrazné „rozhovory s ulicí“.
 
-Historické snímky z Google Street View dokumentují výrazně větší upravenost Palmovky v minulosti. Na místech, kde dnes nic neroste, se dříve nacházela vzrostlá zeleň. Je třeba připomenout, že celá Palmovka vznikla teprve v roce 1990 a jedná se tedy o relativně mladou lokalitu, která však za pouhých třicet let prošla významným úpadkem veřejné zeleně.
+Palmovka představuje v rámci Prahy specifický urbanistický uzel, který navzdory blízkosti k revitalizovaným čtvrtím působí jako zapomenutý svět. Historické snímky z Google Street View ukazují, že na místech, kde dnes rostou jen uschlá stébla v betonových prefabrikátech, bývala dříve vzrostlá zeleň. Úpadek veřejného prostoru je zde hmatatelný, a právě na tento stav projekt reaguje.
 
-V rámci tohoto projektu jsem předpěstoval přibližně 120 rostlin zahrnujících slunečnice, popínavé rostliny a další druhy z lučního setu kvítí. Cílem bylo vybrat české květiny, které nejsou invazivní a jsou přirozenou součástí zdejšího podnebí. Během předpěstování jsem sbíral odpadní materiál, především kelímky od kávy, které posloužily jako nádoby pro sazenice. Každá rostlina prošla jedním mezipřesazením pro posílení kořenového systému.
+Jádrem projektu bylo 120 sazenic slunečnic a popínavých rostlin, které jsem předpěstoval v recyklovaných nádobách. Samotná výsadba, provedená v oranžové vestě pro dodání zdání oficiality, nebyla jen manuální prací, ale performativním aktem. Právě během této práce vznikaly ty nejcennější momenty – momenty, kdy se ulice začala ptát.
 
-Výsadba proběhla ve spolupráci s kolegou Ondřejem Bočkem. Do vykopané díry jsme umístili kravské hnojivo překryté výsadbovou hlínou, což mělo rostlinám zajistit dostatek živin pro zakořenění. Práce probíhala za plného denního světla před zraky desítek kolemjdoucích. Na sobě jsem měl oranžovou vestu nalezenou u popelnic, která dodávala celé akci zdání oficiality.
+Klíčovým prvkem filmu jsou zaznamenané interakce. Rozhovory s kolemjdoucími odhalily fenomén selektivní slepoty; lidé květináče přestali vnímat, protože dlouho neplnily svůj účel. Přidáním rostlin a malých ochranných plůtků jsem do jejich vizuálního pole vložil „chybu“, která je donutila se zastavit. Dialogy se staršími obyvateli, kteří si pamatují Palmovka zelenější, potvrdily, že lidé si přejí změnu, ale cítí se v tomto prostoru opuštěni.
 
-Pro ochranu před sekáči jsme okolo sazenic instalovali malé plůtky vyrobené z desetimetrového zahradního plotu. Původně jsme uvažovali o cedulkách s logem Evropské unie, ale nakonec jsme od tohoto záměru ustoupili z obavy, že by to mohlo vyvolat negativní reakce u části obyvatel.
-
-Projekt odhalil dva typy interakcí s veřejným prostorem. Pasivní interakce měla negativní charakter. Při každé návštěvě jsem nalezl plůtky odpopknuté, zničené nebo zcela odcizené. Přesto jsem vše pokaždé opravil, zalil a odešel. Přítomnost těchto lidskou rukou vytvořených objektů paradoxně vyvolala silnější reakci než samotné rostliny a poukázala na to, že dané místo by mohlo něčemu sloužit.
-
-Aktivní interakce naopak přinášela pozitivní reakce. Při zalévání docházelo k rozhovorům s kolemjdoucími. Jeden z nich proběhl takto: Starší pán poznamenal, že jsem hodný, že to zalívám, ale pochybuje, zda to květina zvládne. Odpověděl jsem, že to nevím ani já sám. Podotkl, že lidé tam házejí hrozný nepořádek. Vysvětlil jsem, že právě proto jsem tam květinu zasadil. Po chvilce ticha a přemýšlení dodal, že jim to třeba dojde, že to nemají dělat. Tento moment byl z hlediska projektu velmi významný.
-
-Z původních 120 sazenic přežily pouze tři. Jedna z nich dosáhla úctyhodné výšky tří metrů a byla viditelná z celého okolí Palmovky. Výsledky potvrdily, že pouhá výsadba květin není dostačujícím řešením. Půda je příliš nekvalitní a rostliny potřebují silný kořenový systém. Pro skutečnou změnu by bylo nutné navézt novou hlínu a ideálně vysázet stromy, které by poskytly stín a vytvořily příjemnější prostředí pro obyvatele, zejména v letních měsících.
-
-Pro většinu obyvatel jsou tyto květináče zcela neviditelné. Jedná se o příklad selektivní slepoty, kdy lidé přestávají vnímat objekty, které dlouhodobě neslouží žádnému účelu. Přidáním plůtků jsem na místo umístil něco, co tam předtím nebylo, alespoň v očích ostatních. Projekt tak odhalil fascinující rozdíl mezi přímou a nepřímou interakcí a jejich vliv na emocionální reakce obyvatel.`,
+Ačkoli z původních 120 sazenic do léta přežily pouze tři (z nichž jedna dorostla do úctyhodných tří metrů), projekt splnil svůj hlavní účel. Jako talentový film neukazuje jen „pěknou zahradu“, ale schopnost pracovat s narativem, vést dialog s veřejností a využívat herní (guerillové) mechanismy k aktivaci prostoru. Je to teoretická sonda o emocionální reakci obyvatel, postavená na kontrastu mezi ničením plůtků a hlubokými rozhovory u zalévání květin.`,
 
     materials: [
         'Semena a sazenice slunečnic',
@@ -46,6 +38,7 @@ Pro většinu obyvatel jsou tyto květináče zcela neviditelné. Jedná se o p�
 
     // Dynamic gallery layout
     galleryLayout: 'mixed',
+    videoFirst: true,
 
     image: '/projects/slunecnice/IMG_4415_thumb.jpg',
     images: [
@@ -81,13 +74,22 @@ Pro většinu obyvatel jsou tyto květináče zcela neviditelné. Jedná se o p�
         '/projects/slunecnice/IMG_5011_thumb.jpg',
     ],
 
-    videoUrl: 'https://www.youtube.com/watch?v=AKgS2maI94k',
-    videoUrl2: 'https://www.youtube.com/watch?v=7WQ9C9qa8vk',
+    videos: [
+        {
+            url: 'https://www.youtube.com/watch?v=AKgS2maI94k',
+            description: 'Rozhovory s ulicí: Talentový film pro FAMU 2025. Retrospektivní shrnutí guerillových intervencí a komunikace s obyvateli Palmovky.'
+        },
+        {
+            url: 'https://www.youtube.com/watch?v=7WQ9C9qa8vk',
+            description: 'Uctění slunečnice 2025: Experimentální střih zachycující atmosféru a rituální charakter péče o rostliny v ulicích. Shot on iPod Nano.'
+        }
+    ],
 
     references: [
         'Henri Lefebvre — Právo na město',
         'David Harvey — Urban Commons',
         'Jane Jacobs — Oči na ulici',
-        'Antropologický výzkum Palmovky IPR Praha'
+        'Antropologický výzkum Palmovky IPR Praha',
+        'Talentové zkoušky FAMU - Katedra herního designu'
     ],
 };
