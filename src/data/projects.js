@@ -1,210 +1,5 @@
-// Project data - organized by medium: analog, digital, guerilla
-// All projects from Martin Tomek's portfolio
-
-export const analogProjects = [
-  {
-    id: 'sticker-art',
-    title: 'Sticker Art',
-    subtitle: 'Participativní linoryt',
-    category: 'analog',
-    description: 'Participativní sticker art z linorytu, který se šíří městem rukama diváků.',
-    artist: 'Martin Tomek',
-    status: 'done',
-    year: '2024-2025',
-    location: 'Veřejný prostor, Anifilm, Prasení',
-    details: ['Linoryt', 'Sticker art', 'Happening', 'Site-specific'],
-    fullDescription: `Participativní sticker art z linorytu, který se šíří městem rukama diváků a vrcholí videem pro otevřenou projekci „Prasení" — hybrid happeningu, site-specific a videa.
-
-Projekt rozšiřuje linoryt do roviny post-graffiti sticker artu a pracuje s participací publika. Autorské motivy digitalizuji, tisknu jako samolepky a uvádím do oběhu ve veřejném prostoru i na festivalu Anifilm.
-
-Společenskou distribuci završuje video-sestřih z motivů stickerek uvedený v otevřené projekci „Prasení". Výsledkem je hybrid mezi happeningem, site-specific intervencí a videem.
-
-Média: linoryt (matrice), samolepky (sticker art), video (projekce)
-Formát: happening / site-specific / participativní distribuce
-Kontext uvedení: veřejný prostor; Anifilm; otevřená projekce „Prasení"
-Role autora: koncept, tisk, distribuce, kamera, střih, projekce`,
-    materials: ['Linoryt matrice', 'Samolepky', 'Video projekce'],
-    budget: '~1000 Kč',
-    timeline: '2024-2025',
-    image: '/projects/sticker-art.jpg',
-    images: [],
-    thumbs: [],
-    videoUrl: '',
-  },
-  {
-    id: 'betonove-banany',
-    title: 'Betonové banány',
-    subtitle: 'Lavičky / Mobiliář',
-    category: 'analog',
-    description: 'Série betonových laviček ve tvaru banánů. Funkční urbánní mobiliář s hravým designem inspirovaný "Tropical Palmbeach".',
-    artist: 'Martin Tomek',
-    status: 'planned',
-    year: '2026',
-    location: 'Křižovatka před KB, Palmovka',
-    details: ['Recyklovaný beton', 'Veřejné sedání', 'Tropical Palmbeach'],
-    fullDescription: `Koncept: Tropical Palmbeach
-
-Projekt vychází z lokální identity Palmovky. Podle antropologické zprávy místní obyvatelé říkají této čtvrti "Tropical Palmbeach" - inspirováno graffiti, které zde dříve bylo.
-
-Série betonových laviček ve tvaru banánů jako funkční urbánní mobiliář. Každá lavička bude mít personalizovanou "etiketu" s názvem Palmovka, připomínající banánové etikety z obchodu.`,
-    materials: ['Rychletuhnoucí beton', 'Forma na odlévání', 'Pletivo pro výztuž', 'Nátěr/barva'],
-    budget: '~3000 Kč',
-    timeline: 'Zima 2025 → Léto 2026',
-    image: '/projects/betonove-banany.jpg',
-    images: [],
-    thumbs: [],
-  },
-  {
-    id: 'hlasovaci-popelniky',
-    title: 'Hlasovací popelníky',
-    subtitle: 'Interaktivní mobiliář',
-    category: 'analog',
-    description: 'Experiment s veřejným zapojením skrze herní mechanismus "hlasování nedopalky"',
-    artist: 'Martin Tomek, Tomáš Koníček',
-    status: 'planned',
-    year: '2026',
-    location: 'Palmovka, Praha',
-    details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
-    fullDescription: `Pozorování a problém: Cigaretové nedopalky jsou jedním z nejběžnějších odpadků na ulici. Mnoho lidí ani nevnímá nedopalky jako odpad – odhodit ho na zem je pro ně normální.
-
-Koncept hlasovacího popelníku: Popelník rozdělený na dvě přihrádky s otázkou, na kterou kuřák "hlasuje" tím, že vhodí nedopalek do jedné či druhé části.
-
-Příklad: "Je lepší káva, nebo čaj?" – jedna strana "káva", druhá "čaj"; lidé házejí špačky podle svého názoru.
-
-Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, a zároveň je to anketa.`,
-    materials: ['Dřevo/kov pro konstrukci', 'Průhledný plexisklo', 'Popisky/otázky', 'Montážní materiál'],
-    budget: '~1500 Kč',
-    timeline: 'Zima 2025 → Jaro 2026',
-    image: '/projects/hlasovaci-popelnik/design_thumb.jpg',
-    images: ['/projects/hlasovaci-popelnik/design.jpeg'],
-    thumbs: ['/projects/hlasovaci-popelnik/design_thumb.jpg'],
-  },
-];
-
-export const digitalProjects = [
-  {
-    id: 'vjing',
-    title: 'VJing',
-    subtitle: 'Live Video Performance',
-    category: 'digital',
-    description: 'Dva roky kontinuální praxe na 30+ klubových, festivalových a galerijních scénách.',
-    artist: 'Martin Tomek',
-    status: 'in-progress',
-    year: '2023-2025',
-    location: 'Prague clubs, galleries, festivals',
-    details: ['Live cinema', 'Videoperformance', 'GLSL', 'Computer Vision'],
-    fullDescription: `Dva roky kontinuální praxe na klubových, festivalových a galerijních scénách — více než 30 shows.
-
-Tvorba spadá do oblasti živého videa na pomezí intermediální performance, videoperformance, live cinema a VJingu.
-
-Site-specific vizuální partitury pro jeviště, galerie a výstavy využívají interaktivní systémy převádějící pohyb a zvuk na obraz v reálném čase.
-
-Součástí praxe je vývoj autorských open-source nástrojů (GLSL ResolumeFX, CV/YOLO ComputerVision) a propojování analogového videa s digitální pipeline.
-
-Důraz je kladen na performativní charakter, improvizaci a zapojení publika do kompozice výsledného obrazu.`,
-    materials: ['Resolume', 'GLSL shaders', 'Computer Vision', 'Analog video'],
-    budget: 'N/A',
-    timeline: '2023-present',
-    image: '/projects/vjing.jpg',
-    images: [],
-    thumbs: [],
-  },
-  {
-    id: 'anijam',
-    title: 'AniJam',
-    subtitle: 'Collaborative Animation',
-    category: 'digital',
-    description: 'Kolaborativní animovaný film vytvořený ve spolupráci s dalšími animátory.',
-    artist: 'Martin Tomek + collective',
-    status: 'done',
-    year: '2024',
-    location: 'Anifilm Festival',
-    details: ['Animation', 'Collaboration', 'Festival screening'],
-    fullDescription: `AniJam je kolaborativní animovaný projekt, kde každý účastník přispívá svou unikátní sekvencí.
-
-Projekt byl představen na festivalu Anifilm a demonstruje sílu kolektivní tvorby v animaci.`,
-    materials: ['Animace', 'Video editing'],
-    budget: 'N/A',
-    timeline: '2024',
-    image: '/projects/anijam.jpg',
-    images: [],
-    thumbs: [],
-    videoUrl: '',
-  },
-  {
-    id: 'game-jams',
-    title: 'Game Jams',
-    subtitle: 'Game Development',
-    category: 'digital',
-    description: 'Účast na game jamech s důrazem na animaci a vizuální styl.',
-    artist: 'Martin Tomek',
-    status: 'done',
-    year: '2024',
-    location: 'Ludum Dare, FAMU Game Jam',
-    details: ['Animation', 'Visual design', 'Technical direction'],
-    fullDescription: `Untitled Roach Game — Ludum Dare 54
-Dvoučlenný tým. Kompletní animace a vizuální styl.
-
-Agent Chaos — FAMU Game Jam
-Technický ředitel a animace.
-
-Obě hry demonstrují spojení animačních dovedností s game designem a technickou realizací.`,
-    materials: ['Unity/Godot', 'Animation', 'Game design'],
-    budget: 'N/A',
-    timeline: '2024',
-    image: '/projects/game-jams.jpg',
-    images: [],
-    thumbs: [],
-  },
-  {
-    id: 'kamerova-hra',
-    title: 'Interaktivní kamerová hra',
-    subtitle: 'Game Design x Veřejný prostor',
-    category: 'digital',
-    description: 'Spolupráce s game designem na vytvoření interaktivní hry s kamerou. Témata: internetová bezpečnost a veřejný prostor.',
-    artist: 'Martin Tomek, Michal Tancjura',
-    status: 'planned',
-    year: '2026',
-    location: 'Palmovka',
-    details: ['Computer vision', 'Interaktivní instalace', 'Edukace hrou'],
-    fullDescription: `Mezioborová spolupráce s Katedrou herního designu FAMU na vytvoření interaktivní hry využívající kameru a computer vision.
-
-Hra bude instalována ve veřejném prostoru a zaměří se na témata jako internetová bezpečnost, soukromí ve veřejném prostoru, nebo sledování a datová stopa.
-
-Herní mechaniky pomohou lidem zážitkově pochopit digitální témata v offline prostředí.`,
-    materials: ['Webkamera/tablet', 'Display/projekce', 'Počítač', 'Software'],
-    budget: '~5000 Kč',
-    timeline: '2-3 měsíce',
-    image: '/projects/kamerova-hra.jpg',
-    images: [],
-    thumbs: [],
-  },
-  {
-    id: 'street-art-ctf',
-    title: 'Street Art CTF',
-    subtitle: 'AR Game',
-    category: 'digital',
-    description: 'Interaktivní AR hra pro objevování street artu v reálném prostoru.',
-    artist: 'Martin Tomek',
-    status: 'in-progress',
-    year: '2025',
-    location: 'Praha',
-    details: ['Augmented Reality', 'Street Art', 'Team Game'],
-    fullDescription: `Street Art CTF je interaktivní AR hra, která spojuje svět street artu s herními mechanikami Capture The Flag.
-
-Hráči prozkoumávají reálné městské prostředí a pomocí AR technologie objevují umělecká díla, sbírají body a soupeří v týmech.
-
-Hra podporuje objevování street artu v místech, kam by se běžný návštěvník nedostal.`,
-    materials: ['Web app', 'AR technologie', 'GPS'],
-    budget: 'N/A',
-    timeline: '2025',
-    image: '/projects/street-art-ctf.jpg',
-    images: [],
-    thumbs: [],
-    externalUrl: 'http://localhost:5173',
-    isAR: true,
-  },
-];
+// Project data - organized by medium
+// Order: Guerilla → Analog → Digital → Photography → Collective
 
 export const guerillaProjects = [
   {
@@ -330,6 +125,31 @@ Tak vznikla malá venkovní galerie: obrazy v ulici, které denně míjely desí
     ],
   },
   {
+    id: 'street-art-ctf',
+    title: 'Street Art CTF',
+    subtitle: 'AR Game',
+    category: 'guerilla',
+    description: 'Interaktivní AR hra pro objevování street artu v reálném prostoru.',
+    artist: 'Martin Tomek',
+    status: 'in-progress',
+    year: '2025',
+    location: 'Praha',
+    details: ['Augmented Reality', 'Street Art', 'Team Game'],
+    fullDescription: `Street Art CTF je interaktivní AR hra, která spojuje svět street artu s herními mechanikami Capture The Flag.
+
+Hráči prozkoumávají reálné městské prostředí a pomocí AR technologie objevují umělecká díla, sbírají body a soupeří v týmech.
+
+Hra podporuje objevování street artu v místech, kam by se běžný návštěvník nedostal.`,
+    materials: ['Web app', 'AR technologie', 'GPS'],
+    budget: 'N/A',
+    timeline: '2025',
+    image: '/projects/street-art-ctf.jpg',
+    images: [],
+    thumbs: [],
+    externalUrl: 'http://localhost:5173',
+    isAR: true,
+  },
+  {
     id: 'parklety',
     title: 'Parklety',
     subtitle: 'Tactical Urbanism',
@@ -384,7 +204,202 @@ Trojí motivace:
   },
 ];
 
-export const allProjects = [...analogProjects, ...digitalProjects, ...guerillaProjects];
+export const analogProjects = [
+  {
+    id: 'vjing',
+    title: 'VJing',
+    subtitle: 'Live Video Performance',
+    category: 'analog',
+    description: 'Dva roky kontinuální praxe na 30+ klubových, festivalových a galerijních scénách.',
+    artist: 'Martin Tomek',
+    status: 'in-progress',
+    year: '2023-2025',
+    location: 'Prague clubs, galleries, festivals',
+    details: ['Live cinema', 'Videoperformance', 'GLSL', 'Computer Vision'],
+    fullDescription: `Dva roky kontinuální praxe na klubových, festivalových a galerijních scénách — více než 30 shows.
+
+Tvorba spadá do oblasti živého videa na pomezí intermediální performance, videoperformance, live cinema a VJingu.
+
+Site-specific vizuální partitury pro jeviště, galerie a výstavy využívají interaktivní systémy převádějící pohyb a zvuk na obraz v reálném čase.
+
+Součástí praxe je vývoj autorských open-source nástrojů (GLSL ResolumeFX, CV/YOLO ComputerVision) a propojování analogového videa s digitální pipeline.
+
+Důraz je kladen na performativní charakter, improvizaci a zapojení publika do kompozice výsledného obrazu.`,
+    materials: ['Resolume', 'GLSL shaders', 'Computer Vision', 'Analog video'],
+    budget: 'N/A',
+    timeline: '2023-present',
+    image: '/projects/vjing.jpg',
+    images: [],
+    thumbs: [],
+  },
+  {
+    id: 'sticker-art',
+    title: 'Sticker Art',
+    subtitle: 'Participativní linoryt',
+    category: 'analog',
+    description: 'Participativní sticker art z linorytu, který se šíří městem rukama diváků.',
+    artist: 'Martin Tomek',
+    status: 'done',
+    year: '2024-2025',
+    location: 'Veřejný prostor, Anifilm, Prasení',
+    details: ['Linoryt', 'Sticker art', 'Happening', 'Site-specific'],
+    fullDescription: `Participativní sticker art z linorytu, který se šíří městem rukama diváků a vrcholí videem pro otevřenou projekci „Prasení" — hybrid happeningu, site-specific a videa.
+
+Projekt rozšiřuje linoryt do roviny post-graffiti sticker artu a pracuje s participací publika. Autorské motivy digitalizuji, tisknu jako samolepky a uvádím do oběhu ve veřejném prostoru i na festivalu Anifilm.
+
+Společenskou distribuci završuje video-sestřih z motivů stickerek uvedený v otevřené projekci „Prasení". Výsledkem je hybrid mezi happeningem, site-specific intervencí a videem.
+
+Média: linoryt (matrice), samolepky (sticker art), video (projekce)
+Formát: happening / site-specific / participativní distribuce
+Kontext uvedení: veřejný prostor; Anifilm; otevřená projekce „Prasení"
+Role autora: koncept, tisk, distribuce, kamera, střih, projekce`,
+    materials: ['Linoryt matrice', 'Samolepky', 'Video projekce'],
+    budget: '~1000 Kč',
+    timeline: '2024-2025',
+    image: '/projects/sticker-art.jpg',
+    images: [],
+    thumbs: [],
+    videoUrl: '',
+  },
+  {
+    id: 'betonove-banany',
+    title: 'Betonové banány',
+    subtitle: 'Lavičky / Mobiliář',
+    category: 'analog',
+    description: 'Série betonových laviček ve tvaru banánů. Funkční urbánní mobiliář s hravým designem inspirovaný "Tropical Palmbeach".',
+    artist: 'Martin Tomek',
+    status: 'planned',
+    year: '2026',
+    location: 'Křižovatka před KB, Palmovka',
+    details: ['Recyklovaný beton', 'Veřejné sedání', 'Tropical Palmbeach'],
+    fullDescription: `Koncept: Tropical Palmbeach
+
+Projekt vychází z lokální identity Palmovky. Podle antropologické zprávy místní obyvatelé říkají této čtvrti "Tropical Palmbeach" - inspirováno graffiti, které zde dříve bylo.
+
+Série betonových laviček ve tvaru banánů jako funkční urbánní mobiliář. Každá lavička bude mít personalizovanou "etiketu" s názvem Palmovka, připomínající banánové etikety z obchodu.`,
+    materials: ['Rychletuhnoucí beton', 'Forma na odlévání', 'Pletivo pro výztuž', 'Nátěr/barva'],
+    budget: '~3000 Kč',
+    timeline: 'Zima 2025 → Léto 2026',
+    image: '/projects/betonove-banany.jpg',
+    images: [],
+    thumbs: [],
+  },
+  {
+    id: 'hlasovaci-popelniky',
+    title: 'Hlasovací popelníky',
+    subtitle: 'Interaktivní mobiliář',
+    category: 'analog',
+    description: 'Experiment s veřejným zapojením skrze herní mechanismus "hlasování nedopalky"',
+    artist: 'Martin Tomek, Tomáš Koníček',
+    status: 'planned',
+    year: '2026',
+    location: 'Palmovka, Praha',
+    details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
+    fullDescription: `Pozorování a problém: Cigaretové nedopalky jsou jedním z nejběžnějších odpadků na ulici. Mnoho lidí ani nevnímá nedopalky jako odpad – odhodit ho na zem je pro ně normální.
+
+Koncept hlasovacího popelníku: Popelník rozdělený na dvě přihrádky s otázkou, na kterou kuřák "hlasuje" tím, že vhodí nedopalek do jedné či druhé části.
+
+Příklad: "Je lepší káva, nebo čaj?" – jedna strana "káva", druhá "čaj"; lidé házejí špačky podle svého názoru.
+
+Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, a zároveň je to anketa.`,
+    materials: ['Dřevo/kov pro konstrukci', 'Průhledný plexisklo', 'Popisky/otázky', 'Montážní materiál'],
+    budget: '~1500 Kč',
+    timeline: 'Zima 2025 → Jaro 2026',
+    image: '/projects/hlasovaci-popelnik/design_thumb.jpg',
+    images: ['/projects/hlasovaci-popelnik/design.jpeg'],
+    thumbs: ['/projects/hlasovaci-popelnik/design_thumb.jpg'],
+  },
+];
+
+export const digitalProjects = [
+  {
+    id: 'game-jams',
+    title: 'Game Jams',
+    subtitle: 'Game Development',
+    category: 'digital',
+    description: 'Účast na game jamech s důrazem na animaci a vizuální styl.',
+    artist: 'Martin Tomek',
+    status: 'done',
+    year: '2024',
+    location: 'Ludum Dare, FAMU Game Jam',
+    details: ['Animation', 'Visual design', 'Technical direction'],
+    fullDescription: `Untitled Roach Game — Ludum Dare 54
+Dvoučlenný tým. Kompletní animace a vizuální styl.
+
+Agent Chaos — FAMU Game Jam
+Technický ředitel a animace.
+
+Obě hry demonstrují spojení animačních dovedností s game designem a technickou realizací.`,
+    materials: ['Unity/Godot', 'Animation', 'Game design'],
+    budget: 'N/A',
+    timeline: '2024',
+    image: '/projects/game-jams.jpg',
+    images: [],
+    thumbs: [],
+  },
+  {
+    id: 'kamerova-hra',
+    title: 'Interaktivní kamerová hra',
+    subtitle: 'Game Design x Veřejný prostor',
+    category: 'digital',
+    description: 'Spolupráce s game designem na vytvoření interaktivní hry s kamerou. Témata: internetová bezpečnost a veřejný prostor.',
+    artist: 'Martin Tomek, Michal Tancjura',
+    status: 'planned',
+    year: '2026',
+    location: 'Palmovka',
+    details: ['Computer vision', 'Interaktivní instalace', 'Edukace hrou'],
+    fullDescription: `Mezioborová spolupráce s Katedrou herního designu FAMU na vytvoření interaktivní hry využívající kameru a computer vision.
+
+Hra bude instalována ve veřejném prostoru a zaměří se na témata jako internetová bezpečnost, soukromí ve veřejném prostoru, nebo sledování a datová stopa.
+
+Herní mechaniky pomohou lidem zážitkově pochopit digitální témata v offline prostředí.`,
+    materials: ['Webkamera/tablet', 'Display/projekce', 'Počítač', 'Software'],
+    budget: '~5000 Kč',
+    timeline: '2-3 měsíce',
+    image: '/projects/kamerova-hra.jpg',
+    images: [],
+    thumbs: [],
+  },
+];
+
+export const photographyProjects = [
+  // TODO: Add analog photography projects
+  // Placeholder for FAMU analog films
+];
+
+export const collectiveProjects = [
+  {
+    id: 'anijam',
+    title: 'AniJam',
+    subtitle: 'Collaborative Animation',
+    category: 'collective',
+    description: 'Kolaborativní animovaný film vytvořený ve spolupráci s dalšími animátory.',
+    artist: 'Martin Tomek + collective',
+    status: 'done',
+    year: '2024',
+    location: 'Anifilm Festival',
+    details: ['Animation', 'Collaboration', 'Festival screening'],
+    fullDescription: `AniJam je kolaborativní animovaný projekt, kde každý účastník přispívá svou unikátní sekvencí.
+
+Projekt byl představen na festivalu Anifilm a demonstruje sílu kolektivní tvorby v animaci.`,
+    materials: ['Animace', 'Video editing'],
+    budget: 'N/A',
+    timeline: '2024',
+    image: '/projects/anijam.jpg',
+    images: [],
+    thumbs: [],
+    videoUrl: '',
+  },
+  // TODO: Add FAMU analog films here
+];
+
+export const allProjects = [
+  ...guerillaProjects,
+  ...analogProjects,
+  ...digitalProjects,
+  ...photographyProjects,
+  ...collectiveProjects,
+];
 
 export const getProjectById = (id) => {
   return allProjects.find(project => project.id === id);
@@ -396,7 +411,9 @@ export const getProjectsByCategory = (category) => {
 
 // Category labels for display
 export const categoryLabels = {
+  guerilla: 'Guerilla',
   analog: 'Analog',
   digital: 'Digital',
-  guerilla: 'Guerilla',
+  photography: 'Photography',
+  collective: 'Collective',
 };

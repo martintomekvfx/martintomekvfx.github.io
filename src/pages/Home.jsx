@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { analogProjects, digitalProjects, guerillaProjects, categoryLabels } from '../data/projects';
+import {
+    guerillaProjects,
+    analogProjects,
+    digitalProjects,
+    photographyProjects,
+    collectiveProjects
+} from '../data/projects';
 
 function Home() {
     // Filter out planned projects - only show done or in-progress
@@ -8,9 +14,11 @@ function Home() {
         p.status === 'done' || p.status === 'in-progress'
     );
 
+    const activeGuerilla = filterActive(guerillaProjects);
     const activeAnalog = filterActive(analogProjects);
     const activeDigital = filterActive(digitalProjects);
-    const activeGuerilla = filterActive(guerillaProjects);
+    const activePhotography = filterActive(photographyProjects);
+    const activeCollective = filterActive(collectiveProjects);
 
     const CategorySection = ({ title, projects }) => (
         projects.length > 0 && (
@@ -90,7 +98,7 @@ function Home() {
                 </motion.div>
             </section>
 
-            {/* About Section - NOW FIRST */}
+            {/* About Section */}
             <section id="about" className="section inverted">
                 <div className="container">
                     <motion.h2
@@ -173,7 +181,7 @@ function Home() {
                 </div>
             </section>
 
-            {/* Work Section - NOW SECOND */}
+            {/* Work Section */}
             <section id="work" className="section">
                 <div className="container">
                     <motion.h2
@@ -186,9 +194,11 @@ function Home() {
                         WORK
                     </motion.h2>
 
+                    <CategorySection title="GUERILLA" projects={activeGuerilla} />
                     <CategorySection title="ANALOG" projects={activeAnalog} />
                     <CategorySection title="DIGITAL" projects={activeDigital} />
-                    <CategorySection title="GUERILLA" projects={activeGuerilla} />
+                    <CategorySection title="PHOTOGRAPHY" projects={activePhotography} />
+                    <CategorySection title="COLLECTIVE" projects={activeCollective} />
                 </div>
             </section>
         </div>
