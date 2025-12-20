@@ -85,6 +85,48 @@ function Project() {
                 </motion.div>
             </section>
 
+            {/* Itch.io Embed */}
+            {project.itchEmbed && (
+                <section className="project-game-embed">
+                    <iframe
+                        src={project.itchEmbed}
+                        width="100%"
+                        height="620"
+                        frameBorder="0"
+                        allowFullScreen
+                        title={`${project.title} - Play Game`}
+                    />
+                    {project.externalUrl && (
+                        <p style={{ textAlign: 'center', marginTop: 'var(--space-md)', opacity: 0.7 }}>
+                            <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
+                                🎮 Otevřít na itch.io →
+                            </a>
+                        </p>
+                    )}
+                </section>
+            )}
+
+            {/* External Link (for non-embedded games) */}
+            {project.externalUrl && !project.itchEmbed && (
+                <section style={{ textAlign: 'center', padding: 'var(--space-lg)' }}>
+                    <a
+                        href={project.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            display: 'inline-block',
+                            padding: 'var(--space-md) var(--space-xl)',
+                            background: 'var(--color-text)',
+                            color: 'var(--color-bg)',
+                            textDecoration: 'none',
+                            fontWeight: 'bold'
+                        }}
+                    >
+                        🎮 Hrát na itch.io →
+                    </a>
+                </section>
+            )}
+
             {/* Video */}
             {project.videoUrl && (
                 <section className="project-video">

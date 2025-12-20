@@ -360,7 +360,7 @@ export const gamejamProjects = [
     id: 'untitled-roach-game',
     title: 'Untitled Roach Game',
     subtitle: 'Ludum Dare 54',
-    category: 'games',
+    category: 'gamejam',
     description: 'Game jam hra s důrazem na animaci a vizuální styl. Dvoučlenný tým.',
     artist: 'Martin Tomek + tým',
     status: 'done',
@@ -373,43 +373,50 @@ Dvoučlenný tým. Kompletní animace a vizuální styl.
 
 Hra vznikla během 48hodinového game jamu Ludum Dare, kde je téma odhaleno na začátku a týmy mají omezený čas na vytvoření kompletní hry.
 
-Role: Animace, vizuální styl, art direction.`,
+Role: Animace, vizuální styl, art direction.
+
+🎮 Hraj na itch.io`,
     materials: ['Godot', 'Animation', 'Game design'],
     budget: 'N/A',
     timeline: '48 hodin',
     image: '/projects/roach-game.jpg',
     images: [],
     thumbs: [],
+    videoUrl: 'https://www.youtube.com/watch?v=FdrGPoGjr8A',
+    externalUrl: 'https://jamiiethetrashman.itch.io/untitled-roach-game',
   },
   {
-    id: 'profesor-chaos',
-    title: 'Profesor Chaos',
+    id: 'agent-chaos',
+    title: 'Agent Chaos',
     subtitle: 'FAMU Game Jam',
-    category: 'games',
+    category: 'gamejam',
     description: 'Game jam hra vytvořená na FAMU. Technický ředitel a animace.',
     artist: 'Martin Tomek + tým',
     status: 'done',
     year: '2024',
     location: 'FAMU Game Jam',
     details: ['Technical direction', 'Animation', 'Team collaboration'],
-    fullDescription: `Profesor Chaos — FAMU Game Jam
+    fullDescription: `Agent Chaos — FAMU Game Jam
 
 Technický ředitel a animace.
 
-Mezioborová spolupráce studentů FAMU na vytvoření hry během game jamu. Projekt demonstruje spojení animačních dovedností s game designem a technickou realizací.`,
+Mezioborová spolupráce studentů FAMU na vytvoření hry během game jamu. Projekt demonstruje spojení animačních dovedností s game designem a technickou realizací.
+
+🎮 Hraj na itch.io`,
     materials: ['Unity', 'Animation', 'Game design'],
     budget: 'N/A',
     timeline: '2024',
-    image: '/projects/profesor-chaos.jpg',
+    image: '/projects/agent-chaos.jpg',
     images: [],
     thumbs: [],
+    externalUrl: 'https://jamiiethetrashman.itch.io/agentchaos',
   },
   {
     id: 'besneni',
     title: 'Běsnění',
     subtitle: 'Experimentální hra',
-    category: 'games',
-    description: 'Experimentální herní projekt.',
+    category: 'gamejam',
+    description: 'Experimentální herní projekt zkoumající hranice mezi hrou a interaktivním uměním.',
     artist: 'Martin Tomek',
     status: 'done',
     year: '2024',
@@ -417,19 +424,23 @@ Mezioborová spolupráce studentů FAMU na vytvoření hry během game jamu. Pro
     details: ['Experimental', 'Animation', 'Narrative'],
     fullDescription: `Běsnění — experimentální herní projekt.
 
-Projekt zkoumá hranice mezi hrou a interaktivním uměním.`,
+Projekt zkoumá hranice mezi hrou a interaktivním uměním.
+
+🎮 Hraj přímo zde nebo na itch.io`,
     materials: ['Game engine', 'Animation', 'Sound design'],
     budget: 'N/A',
     timeline: '2024',
     image: '/projects/besneni.jpg',
     images: [],
     thumbs: [],
+    externalUrl: 'https://jamiiethetrashman.itch.io/besneni',
+    itchEmbed: 'https://itch.io/embed-upload/12207206?color=333333',
   },
   {
     id: 'kamerova-hra',
     title: 'Interaktivní kamerová hra',
     subtitle: 'Game Design x Veřejný prostor',
-    category: 'games',
+    category: 'gamejam',
     description: 'Spolupráce s game designem na vytvoření interaktivní hry s kamerou. Témata: internetová bezpečnost a veřejný prostor.',
     artist: 'Martin Tomek, Michal Tancjura',
     status: 'planned',
@@ -472,6 +483,50 @@ Projekt byl představen na festivalu Anifilm a demonstruje sílu kolektivní tvo
     images: [],
     thumbs: [],
     videoUrl: '',
+  },
+  {
+    id: 'flatprint',
+    title: 'Flatprint',
+    subtitle: 'Kolektivní tisk',
+    category: 'collective',
+    description: 'Kolektivní projekt zaměřený na experimentální tiskové techniky.',
+    artist: 'Martin Tomek + collective',
+    status: 'done',
+    year: '2024',
+    location: 'Praha',
+    details: ['Print', 'Collaboration', 'Experimental'],
+    fullDescription: `Flatprint — kolektivní projekt zaměřený na experimentální tiskové techniky.
+
+Spolupráce více umělců na vytváření unikátních tisků kombinujících různé techniky a přístupy.`,
+    materials: ['Tiskové techniky', 'Papír', 'Barvy'],
+    budget: 'N/A',
+    timeline: '2024',
+    image: '/projects/flatprint.jpg',
+    images: [],
+    thumbs: [],
+  },
+  {
+    id: 'bolex-module',
+    title: 'Bolex Module',
+    subtitle: 'Analog Film Collective',
+    category: 'collective',
+    description: 'Kolektivní projekt pracující s analogovým filmem na kamerách Bolex.',
+    artist: 'Martin Tomek + collective',
+    status: 'done',
+    year: '2024',
+    location: 'FAMU',
+    details: ['16mm film', 'Bolex', 'Analog', 'Collaboration'],
+    fullDescription: `Bolex Module — kolektivní projekt pracující s analogovým filmem.
+
+Skupina filmařů pracujících na 16mm kamerách Bolex, sdílející techniky, materiál a zkušenosti s analogovým filmem.
+
+Projekt podporuje návrat k analogovým metodám a sdílení znalostí o práci s filmem.`,
+    materials: ['Bolex kamera', '16mm film', 'Analog processing'],
+    budget: 'N/A',
+    timeline: '2024',
+    image: '/projects/bolex-module.jpg',
+    images: [],
+    thumbs: [],
   },
 ];
 
