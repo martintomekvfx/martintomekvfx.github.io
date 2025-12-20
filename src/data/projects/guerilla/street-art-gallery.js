@@ -7,37 +7,68 @@ export default {
   subtitle: 'Obrazy v ulicích',
   category: 'guerilla',
 
-  description: 'Pouliční galerie využívající prázdné plochy města jako výstavní prostor. Kritika vizuálního smogu a komercionalizace veřejného prostoru.',
+  description: 'Město jako galerie. Různé techniky guerilla artu od paste-upů přes kresby až po stickery.',
 
-  artist: 'Ptáček + další umělci',
+  artist: 'Ptáček + kolektiv',
   status: 'in-progress',
   year: '2024-2025',
   location: 'Palmovka, Kolbenka, Anifilm Třeboň',
 
-  details: ['Paste-upy', 'Sticker bombing', 'Linoryt', 'Opuštěné vývěsky', 'Kolektivní tvorba'],
+  details: ['Paste-upy', 'Instalace', 'Kresby', 'Stickery', 'Spray art'],
 
-  fullDescription: `Projekt vychází z premisy, že město samo o sobě představuje galerii a jeho ulice jsou výstavními stěnami. Tento přístup reaguje na množství opuštěných informačních prostor, které ztratily původní účel. Jedná se o tabule, cedule a informační místa pro náhradní autobusovou dopravu, kde vznikly pouze prázdné rámy bez jakéhokoli obsahu.
+  // Custom layout flag
+  customLayout: 'street-art',
 
-Příkladem je situace u autobusových zastávek, kde náhradní doprava již není potřeba. Místo, které dříve sloužilo informování cestujících, zaniklo a zůstal jen prázdný rám. Kolem něj přitom každý den projde značné množství lidí. Snažil jsem se těmto prostorům vrátit druhý dech vytištěním grafických prací, vlastních i od přátel, a jejich vylepením na tato nevyužitá místa.
+  fullDescription: `Projekt vychází z premisy, že město samo o sobě představuje galerii a jeho ulice jsou výstavními stěnami. Pracuji s množstvím opuštěných informačních prostor, které ztratily původní účel.
 
-Záměrně jsem chtěl využít umění svých známých i kohokoliv dalšího, kdo by se chtěl připojit, aby práce nemusely procházet tradičním kurátorským výběrem. Přesto si uvědomuji, že kurátorem jsem nakonec do jisté míry já sám.
+Záměrně využívám umění svých přátel i kohokoliv, kdo se chce připojit. Ulice je všech. Práce nemusí procházet tradičním kurátorským výběrem, protože veřejný prostor patří každému.
 
-Zajímavou okolností je blízkost těchto intervencí ke Galerii Pragovka. Vzniká tak implicitní srovnání mezi oficiálním galerijním prostorem a pouliční galerií. Zajímalo by mě, jaká je denní návštěvnost zmíněné galerie ve srovnání s počtem lidí, kteří míjejí tyto obrazy v ulicích.
+Zajímavou okolností je blízkost mnoha intervencí ke Galerii Pragovka. Vzniká tak implicitní srovnání mezi oficiálním galerijním prostorem a pouliční galerií.`,
 
-Z této úvahy vychází širší vize proměny celé hlavní silnice v galerii. Na každém sloupu by mohl být obraz, který by kolemjdoucím poskytl alternativu k nekončící asfaltové ploše a reklamnímu smogu v podobě billboardů určených primárně řidičům automobilů. Prostor by tak získal rozměr pro pěší, kteří jsou dosud odkázáni pouze na chodníky.
-
-Projekt rovněž kriticky zkoumá vztah mezi uměním a reklamou ve veřejném prostoru. Jeden obraz jsem umístil na místo, kde se nacházela nelegální reklama a staré značení. Když jsem se druhý den vrátil, nezbylo tam nic. Jiný pokus proběhl na reklamním sloupu, kde jsem nalepil obraz tak, aby nepřekrýval existující reklamu. Za dva dny bylo vše odstraněno. Kdyby však stejný obraz visel na zdi hned vedle, plné špíny a graffiti, nikdo by to neřešil. Jakmile jde o prostor spojený s reklamou a potenciálním generováním zisku, reakce přichází okamžitě.
-
-Tento nepoměr poukazuje na fenomén, který nazývám Art Block. Obyvatelé měst si vytrénovali oči, aby určité podněty nevnímali. Nerozlišují pak už mezi reklamou a uměním. Vizuálního šumu je příliš mnoho, a to jak z fyzického, tak digitálního světa. Lidé se naučili nevidět, protože vidět nechtějí nebo nemohou.
-
-V digitálním světě máme možnost volby, zda zaplatíme za prémiový obsah bez reklam, nebo si nainstalujeme blokátor reklam. V analogovém veřejném prostoru však tato možnost neexistuje. Jsme vystaveni reklamě bez jakékoli možnosti ji odfiltrovat. Paradoxně je tato invaze do osobního prostoru obecně tolerována, zatímco guerillové umění vyvolává diskuse o vlastnictví a legálnosti.`,
+  // Subcategories for different techniques
+  subcategories: [
+    {
+      title: 'Paste-upy a Chomps',
+      description: 'Vylepované grafické práce a animované Chompy propojené s AR hrou ChompAR. Každý paste-up funguje jako AR marker pro rozšířenou realitu.',
+      images: [
+        '/projects/streetart/IMG_4740_web.jpg',
+        '/projects/gallery/IMG_1694_web.jpg',
+        '/projects/gallery/IMG_1719_web.jpg',
+      ]
+    },
+    {
+      title: 'Instalace z recyklovaných materiálů',
+      description: 'Využití nalezeného materiálu k vytvoření site-specific instalací. Práce s tím, co město samo nabízí.',
+      images: [
+        '/projects/gallery/IMG_2332_web.jpg',
+      ]
+    },
+    {
+      title: 'Kresby na odpad',
+      description: 'Transformace vyhozeného odpadu na umělecké objekty. Karton, dřevo, cokoli co čeká na popelnice.',
+      images: [
+        '/projects/gallery/IMG_4702_web.jpg',
+      ]
+    },
+    {
+      title: 'Sticker art',
+      description: 'Samolepky jako nejdostupnější forma guerilla artu. Rychlé, nenápadné, všudypřítomné.',
+      images: []
+    },
+    {
+      title: 'Spray art',
+      description: 'Klasická forma street artu. Šablony a freehand práce na legálních i šedých plochách.',
+      images: []
+    }
+  ],
 
   materials: [
     'Grafické tisky vlastní i od přátel',
     'Linorytové matrice',
     'Samolepky',
     'Paste-upy',
-    'Lepidlo'
+    'Spreje a šablony',
+    'Recyklovaný materiál'
   ],
   budget: '~1750 Kč',
   timeline: 'Průběžně',
@@ -45,27 +76,14 @@ V digitálním světě máme možnost volby, zda zaplatíme za prémiový obsah 
   videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
 
   image: '/projects/streetart/IMG_4740_thumb.jpg',
-  images: [
-    '/projects/streetart/IMG_4740_web.jpg',
-    '/projects/gallery/IMG_1694_web.jpg',
-    '/projects/gallery/IMG_1719_web.jpg',
-    '/projects/gallery/IMG_2332_web.jpg',
-    '/projects/gallery/IMG_4702_web.jpg',
-  ],
-  thumbs: [
-    '/projects/streetart/IMG_4740_thumb.jpg',
-    '/projects/gallery/IMG_1694_thumb.jpg',
-    '/projects/gallery/IMG_1719_thumb.jpg',
-    '/projects/gallery/IMG_2332_thumb.jpg',
-    '/projects/gallery/IMG_4702_thumb.jpg',
-  ],
+  images: [],
+  thumbs: [],
 
   relatedProject: 'chompar',
 
   references: [
     'Rob Walker — The Art of Noticing',
     'Jacques Rancière — Rozdělení smyslového',
-    'Brian O\'Doherty — Uvnitř bílé krychle',
-    'nelegalnireklama.cz'
+    'Brian O\'Doherty — Uvnitř bílé krychle'
   ],
 };

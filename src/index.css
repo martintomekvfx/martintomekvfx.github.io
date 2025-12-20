@@ -1056,3 +1056,294 @@ a:hover {
     padding: var(--space-xl) var(--space-md);
   }
 }
+
+/* ==================== CHOMPAR LAYOUT ==================== */
+
+.chompar-layout {
+  background: #FAFAFA;
+}
+
+.chompar-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl);
+}
+
+.chompar-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  max-width: 1000px;
+  align-items: center;
+}
+
+.chompar-hero-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  border: 2px solid black;
+}
+
+.chompar-meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: var(--space-md);
+}
+
+.chompar-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.chompar-description {
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.chompar-cta {
+  display: inline-block;
+}
+
+/* Pillars */
+.chompar-pillars {
+  background: black;
+  color: white;
+  padding: var(--space-2xl);
+  text-align: center;
+}
+
+.section-meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: var(--space-md);
+}
+
+.chompar-pillars .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pillar-card {
+  padding: var(--space-lg);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.pillar-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-md);
+}
+
+.pillar-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.pillar-card p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: var(--space-sm);
+}
+
+/* Modes */
+.chompar-modes {
+  background: black;
+  color: white;
+  padding: var(--space-2xl);
+  text-align: center;
+}
+
+.chompar-modes .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mode-card {
+  padding: var(--space-xl);
+  text-align: left;
+}
+
+.mode-light {
+  background: white;
+  color: black;
+}
+
+.mode-dark {
+  border: 2px solid white;
+}
+
+.mode-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.mode-type {
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: var(--space-lg);
+}
+
+.mode-dark .mode-type {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mode-points p {
+  margin-bottom: var(--space-sm);
+}
+
+.mode-meaning {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.mode-dark .mode-meaning {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Privacy */
+.chompar-privacy {
+  background: black;
+  color: white;
+  padding: var(--space-2xl);
+  text-align: center;
+}
+
+.chompar-privacy .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+}
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-card {
+  padding: var(--space-lg);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.privacy-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.privacy-card p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.privacy-note {
+  margin-top: var(--space-xl);
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.privacy-note strong {
+  color: white;
+}
+
+/* Full-width game embed */
+.project-game-embed-full {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.project-game-embed-full iframe {
+  border: 2px solid black;
+}
+
+.project-game-embed-full .game-link {
+  text-align: center;
+  margin-top: var(--space-md);
+}
+
+/* ==================== STREET ART LAYOUT ==================== */
+
+.street-art-section {
+  padding: var(--space-2xl) var(--space-lg);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.street-art-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.street-art-section-desc {
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .chompar-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .chompar-hero-image img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chompar-title {
+    font-size: 2.5rem;
+  }
+}

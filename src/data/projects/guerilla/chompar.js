@@ -7,7 +7,7 @@ export default {
   subtitle: 'Street Art AR Game',
   category: 'guerilla',
 
-  description: 'Street artová AR hra využívající gamifikaci ke cvičení pozornosti a apropriaci veřejného prostoru.',
+  description: 'Street artová hra využívající gamifikaci ke cvičení pozornosti a apropriaci veřejného prostoru.',
 
   artist: 'Martin Tomek',
   status: 'in-progress',
@@ -16,21 +16,75 @@ export default {
 
   details: ['Augmented Reality', 'Gamifikace', 'Privacy-first', 'Ekologie pozornosti'],
 
-  fullDescription: `ChompAR představuje street artovou hru využívající rozšířenou realitu k podpoře pozornosti a apropriaci veřejného prostoru. Projekt stojí na třech pilířích, které reagují na současnou situaci ve městech.
+  // Custom layout flag
+  customLayout: 'chompar',
 
-Prvním pilířem je ekologie pozornosti. Lidé se přestávají dívat okolo sebe, pohrouženi do svých mobilních telefonů nebo mentálně vypnutí kvůli přehlcení vizuálními podněty. Hra je navržena tak, aby hráče motivovala k aktivnímu vnímání okolí.
+  // Hero section
+  heroImage: '/projects/chomps/scan.gif',
 
-Druhým pilířem je právo na město vycházející z myšlenek Henri Lefebvra. Obyvatelé často nepovažují veřejný prostor za svůj vlastní a chybí jim pocit sounáležitosti s místy, kterými denně procházejí. ChompAR umožňuje symbolické přivlastnění těchto míst prostřednictvím herních mechanik.
+  // Three pillars
+  pillars: [
+    {
+      icon: '/projects/chomps/badge-1.png',
+      title: 'Ekologie pozornosti',
+      description: 'Lidé se nedívají okolo sebe.'
+    },
+    {
+      icon: '/projects/chomps/badge-2.png',
+      title: 'Právo na město',
+      description: 'Lidé nepovažují město za jejich.'
+    },
+    {
+      icon: '/projects/chomps/badge-3.png',
+      title: 'Détournement',
+      description: 'Využívání technologie proti technologii.'
+    }
+  ],
+
+  // Game modes
+  modes: [
+    {
+      title: 'Solo mód',
+      type: 'Ambientní',
+      points: [
+        'Sbírej Chompy do osobní sbírky.',
+        'Vlastnictví zůstává navždy.',
+        'Žádný tlak. Cesta je cíl.'
+      ],
+      meaning: 'Cvičení pozornosti'
+    },
+    {
+      title: 'Battle mód',
+      type: 'Kompetitivní',
+      points: [
+        'Red vs Blue.',
+        'Claimni = tenhle kus města je tvůj.',
+        'Dá se přebírat.'
+      ],
+      meaning: 'Apropriace veřejného prostoru'
+    }
+  ],
+
+  // Privacy features
+  privacy: [
+    { title: 'Žádná GPS', description: 'Netrackujeme polohu.' },
+    { title: 'Lokální profil', description: 'Data v prohlížeči. Žádná registrace.' },
+    { title: '20min delay', description: 'Anti-predator ochrana na mapě.' }
+  ],
+
+  fullDescription: `ChompAR představuje street artovou hru využívající rozšířenou realitu k podpoře pozornosti a apropriaci veřejného prostoru.
+
+Projekt stojí na třech teoretických pilířích. Prvním je ekologie pozornosti reagující na skutečnost, že lidé se přestávají dívat okolo sebe, pohrouženi do mobilních telefonů nebo mentálně vypnutí kvůli přehlcení vizuálními podněty.
+
+Druhým pilířem je právo na město vycházející z myšlenek Henri Lefebvra. Obyvatelé často nepovažují veřejný prostor za svůj vlastní a chybí jim pocit sounáležitosti s místy, kterými denně procházejí.
 
 Třetím pilířem je détournement neboli využití technologie proti technologii. Mobilní telefon, který obvykle odvádí pozornost od okolí, se stává nástrojem pro její zaměření na fyzický svět.
 
-Hra nabízí dva oddělené režimy. Solo mód má ambientní charakter a funguje jako cvičení pozornosti. Hráč sbírá virtuální objekty zvané Chompy do osobní sbírky, přičemž vlastnictví zůstává trvalé. Neexistuje zde žádný časový tlak a cesta se stává cílem.
+Hra nabízí dva oddělené režimy. Solo mód má ambientní charakter a funguje jako cvičení pozornosti. Battle mód přináší kompetitivní rozměr s týmy Red a Blue soupeřícími o kontrolu nad městem.
 
-Battle mód přináší kompetitivní rozměr a funguje jako nástroj apropriace veřejného prostoru. Dva týmy soupeří o kontrolu nad městem prostřednictvím claimování jednotlivých lokací. Kontrola je přechodná a může být přebrána soupeřem.
+Projekt klade důraz na ochranu soukromí. Hra nesleduje GPS polohu, profil je uložen lokálně bez registrace a mapa zobrazuje aktivitu s dvacetiminutovým zpožděním.
 
-Projekt klade důraz na ochranu soukromí. Hra nesleduje GPS polohu hráčů, profil je uložen lokálně v prohlížeči bez nutnosti registrace. Mapa zobrazuje aktivitu s dvacetiminutovým zpožděním jako ochranné opatření. Mobilní telefon je vnímán jako sekundární nástroj, ne jako primární fokus pozornosti.
-
-Pro festival Anifilm 2026 je plánována speciální verze v podobě AR treasure hunt. Po areálu festivalu bude rozmístěno dvanáct paste-upů, každý obsahující jeden snímek animace. Sesbíráním všech vznikne dvousekundová animace, která se objeví na kolektivním CRT displeji.`,
+Pro festival Anifilm 2026 je plánována speciální verze AR treasure hunt s dvanácti paste-upy po areálu festivalu.`,
 
   materials: [
     'Webová aplikace',
@@ -40,7 +94,7 @@ Pro festival Anifilm 2026 je plánována speciální verze v podobě AR treasure
   budget: 'N/A',
   timeline: '2025-2026',
 
-  image: '/projects/chomps/chomp.png',
+  image: '/projects/chomps/chumper.png',
   images: [],
   thumbs: [],
 
@@ -48,9 +102,11 @@ Pro festival Anifilm 2026 je plánována speciální verze v podobě AR treasure
   externalUrl: 'https://chompar.vercel.app',
   isAR: true,
 
+  relatedProject: 'street-art-gallery',
+
   references: [
     'Henri Lefebvre — Právo na město',
     'Situacionistický détournement',
-    'MindAR documentation'
+    'Rob Walker — The Art of Noticing'
   ],
 };

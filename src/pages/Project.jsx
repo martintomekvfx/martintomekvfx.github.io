@@ -32,102 +32,6 @@ function Project() {
         }
     };
 
-    // Parse description with styled sections
-    const renderDescription = (text) => {
-        const lines = text.split('\n');
-        const elements = [];
-        let currentParagraph = [];
-
-        lines.forEach((line, index) => {
-            // Section headers (═══)
-            if (line.includes('═══════')) {
-                if (currentParagraph.length > 0) {
-                    elements.push(
-                        <p key={`p-${index}`} className="project-paragraph">
-                            {currentParagraph.join(' ')}
-                        </p>
-                    );
-                    currentParagraph = [];
-                }
-                elements.push(<hr key={`hr-${index}`} className="project-divider" />);
-            }
-            // Main headers (ALL CAPS with colon or standalone)
-            else if (line.match(/^[A-ZĚŠČŘŽÝÁÍÉÚŮĎŤŇ\s—]+:?$/) && line.length > 3) {
-                if (currentParagraph.length > 0) {
-                    elements.push(
-                        <p key={`p-${index}`} className="project-paragraph">
-                            {currentParagraph.join(' ')}
-                        </p>
-                    );
-                    currentParagraph = [];
-                }
-                elements.push(
-                    <h3 key={`h-${index}`} className="project-section-title">
-                        {line.replace(':', '')}
-                    </h3>
-                );
-            }
-            // Bullet points
-            else if (line.trim().startsWith('•') || line.trim().startsWith('→')) {
-                if (currentParagraph.length > 0) {
-                    elements.push(
-                        <p key={`p-${index}`} className="project-paragraph">
-                            {currentParagraph.join(' ')}
-                        </p>
-                    );
-                    currentParagraph = [];
-                }
-                elements.push(
-                    <div key={`b-${index}`} className="project-bullet">
-                        {line}
-                    </div>
-                );
-            }
-            // Numbered items
-            else if (line.match(/^\d+\./)) {
-                if (currentParagraph.length > 0) {
-                    elements.push(
-                        <p key={`p-${index}`} className="project-paragraph">
-                            {currentParagraph.join(' ')}
-                        </p>
-                    );
-                    currentParagraph = [];
-                }
-                elements.push(
-                    <div key={`n-${index}`} className="project-numbered">
-                        {line}
-                    </div>
-                );
-            }
-            // Empty lines = paragraph break
-            else if (line.trim() === '') {
-                if (currentParagraph.length > 0) {
-                    elements.push(
-                        <p key={`p-${index}`} className="project-paragraph">
-                            {currentParagraph.join(' ')}
-                        </p>
-                    );
-                    currentParagraph = [];
-                }
-            }
-            // Regular text
-            else {
-                currentParagraph.push(line);
-            }
-        });
-
-        // Flush remaining paragraph
-        if (currentParagraph.length > 0) {
-            elements.push(
-                <p key="p-final" className="project-paragraph">
-                    {currentParagraph.join(' ')}
-                </p>
-            );
-        }
-
-        return elements;
-    };
-
     // Determine gallery layout based on image count
     const getGalleryClass = () => {
         if (!project.images) return '';
@@ -135,6 +39,16 @@ function Project() {
         if (project.images.length >= 4) return 'gallery-masonry';
         return 'gallery-stack';
     };
+
+    // ChompAR custom layout
+    if (project.customLayout === 'chompar') {
+        return <ChompARLayout project={project} getStatusLabel={getStatusLabel} />;
+    }
+
+    // Street Art Gallery custom layout
+    if (project.customLayout === 'street-art') {
+        return <StreetArtLayout project={project} getStatusLabel={getStatusLabel} getGalleryClass={getGalleryClass} />;
+    }
 
     return (
         <div className="project-detail">
@@ -160,7 +74,6 @@ function Project() {
                         </span>
                     </div>
 
-                    {/* Tags */}
                     {project.details && (
                         <div className="project-tags">
                             {project.details.map((tag, i) => (
@@ -172,7 +85,7 @@ function Project() {
             </section>
 
             {/* Hero Image */}
-            {project.image && (
+            {project.image && !project.itchEmbed && (
                 <section className="project-hero-image">
                     <motion.img
                         src={project.image}
@@ -181,6 +94,28 @@ function Project() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6 }}
                     />
+                </section>
+            )}
+
+            {/* Itch.io Embed - FULL WIDTH for games */}
+            {project.itchEmbed && (
+                <section className="project-game-embed-full">
+                    <iframe
+                        src={project.itchEmbed}
+                        width="100%"
+                        height="700"
+                        frameBorder="0"
+                        allowFullScreen
+                        title={`${project.title} - Play Game`}
+                        style={{ display: 'block' }}
+                    />
+                    {project.externalUrl && (
+                        <p className="game-link">
+                            <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
+                                🎮 Fullscreen na itch.io →
+                            </a>
+                        </p>
+                    )}
                 </section>
             )}
 
@@ -193,7 +128,9 @@ function Project() {
                     viewport={{ once: true }}
                     className="project-description-content"
                 >
-                    {renderDescription(project.fullDescription)}
+                    {project.fullDescription.split('\n\n').map((para, i) => (
+                        <p key={i} className="project-paragraph">{para}</p>
+                    ))}
                 </motion.div>
             </section>
 
@@ -216,29 +153,6 @@ function Project() {
                             />
                         </motion.div>
                     ))}
-                </section>
-            )}
-
-            {/* Itch.io Embed */}
-            {project.itchEmbed && (
-                <section className="project-game-embed">
-                    <div className="game-frame">
-                        <iframe
-                            src={project.itchEmbed}
-                            width="100%"
-                            height="620"
-                            frameBorder="0"
-                            allowFullScreen
-                            title={`${project.title} - Play Game`}
-                        />
-                    </div>
-                    {project.externalUrl && (
-                        <p className="game-link">
-                            <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
-                                🎮 Otevřít na itch.io →
-                            </a>
-                        </p>
-                    )}
                 </section>
             )}
 
@@ -270,13 +184,149 @@ function Project() {
                 </section>
             )}
 
-            {/* Second Video */}
-            {project.videoUrl2 && (
+            {/* Related Project */}
+            {project.relatedProject && (
+                <section className="project-related">
+                    <Link to={`/work/${project.relatedProject}`} className="related-link">
+                        → Související projekt
+                    </Link>
+                </section>
+            )}
+        </div>
+    );
+}
+
+// ChompAR Presentation-style Layout
+function ChompARLayout({ project, getStatusLabel }) {
+    return (
+        <div className="project-detail chompar-layout">
+            {/* Hero Section */}
+            <section className="chompar-hero">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="chompar-hero-content"
+                >
+                    <Link to="/#work" className="back-link">← Back</Link>
+
+                    <div className="chompar-hero-grid">
+                        <div className="chompar-hero-image">
+                            <motion.img
+                                src={project.heroImage || project.image}
+                                alt="AR Scanning"
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
+                            />
+                        </div>
+                        <div className="chompar-hero-text">
+                            <p className="chompar-meta">FAMU • {project.year}</p>
+                            <h1 className="chompar-title">{project.title}</h1>
+                            <p className="chompar-description">{project.description}</p>
+
+                            <a
+                                href={project.externalUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cta-button chompar-cta"
+                            >
+                                🚀 Launch AR Experience
+                            </a>
+                        </div>
+                    </div>
+                </motion.div>
+            </section>
+
+            {/* Three Pillars */}
+            {project.pillars && (
+                <section className="chompar-pillars">
+                    <p className="section-meta">TEORETICKÝ RÁMEC</p>
+                    <h2 className="section-title">Tři pilíře</h2>
+
+                    <div className="pillars-grid">
+                        {project.pillars.map((pillar, i) => (
+                            <motion.div
+                                key={i}
+                                className="pillar-card"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                <img src={pillar.icon} alt={pillar.title} className="pillar-icon" />
+                                <h3>{pillar.title}</h3>
+                                <p>{pillar.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {/* Game Modes */}
+            {project.modes && (
+                <section className="chompar-modes">
+                    <p className="section-meta">HERNÍ DESIGN</p>
+                    <h2 className="section-title">Dva módy</h2>
+
+                    <div className="modes-grid">
+                        {project.modes.map((mode, i) => (
+                            <motion.div
+                                key={i}
+                                className={`mode-card ${i === 0 ? 'mode-light' : 'mode-dark'}`}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                <h3>{mode.title}</h3>
+                                <p className="mode-type">{mode.type}</p>
+                                <div className="mode-points">
+                                    {mode.points.map((point, j) => (
+                                        <p key={j}>{point}</p>
+                                    ))}
+                                </div>
+                                <div className="mode-meaning">
+                                    = {mode.meaning}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {/* Privacy Features */}
+            {project.privacy && (
+                <section className="chompar-privacy">
+                    <p className="section-meta">DESIGN</p>
+                    <h2 className="section-title">Privacy-first</h2>
+
+                    <div className="privacy-grid">
+                        {project.privacy.map((feature, i) => (
+                            <motion.div
+                                key={i}
+                                className="privacy-card"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <h3>{feature.title}</h3>
+                                <p>{feature.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                    <p className="privacy-note">Mobil jako <strong>sekundární nástroj</strong>.</p>
+                </section>
+            )}
+
+            {/* Video */}
+            {project.videoUrl && (
                 <section className="project-video">
                     <div className="video-container">
                         <iframe
-                            src={project.videoUrl2.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
-                            title={`${project.title} - video 2`}
+                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                            title={project.title}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         />
@@ -284,31 +334,18 @@ function Project() {
                 </section>
             )}
 
-            {/* Details Footer */}
-            <section className="project-details-simple">
+            {/* Full Description */}
+            <section className="project-content-styled">
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="details-grid"
+                    className="project-description-content"
                 >
-                    {project.materials && (
-                        <div className="detail-block">
-                            <h4>Materials</h4>
-                            <ul>
-                                {project.materials.map((m, i) => <li key={i}>{m}</li>)}
-                            </ul>
-                        </div>
-                    )}
-                    <div className="detail-block">
-                        <h4>Budget</h4>
-                        <p>{project.budget}</p>
-                    </div>
-                    <div className="detail-block">
-                        <h4>Timeline</h4>
-                        <p>{project.timeline}</p>
-                    </div>
+                    {project.fullDescription.split('\n\n').map((para, i) => (
+                        <p key={i} className="project-paragraph">{para}</p>
+                    ))}
                 </motion.div>
             </section>
 
@@ -316,7 +353,97 @@ function Project() {
             {project.relatedProject && (
                 <section className="project-related">
                     <Link to={`/work/${project.relatedProject}`} className="related-link">
-                        → View Related Project
+                        → Street Art Gallery
+                    </Link>
+                </section>
+            )}
+        </div>
+    );
+}
+
+// Street Art Gallery Layout with Subcategories
+function StreetArtLayout({ project, getStatusLabel, getGalleryClass }) {
+    return (
+        <div className="project-detail street-art-layout">
+            {/* Header */}
+            <section className="project-header-simple">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <Link to="/#work" className="back-link">← Back</Link>
+
+                    <h1 className="project-main-title">{project.title}</h1>
+                    <p className="project-subtitle-simple">{project.subtitle}</p>
+
+                    <div className="project-meta-simple">
+                        <span>{project.year}</span>
+                        <span>•</span>
+                        <span>{project.location}</span>
+                    </div>
+                </motion.div>
+            </section>
+
+            {/* Intro */}
+            <section className="project-content-styled">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="project-description-content"
+                >
+                    {project.fullDescription.split('\n\n').map((para, i) => (
+                        <p key={i} className="project-paragraph">{para}</p>
+                    ))}
+                </motion.div>
+            </section>
+
+            {/* Subcategories */}
+            {project.subcategories && project.subcategories.map((sub, i) => (
+                <section key={i} className="street-art-section">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="street-art-section-title">{sub.title}</h2>
+                        <p className="street-art-section-desc">{sub.description}</p>
+
+                        {sub.images && sub.images.length > 0 && (
+                            <div className="gallery-masonry">
+                                {sub.images.map((img, j) => (
+                                    <div key={j} className="gallery-item">
+                                        <img src={img} alt={`${sub.title} ${j + 1}`} loading="lazy" />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </motion.div>
+                </section>
+            ))}
+
+            {/* Video */}
+            {project.videoUrl && (
+                <section className="project-video">
+                    <div className="video-container">
+                        <iframe
+                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                            title={project.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+                </section>
+            )}
+
+            {/* Related Project */}
+            {project.relatedProject && (
+                <section className="project-related">
+                    <Link to={`/work/${project.relatedProject}`} className="related-link">
+                        → ChompAR
                     </Link>
                 </section>
             )}
