@@ -116,22 +116,28 @@ function Project() {
             {/* Gallery - use phone gallery for mobile games */}
             {project.images && project.images.length > 0 && (
                 <section className={`project-gallery ${project.mobileGame ? 'gallery-phone' : getGalleryClass()}`}>
-                    {project.images.map((image, index) => (
-                        <motion.div
-                            key={index}
-                            className="gallery-item"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4, delay: index * 0.05 }}
-                            viewport={{ once: true }}
-                        >
-                            <img
-                                src={image}
-                                alt={`${project.title} ${index + 1}`}
-                                loading="lazy"
-                            />
-                        </motion.div>
-                    ))}
+                    {project.images.map((image, index) => {
+                        const imgUrl = typeof image === 'string' ? image : image.url;
+                        const imgTitle = typeof image === 'string' ? null : image.title;
+
+                        return (
+                            <motion.div
+                                key={index}
+                                className="gallery-item"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: index * 0.05 }}
+                                viewport={{ once: true }}
+                            >
+                                <img
+                                    src={imgUrl}
+                                    alt={imgTitle || `${project.title} ${index + 1}`}
+                                    loading="lazy"
+                                />
+                                {imgTitle && <div className="gallery-caption">{imgTitle}</div>}
+                            </motion.div>
+                        );
+                    })}
                 </section>
             )}
 
@@ -420,11 +426,21 @@ function StreetArtLayout({ project, getStatusLabel, getGalleryClass }) {
 
                         {sub.images && sub.images.length > 0 && (
                             <div className="gallery-masonry">
-                                {sub.images.map((img, j) => (
-                                    <div key={j} className="gallery-item">
-                                        <img src={img} alt={`${sub.title} ${j + 1}`} loading="lazy" />
-                                    </div>
-                                ))}
+                                {sub.images.map((image, j) => {
+                                    const imgUrl = typeof image === 'string' ? image : image.url;
+                                    const imgTitle = typeof image === 'string' ? null : image.title;
+
+                                    return (
+                                        <div key={j} className="gallery-item">
+                                            <img
+                                                src={imgUrl}
+                                                alt={imgTitle || `${sub.title} ${j + 1}`}
+                                                loading="lazy"
+                                            />
+                                            {imgTitle && <div className="gallery-caption">{imgTitle}</div>}
+                                        </div>
+                                    );
+                                })}
                             </div>
                         )}
                     </motion.div>

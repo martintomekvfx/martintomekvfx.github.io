@@ -40,18 +40,21 @@ Je pozoruhodné, že děti vytvářejí výhradně pozitivní dialog. Na rozdíl
     budget: '~50 Kč',
     timeline: 'Průběžně',
 
+    // Use nice mixed gallery
+    galleryLayout: 'mixed',
+
     image: '/projects/panak/IMG_1694_2_thumb.jpg',
     images: [
-        '/projects/panak/IMG_1694_2_web.jpg',
-        '/projects/panak/IMG_1697_web.jpg',
-        '/projects/panak/IMG_1744_web.jpg',
-        '/projects/panak/IMG_1746_3_web.jpg',
-        '/projects/panak/IMG_1747_web.jpg',
-        '/projects/panak/IMG_1930_web.jpg',
-        '/projects/panak/IMG_1953_web.jpg',
-        '/projects/panak/video_frame_01.jpg',
-        '/projects/panak/video_frame_02.jpg',
-        '/projects/panak/video_frame_03.jpg',
+        { url: '/projects/panak/IMG_1694_2_web.jpg', title: 'Nové využití nevyužitého prostoru' },
+        { url: '/projects/panak/IMG_1697_web.jpg', title: 'Opičí dráha u žlutých zábran' },
+        { url: '/projects/panak/IMG_1744_web.jpg', title: 'Detail kresby křídou' },
+        { url: '/projects/panak/IMG_1746_3_web.jpg', title: 'Panák jako univerzální vizuální jazyk' },
+        { url: '/projects/panak/IMG_1747_web.jpg', title: 'Interakce s městským mobiliářem' },
+        { url: '/projects/panak/IMG_1930_web.jpg', title: 'Řetězová reakce – další kresby od obyvatel' },
+        { url: '/projects/panak/IMG_1953_web.jpg', title: 'Fotbalové branky na asfaltu' },
+        { url: '/projects/panak/video_frame_01.jpg', title: 'Příprava plochy' },
+        { url: '/projects/panak/video_frame_02.jpg', title: 'Realizace intervence' },
+        { url: '/projects/panak/video_frame_03.jpg', title: 'Finální podoba hry' },
     ],
     thumbs: [
         '/projects/panak/IMG_1694_2_thumb.jpg',
