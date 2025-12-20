@@ -7,7 +7,7 @@ export default {
     subtitle: 'Guerilla Gardening',
     category: 'guerilla',
 
-    description: 'Guerillová výsadba 120 sazenic do zanedbaných betonových květináčů. Projekt zkoumající vztah lidí k veřejnému prostoru a selektivní slepotu.',
+    description: 'Guerillová výsadba 120 sazenic do zanedbaných betonových květináčů. Projekt zkoumající vztah lidí k veřejnému prostoru a fenomén selektivní slepoty.',
 
     artist: 'Martin Tomek',
     status: 'done',
@@ -16,80 +16,30 @@ export default {
 
     details: ['120 sazenic', 'Recyklace', '12 lokalit', 'Antropologický výzkum', 'Komunitní dialog'],
 
-    fullDescription: `SLUNEČNICE NA PALMOVCE
+    fullDescription: `Palmovka představuje oproti ostatním částem Prahy výrazně zanedbané území. Navzdory své geografické blízkosti k revitalizovaným čtvrtím jako Holešovice či Karlín působí jako zcela odlišný svět. Nachází se zde množství míst určených pro výsadbu květin či keřů, kde však roste pouze tráva, která po pravidelném sekání usychá.
 
-Guerillová výsadba 120 sazenic do zanedbaných betonových květináčů.
+Historické snímky z Google Street View dokumentují výrazně větší upravenost Palmovky v minulosti. Na místech, kde dnes nic neroste, se dříve nacházela vzrostlá zeleň. Je třeba připomenout, že celá Palmovka vznikla teprve v roce 1990 a jedná se tedy o relativně mladou lokalitu, která však za pouhých třicet let prošla významným úpadkem veřejné zeleně.
 
-═══════════════════════════════════════════
+V rámci tohoto projektu jsem předpěstoval přibližně 120 rostlin zahrnujících slunečnice, popínavé rostliny a další druhy z lučního setu kvítí. Cílem bylo vybrat české květiny, které nejsou invazivní a jsou přirozenou součástí zdejšího podnebí. Během předpěstování jsem sbíral odpadní materiál, především kelímky od kávy, které posloužily jako nádoby pro sazenice. Každá rostlina prošla jedním mezipřesazením pro posílení kořenového systému.
 
-KONTEXT:
+Výsadba proběhla ve spolupráci s kolegou Ondřejem Bočkem. Do vykopané díry jsme umístili kravské hnojivo překryté výsadbovou hlínou, což mělo rostlinám zajistit dostatek živin pro zakořenění. Práce probíhala za plného denního světla před zraky desítek kolemjdoucích. Na sobě jsem měl oranžovou vestu nalezenou u popelnic, která dodávala celé akci zdání oficiality.
 
-Palmovka je oproti ostatním místům v Praze velmi zanedbána. Má blízko k Holešovicím a Karlínu, přitom je to jak jiný svět.
+Pro ochranu před sekáči jsme okolo sazenic instalovali malé plůtky vyrobené z desetimetrového zahradního plotu. Původně jsme uvažovali o cedulkách s logem Evropské unie, ale nakonec jsme od tohoto záměru ustoupili z obavy, že by to mohlo vyvolat negativní reakce u části obyvatel.
 
-Nachází se zde hodně míst, kde nic neroste. Jsou to přímo určené bloky pro květiny či keře, ale roste tam jen tráva. Kterou samozřejmě osekají, takže uschne.
+Projekt odhalil dva typy interakcí s veřejným prostorem. Pasivní interakce měla negativní charakter. Při každé návštěvě jsem nalezl plůtky odpopknuté, zničené nebo zcela odcizené. Přesto jsem vše pokaždé opravil, zalil a odešel. Přítomnost těchto lidskou rukou vytvořených objektů paradoxně vyvolala silnější reakci než samotné rostliny a poukázala na to, že dané místo by mohlo něčemu sloužit.
 
-Google Street View jasně ukazuje větší upravenost Palmovky v minulosti. Na místech kde již keře nerostou, tam dříve bývaly. Celá Palmovka vznikla teprve v roce 1990 — je relativně mladá.
+Aktivní interakce naopak přinášela pozitivní reakce. Při zalévání docházelo k rozhovorům s kolemjdoucími. Jeden z nich proběhl takto: Starší pán poznamenal, že jsem hodný, že to zalívám, ale pochybuje, zda to květina zvládne. Odpověděl jsem, že to nevím ani já sám. Podotkl, že lidé tam házejí hrozný nepořádek. Vysvětlil jsem, že právě proto jsem tam květinu zasadil. Po chvilce ticha a přemýšlení dodal, že jim to třeba dojde, že to nemají dělat. Tento moment byl z hlediska projektu velmi významný.
 
-═══════════════════════════════════════════
+Z původních 120 sazenic přežily pouze tři. Jedna z nich dosáhla úctyhodné výšky tří metrů a byla viditelná z celého okolí Palmovky. Výsledky potvrdily, že pouhá výsadba květin není dostačujícím řešením. Půda je příliš nekvalitní a rostliny potřebují silný kořenový systém. Pro skutečnou změnu by bylo nutné navézt novou hlínu a ideálně vysázet stromy, které by poskytly stín a vytvořily příjemnější prostředí pro obyvatele, zejména v letních měsících.
 
-PROCES:
-
-• Předpěstování ~120 rostlin (slunečnice, popínavka, luční kvítí)
-• Výběr českých květin, které nejsou invazivní
-• Sbírání odpadního materiálu (kelímky na kávu) pro předpěstování
-• Jedno mezipřesazení pro silnější kořenový bal
-• Výsadba s kravským hnojivem a výsadbovou hlínou
-• Instalace plůtků jako ochrana před sekáči
-
-═══════════════════════════════════════════
-
-DVĚ INTERAKCE:
-
-PASIVNÍ (negativní):
-Při každém pozorování — plot odpopknutý, zničený, nebo odcizený. Pokaždé opraveno a zalito. Tento "human made object" vyvolal dialog a ukázal lidem, že by na tom místě mohlo něco být.
-
-AKTIVNÍ (pozitivní):
-Rozhovory při zalévání vyvolávaly pozitivní reakce:
-
-"To jste hodnej že to zalíváte. Ale nevím jestli to ta kytka dá."
-"No to já taky nevím."
-"Lidi tam hazí hrozný bordel."
-"No proto jsem ji tam zasadil."
-Chvilka ticha a přemýšlení.
-"No třeba jim to dojde že to nemají dělat."
-
-═══════════════════════════════════════════
-
-VÝSLEDKY:
-
-Přežily pouze 3 rostliny:
-• Jedna dosáhla úžasných 3 metrů výšky — viditelná z celé Palmovky!
-• Zjištění: Hlína je špatná, kytky potřebují silné kořeny
-• Jen vysadit květiny není řešení — chtělo by navézt novou hlínu
-
-═══════════════════════════════════════════
-
-ZJIŠTĚNÍ:
-
-Pro hodně lidí jsou ty květináče neviditelné. Selektivní slepota.
-
-Když bych tam nechal jen slunečnici, možná by si toho nikdo nevšiml. Ale ty malé plůtky přidaly na to místo něco, co tam předtím nebylo — alespoň v očích ostatních.
-
-Je velmi zajímavé jak přímá a nepřímá interakce vyvolává v lidech odlišné emoce.
-
-═══════════════════════════════════════════
-
-BUDOUCNOST:
-
-Rád bych s těmi prostory pracoval dál a nasadil tam nejlépe stromy. Stromy by zlepšily stín pro lidi hlavně v létě. Momentálně se tam nenachází hodně míst kde by něco mohlo růst ale neroste.`,
+Pro většinu obyvatel jsou tyto květináče zcela neviditelné. Jedná se o příklad selektivní slepoty, kdy lidé přestávají vnímat objekty, které dlouhodobě neslouží žádnému účelu. Přidáním plůtků jsem na místo umístil něco, co tam předtím nebylo, alespoň v očích ostatních. Projekt tak odhalil fascinující rozdíl mezi přímou a nepřímou interakcí a jejich vliv na emocionální reakce obyvatel.`,
 
     materials: [
-        'Semena/sazenice slunečnic',
+        'Semena a sazenice slunečnic',
         'Recyklované kelímky na předpěstování',
-        'Hlína',
-        'Kravské hnojivo',
-        'Ochranné plůtky (10m plot)',
-        'Oranžová vesta (nalezená u popelnic)'
+        'Hlína a kravské hnojivo',
+        'Ochranné plůtky',
+        'Oranžová vesta'
     ],
     budget: '~800 Kč',
     timeline: 'Jaro 2025 → Léto 2025',
@@ -109,11 +59,10 @@ Rád bych s těmi prostory pracoval dál a nasadil tam nejlépe stromy. Stromy b
     videoUrl: 'https://www.youtube.com/watch?v=AKgS2maI94k',
     videoUrl2: 'https://www.youtube.com/watch?v=7WQ9C9qa8vk',
 
-    // Theoretical framework
     references: [
         'Henri Lefebvre — Právo na město',
         'David Harvey — Urban Commons',
         'Jane Jacobs — Oči na ulici',
-        'Antropologický výzkum Palmovky (IPR Praha)'
+        'Antropologický výzkum Palmovky IPR Praha'
     ],
 };

@@ -7,7 +7,7 @@ export default {
     subtitle: 'DIY Guerilla Furniture',
     category: 'guerilla',
 
-    description: 'Lavička vyrobená z odpadních palet jako protest proti nehostinnému Libeňskému mostu během rekonstrukce.',
+    description: 'Lavička vyrobená z odpadních palet jako reakce na nehostinný prostor Libeňského mostu během rekonstrukce.',
 
     artist: 'Ptáček',
     status: 'in-progress',
@@ -16,62 +16,24 @@ export default {
 
     details: ['Palety', 'DIY', 'Upcycle', 'Rekonstrukce mostu', 'Veřejné sedání'],
 
-    fullDescription: `LAVIČKA
+    fullDescription: `Rekonstrukce Libeňského mostu probíhá již delší dobu a proměnila jej v nehostinné místo. Cesta na druhou stranu břehu se stala obtížnou a vznikly zde prostory, kam se přestalo chodit a které nyní obývají bezdomovci. Tito lidé si tak paradoxně našli využití pro opuštěné místo.
 
-Lavička vyrobená z odpadních palet jako protest proti nehostinnému prostoru.
+Reakcí městské správy bylo umístění zábran a značek zakazujících vstup. Tímto řešením prostor fakticky přestal existovat, byl vymazán z mentální mapy města. Jako protest proti tomuto přístupu jsem se rozhodl vytvořit lavičku z dostupných materiálů.
 
-═══════════════════════════════════════════
+Nasbíral jsem dřevěné palety nabízené za odvoz. Přestože jsem nikdy předtím nepracoval se dřevem, pustil jsem se do výroby. Proces zahrnoval vrtání, řezání, broušení a natírání. Každá fáze představovala učení se novým dovednostem a práci s nástroji, které jsem dříve nepoužíval.
 
-KONTEXT:
+V rámci rešerše jsem objevil práci Viktora Šolíka, který vytvořil podobnou intervenci v podobě lavičky na Ohradě, která se nachází na velmi frekventovaném místě. Jeho projekt poukazuje na nedostatek veřejného mobiliáře v Praze a potvrdil smysluplnost mého záměru.
 
-Oprava Libeňského mostu probíhá a stalo se z něj nehostinné místo.
+Lavička nyní čeká na umístění na Libeňský most. Otázkou zůstává, jak dlouho tam vydrží a jakým způsobem s ní budou lidé interagovat. Samotný akt výroby však již naplnil jeden z cílů projektu.
 
-Je to už delší dobu, ale právě s jeho opravou se z cesty na druhou stranu břehu stalo něco těžkého.
-
-Zůstala tam určitá místa, kam se přestalo moct chodit a kde žijí bezdomovci. To je fajn že si to našlo aspoň využití v tomhle.
-
-Ale řešení bylo to, že na místo dali zábrany a značku "Nevstupovat". Takže vlastně to místo zabili a přestalo existovat.
-
-═══════════════════════════════════════════
-
-REALIZACE:
-
-Jako protest jsem nasbíral dostupný materiál — palety za odvoz.
-
-I když jsem nikdy nepracoval se dřevem, pustil jsem se do výroby lavičky:
-• Vrtání
-• Broušení
-• Natírání
-• Montáž
-
-═══════════════════════════════════════════
-
-REFERENCE:
-
-V rámci výzkumu jsem se dostal k práci Viktora Šolíka, který vytvořil také lavičku na Ohradě. Na velmi frekventovaném místě.
-
-To poukazuje na nedostatek laviček ve veřejném prostoru. Což mě ještě utvrdilo v realizaci mé verze.
-
-═══════════════════════════════════════════
-
-OTÁZKA:
-
-Jak dlouho tam vydrží a jak moc s ní budou lidé interagovat?
-
-═══════════════════════════════════════════
-
-UČENÍ:
-
-Je zajímavé že obohacuji veřejný prostor, ale taky zároveň obohacuji sám sebe novými zkušenostmi a hlavně dovednostmi.
-
-Je to něco k čemu by se člověk v Praze jen tak nedostal.`,
+Je pozoruhodné, jak práce na guerillových intervencích současně obohacuje veřejný prostor i samotného autora. Získávání praktických dovedností jako práce se dřevem, vázání uzlů či zahradničení představuje hodnotu, ke které by se člověk žijící v Praze běžně nedostal. V době rostoucí automatizace a nástupu umělé inteligence se tyto manuální dovednosti stávají čím dál cennějšími.`,
 
     materials: [
-        'Dřevěné palety (za odvoz)',
+        'Dřevěné palety za odvoz',
         'Šrouby a vruty',
         'Brusný papír',
         'Venkovní nátěr',
-        'Nářadí (vrtačka, pilka)'
+        'Ruční nářadí'
     ],
     budget: '~300 Kč',
     timeline: '2025',

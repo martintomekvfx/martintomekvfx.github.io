@@ -7,7 +7,7 @@ export default {
   subtitle: 'Obrazy v ulicích',
   category: 'guerilla',
 
-  description: 'Pouliční galerie využívající prázdné plochy města — opuštěné informační prostory, kde nic není. Město jako galerie.',
+  description: 'Pouliční galerie využívající prázdné plochy města jako výstavní prostor. Kritika vizuálního smogu a komercionalizace veřejného prostoru.',
 
   artist: 'Ptáček + další umělci',
   status: 'in-progress',
@@ -16,80 +16,25 @@ export default {
 
   details: ['Paste-upy', 'Sticker bombing', 'Linoryt', 'Opuštěné vývěsky', 'Kolektivní tvorba'],
 
-  fullDescription: `STREET ART GALLERY
+  fullDescription: `Projekt vychází z premisy, že město samo o sobě představuje galerii a jeho ulice jsou výstavními stěnami. Tento přístup reaguje na množství opuštěných informačních prostor, které ztratily původní účel. Jedná se o tabule, cedule a informační místa pro náhradní autobusovou dopravu, kde vznikly pouze prázdné rámy bez jakéhokoli obsahu.
 
-Město jako galerie — prázdné plochy jako výstavní prostor.
+Příkladem je situace u autobusových zastávek, kde náhradní doprava již není potřeba. Místo, které dříve sloužilo informování cestujících, zaniklo a zůstal jen prázdný rám. Kolem něj přitom každý den projde značné množství lidí. Snažil jsem se těmto prostorům vrátit druhý dech vytištěním grafických prací, vlastních i od přátel, a jejich vylepením na tato nevyužitá místa.
 
-═══════════════════════════════════════════
+Záměrně jsem chtěl využít umění svých známých i kohokoliv dalšího, kdo by se chtěl připojit, aby práce nemusely procházet tradičním kurátorským výběrem. Přesto si uvědomuji, že kurátorem jsem nakonec do jisté míry já sám.
 
-OPUŠTĚNÉ INFORMAČNÍ PROSTORY:
+Zajímavou okolností je blízkost těchto intervencí ke Galerii Pragovka. Vzniká tak implicitní srovnání mezi oficiálním galerijním prostorem a pouliční galerií. Zajímalo by mě, jaká je denní návštěvnost zmíněné galerie ve srovnání s počtem lidí, kteří míjejí tyto obrazy v ulicích.
 
-Na hodně místech vznikly informační cedule, o které se již nikdo nestará a ztratily původní účel:
-• Tabule a cedule
-• Informační místa pro náhradní autobusovou dopravu
-• Prázdné rámy na vývěsky u zastávek MHD
+Z této úvahy vychází širší vize proměny celé hlavní silnice v galerii. Na každém sloupu by mohl být obraz, který by kolemjdoucím poskytl alternativu k nekončící asfaltové ploše a reklamnímu smogu v podobě billboardů určených primárně řidičům automobilů. Prostor by tak získal rozměr pro pěší, kteří jsou dosud odkázáni pouze na chodníky.
 
-U autobusu: Náhradní autobusová doprava není využita. Místo kde normálně bývají informace zaniklo — vznikl jen prázdný rám. Kolem kterého lidé projdou každý den strašně moc.
+Projekt rovněž kriticky zkoumá vztah mezi uměním a reklamou ve veřejném prostoru. Jeden obraz jsem umístil na místo, kde se nacházela nelegální reklama a staré značení. Když jsem se druhý den vrátil, nezbylo tam nic. Jiný pokus proběhl na reklamním sloupu, kde jsem nalepil obraz tak, aby nepřekrýval existující reklamu. Za dva dny bylo vše odstraněno. Kdyby však stejný obraz visel na zdi hned vedle, plné špíny a graffiti, nikdo by to neřešil. Jakmile jde o prostor spojený s reklamou a potenciálním generováním zisku, reakce přichází okamžitě.
 
-═══════════════════════════════════════════
+Tento nepoměr poukazuje na fenomén, který nazývám Art Block. Obyvatelé měst si vytrénovali oči, aby určité podněty nevnímali. Nerozlišují pak už mezi reklamou a uměním. Vizuálního šumu je příliš mnoho, a to jak z fyzického, tak digitálního světa. Lidé se naučili nevidět, protože vidět nechtějí nebo nemohou.
 
-REALIZACE:
-
-Snažil jsem se dát tomu prostoru druhý dech:
-• Vytiskl jsem grafické práce — svoje i přátel
-• Vylepil jsem je na tyhle místa
-
-Chtěl jsem použít i umění svých kamarádů, či kohokoliv, tak abych využil to místo a vlastně nemusely procházet ty věci kurátorským výběrem.
-
-Ale asi jsem ten kurátor já.
-
-═══════════════════════════════════════════
-
-KONTEXT — VEDLE GALERIE:
-
-Je to zajímavé tím, že se to nachází hned vedle Galerie Pragovka.
-
-Zajímalo by mě jaká je denní návštěvnost galerie, a kolik lidí vidí tyhle obrazy.
-
-═══════════════════════════════════════════
-
-VIZE:
-
-Dalo by se s tím uvažovat tak, že ta ošklivá hlavní silnice by se dala udělat celá jako galerie. Na každém sloupu by mohl být obraz.
-
-Člověk by aspoň nevnímal nekončící asfaltovou plochu podpořenou reklamním smogem v podobě billboardů pro auta.
-
-Vlastně by v tom prostoru vzniklo aspoň něco pro lidi. Když nepočítáme chodníky.
-
-═══════════════════════════════════════════
-
-KRITIKA REKLAMY:
-
-Jeden obraz jsem vyvěsil na místo kde byla i nelegální reklama a staré značení. Zase to vyvolalo dialog — když jsem druhý den přišel, nezbylo tam nic.
-
-Jako další kritiku můžu vzít reklamní sloupy. Je to další komercializace veřejného prostoru. Velmi hlídané místo.
-
-Sám jsem tam nalepil další obraz. Ale respektující tu reklamu, tudíž jsem nic nepřelepil. Za dva dny bylo vše pryč.
-
-Kdyby jsem to nalepil na stěnu hned vedle — plnou špíny a graffiti — tak by to nikdo neřešil.
-
-Jakmile jde o reklamu a o možné negenerování zisku — v ten moment je to řešeno.
-
-═══════════════════════════════════════════
-
-ART BLOCK:
-
-V očích normálních lidí vzniká "Art Block" — lidi si natrénují své oči aby neviděli.
-
-Nerozlišují pak už reklamu nebo umění. Toho vizuálního šumu je na ně tolik moc i z toho digitálního světa. Že se prostě naučili nevidět.
-
-Mají tunnel vision. Protože vidět nechtějí.
-
-→ Viz také projekt ChompAR — AR hra propojená se street artem`,
+V digitálním světě máme možnost volby, zda zaplatíme za prémiový obsah bez reklam, nebo si nainstalujeme blokátor reklam. V analogovém veřejném prostoru však tato možnost neexistuje. Jsme vystaveni reklamě bez jakékoli možnosti ji odfiltrovat. Paradoxně je tato invaze do osobního prostoru obecně tolerována, zatímco guerillové umění vyvolává diskuse o vlastnictví a legálnosti.`,
 
   materials: [
-    'Grafické tisky (vlastní + přátelé)',
-    'Linoryt matrice',
+    'Grafické tisky vlastní i od přátel',
+    'Linorytové matrice',
     'Samolepky',
     'Paste-upy',
     'Lepidlo'
@@ -120,7 +65,7 @@ Mají tunnel vision. Protože vidět nechtějí.
   references: [
     'Rob Walker — The Art of Noticing',
     'Jacques Rancière — Rozdělení smyslového',
-    'Bílá krychle — Ideologie galerijního prostoru',
+    'Brian O\'Doherty — Uvnitř bílé krychle',
     'nelegalnireklama.cz'
   ],
 };
