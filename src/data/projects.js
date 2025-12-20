@@ -25,9 +25,9 @@ Jedna slunečnice dosáhla úžasných 3 metrů výšky - byla viditelná z cel�
     timeline: 'Jaro 2025 → Léto 2025',
     image: '/projects/slunecnice/IMG_4417_thumb.jpg',
     images: [
-      '/projects/slunecnice/IMG_4417.jpeg',
-      '/projects/slunecnice/IMG_4421.jpeg',
-      '/projects/slunecnice/IMG_4702.jpeg',
+      '/projects/slunecnice/IMG_4417_web.jpg',
+      '/projects/slunecnice/IMG_4421_web.jpg',
+      '/projects/slunecnice/IMG_4702_web.jpg',
     ],
     thumbs: [
       '/projects/slunecnice/IMG_4417_thumb.jpg',
@@ -59,7 +59,7 @@ Po delší době: Celý kovový mobiliář sušáků byl obroušen a nově natř
     budget: '~200 Kč',
     timeline: 'Víkend → Trvalá proměna',
     image: '/projects/houpacka/IMG_2332_thumb.jpg',
-    images: ['/projects/houpacka/IMG_2332.png'],
+    images: ['/projects/houpacka/IMG_2332_web.jpg'],
     thumbs: ['/projects/houpacka/IMG_2332_thumb.jpg'],
   },
   {
@@ -86,7 +86,7 @@ Vytvořil jsem sérii samolepek s natiskem linoritu, kde každá samolepka má s
     timeline: 'Průběžně',
     videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
     image: '/projects/streetart/IMG_4740_thumb.jpg',
-    images: ['/projects/streetart/IMG_4740.jpeg'],
+    images: ['/projects/streetart/IMG_4740_web.jpg'],
     thumbs: ['/projects/streetart/IMG_4740_thumb.jpg'],
   },
   {
@@ -112,10 +112,10 @@ Tak vznikla malá venkovní galerie: obrazy v ulici, které denně míjely desí
     timeline: 'Průběžně',
     image: '/projects/gallery/IMG_1694_thumb.jpg',
     images: [
-      '/projects/gallery/IMG_1694.png',
-      '/projects/gallery/IMG_1719.png',
-      '/projects/gallery/IMG_2332.png',
-      '/projects/gallery/IMG_4702.png',
+      '/projects/gallery/IMG_1694_web.jpg',
+      '/projects/gallery/IMG_1719_web.jpg',
+      '/projects/gallery/IMG_2332_web.jpg',
+      '/projects/gallery/IMG_4702_web.jpg',
     ],
     thumbs: [
       '/projects/gallery/IMG_1694_thumb.jpg',
