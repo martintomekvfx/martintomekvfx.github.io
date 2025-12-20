@@ -184,6 +184,9 @@ function Project() {
                             allowFullScreen
                         />
                     </div>
+                    {project.videoDescription && (
+                        <p className="video-description">{project.videoDescription}</p>
+                    )}
                 </section>
             )}
 
@@ -439,6 +442,9 @@ function StreetArtLayout({ project, getStatusLabel, getGalleryClass }) {
                             allowFullScreen
                         />
                     </div>
+                    {project.videoDescription && (
+                        <p className="video-description">{project.videoDescription}</p>
+                    )}
                 </section>
             )}
 

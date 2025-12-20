@@ -7,14 +7,14 @@ export default {
   subtitle: 'Obrazy v ulicích',
   category: 'guerilla',
 
-  description: 'Město jako galerie. Různé techniky guerilla artu od paste-upů přes kresby až po stickery.',
+  description: 'Město jako galerie. Různé techniky guerilla artu od paste-upů přes kresby až po stickery. Propojení s rozšířenou realitou skrze projekt Chomp AR.',
 
   artist: 'Ptáček + kolektiv',
   status: 'in-progress',
   year: '2024-2025',
   location: 'Palmovka, Kolbenka, Anifilm Třeboň',
 
-  details: ['Paste-upy', 'Instalace', 'Kresby', 'Stickery', 'Spray art'],
+  details: ['Paste-upy', 'Stickery', 'Instalace', 'AR integrace', 'Recyklace'],
 
   // Custom layout flag
   customLayout: 'street-art',
@@ -23,59 +23,40 @@ export default {
 
 Záměrně využívám umění svých přátel i kohokoliv, kdo se chce připojit. Ulice je všech. Práce nemusí procházet tradičním kurátorským výběrem, protože veřejný prostor patří každému.
 
-Zajímavou okolností je blízkost mnoha intervencí ke Galerii Pragovka. Vzniká tak implicitní srovnání mezi oficiálním galerijním prostorem a pouliční galerií.`,
+Výrazným prvkem projektu jsou "Chomps" – postavičky, které propojují fyzický street art s digitálním světem. Tato galerie slouží jako rozcestník pro projekt [Chomp AR](/work/chompar), kde naleznete kompletní teoretický rámec i samotnou AR aplikaci.`,
 
   // Subcategories for different techniques
   subcategories: [
     {
       title: 'Paste-upy, Stickers a Chomps',
-      description: 'Vylepované grafické práce a animované Chompy propojené s AR hrou ChompAR. Každý paste-up funguje jako AR marker pro rozšířenou realitu.',
+      description: 'Vylepované grafické práce a postavičky Chomp. Tato sekce je přímo propojena s AR hrou Chomp AR. Každý sticker nebo paste-up slouží jako marker pro rozšířenou realitu. Fotky zachycují proces vylepování i finální umístění v urbanistickém kontextu.',
       images: [
         '/projects/streetart/IMG_4740_web.jpg',
-        '/projects/gallery/IMG_1694_web.jpg',
-        '/projects/gallery/IMG_1719_web.jpg',
-        '/projects/gallery/F6A9BAC1-8AB4-4E93-9032-B338D0CE4676_web.jpg',
         '/projects/gallery/IMG_5328_web.jpg',
         '/projects/gallery/IMG_5335_web.jpg',
         '/projects/gallery/IMG_5565_web.jpg',
         '/projects/gallery/IMG_5568_web.jpg',
+        '/projects/gallery/F6A9BAC1-8AB4-4E93-9032-B338D0CE4676_web.jpg',
+        '/projects/gallery/IMG_6184_2_web.jpg',
+        '/projects/gallery/IMG_6190_web.jpg',
+        '/projects/gallery/IMG_6192_web.jpg',
+        '/projects/gallery/IMG_6203_web.jpg',
       ]
     },
     {
       title: 'Instalace z recyklovaných materiálů',
-      description: 'Využití nalezeného materiálu k vytvoření site-specific instalací. Práce s tím, co město samo nabízí.',
+      description: 'Využití nalezeného materiálu k vytvoření site-specific intervencí. Práce s tím, co město samo nabízí – od starých desek přes nálezové objekty až po textilní prvky vpletené do plotů.',
       images: [
-        '/projects/gallery/IMG_2332_web.jpg',
         '/projects/gallery/IMG_5449_web.jpg',
         '/projects/gallery/IMG_5462_web.jpg',
         '/projects/gallery/IMG_5464_web.jpg',
         '/projects/gallery/E168AFDE-5124-411C-BCE3-3EEF4737634B_web.jpg',
-        '/projects/gallery/IMG_4342_2_web.jpg',
         '/projects/gallery/IMG_4788_web.jpg',
         '/projects/gallery/IMG_4842_web.jpg',
         '/projects/gallery/IMG_5016_web.jpg',
         '/projects/gallery/IMG_5134_web.jpg',
         '/projects/gallery/IMG_5760_web.jpg',
         '/projects/gallery/IMG_5776_web.jpg',
-      ]
-    },
-    {
-      title: 'Kresby na odpad',
-      description: 'Transformace vyhozeného odpadu na umělecké objekty. Karton, dřevo, cokoli co čeká na popelnice.',
-      images: [
-        '/projects/gallery/IMG_4702_web.jpg',
-        '/projects/gallery/IMG_5975_web.jpg',
-        '/projects/gallery/IMG_5976_web.jpg',
-      ]
-    },
-    {
-      title: 'Sticker art & Spray art',
-      description: 'Samolepky a spreje jako nejdostupnější formy guerilla artu. Rychlé, nenápadné, všudypřítomné.',
-      images: [
-        '/projects/gallery/IMG_6184_2_web.jpg',
-        '/projects/gallery/IMG_6190_web.jpg',
-        '/projects/gallery/IMG_6192_web.jpg',
-        '/projects/gallery/IMG_6203_web.jpg',
       ]
     }
   ],
@@ -85,13 +66,13 @@ Zajímavou okolností je blízkost mnoha intervencí ke Galerii Pragovka. Vznik�
     'Linorytové matrice',
     'Samolepky',
     'Paste-upy',
-    'Spreje a šablony',
     'Recyklovaný materiál'
   ],
   budget: '~1750 Kč',
   timeline: 'Průběžně',
 
   videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
+  videoDescription: 'Video dokumentace stickerů, které byly naskenované a rozdávané návštěvníkům festivalu Anifilm. Záznam zachycuje jejich reakce při objevování umění v neočekávaném kontextu. Cílem bylo zprostředkovat pocit ze street artu v kontrolovaném prostředí festivalu. Video mělo premiéru na akci Prase-ní.',
 
   image: '/projects/streetart/IMG_4740_thumb.jpg',
   images: [],

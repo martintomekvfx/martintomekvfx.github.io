@@ -715,6 +715,17 @@ a:hover {
   padding: 0 var(--space-lg) var(--space-2xl);
 }
 
+.video-description {
+  margin-top: var(--space-md);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .project-details-simple {
   background: var(--color-gray-light);
   padding: var(--space-2xl) var(--space-lg);
