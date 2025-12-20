@@ -1,147 +1,129 @@
-# Martin Tomek Portfolio - Categories & Projects
+# Martin Tomek Portfolio
 
-## Overview
+## Přehled kategorií a projektů
 
-Portfolio organizace pro Martin Tomek - guerilla art, analog media, game jam projekty a kolektivní tvorba.
+**URL:** https://martintomekvfx.github.io/
 
 ---
 
 ## 🏴 GUERILLA
 
-Intervence ve veřejném prostoru, tactical urbanism, street art.
+*Intervence ve veřejném prostoru, tactical urbanism, street art.*
 
-| Projekt | Subtitle | Status | Rok |
-|---------|----------|--------|-----|
-| **Slunečnice na Palmovce** | Guerilla Gardening | ✅ Done | 2025 |
-| **Houpačka** | Aktivace prostoru | ✅ Done | 2025 |
-| **Street Art Gallery** | Obrazy v ulicích | 🔄 In Progress | 2024-2025 |
-| **ChompAR** | Street Art AR Game | 🔄 In Progress | 2025 |
-| **Parklety** | Tactical Urbanism | 📋 Planned | 2026 |
-| **Dočasná solární světla** | Tactical Urbanism | 📋 Planned | 2026 |
-
-### Detaily projektů:
-
-**Slunečnice na Palmovce**
-- Guerillová výsadba 120 sazenic do zanedbaných betonových květináčů
-- Jedna dosáhla 3 metrů výšky!
-- 2 videa dokumentující projekt
-
-**Houpačka**
-- Instalace houpačky na opuštěném kovové sušáku ve vnitrobloku
-- Komunitní odezva → místní ji opravili a celý mobiliář natřeli
-
-**Street Art Gallery** (sloučeno ze Street Art + Guerilla Gallery + Sticker Art)
-- Město jako galerie — prázdné plochy jako výstavní prostor
-- Techniky: paste-upy, sticker bombing, poster bombing, spray art, linoryt
-- Stop motion projekt z linoritových samolepek (Anifest projekce)
-- Propojeno s ChompAR
-
-**ChompAR**
-- Street artová AR hra využívající gamifikaci
-- 3 pilíře: Ekologie pozornosti, Právo na město, Détournement
-- 2 módy: Solo (ambientní) + Battle (kompetitivní)
-- Privacy-first design (žádná GPS, lokální profil)
-- Plánováno pro Anifilm 2026
+| Projekt | Popis | Status |
+|---------|-------|--------|
+| **[Slunečnice na Palmovce](/work/slunecnice)** | Guerillová výsadba 120 sazenic do zanedbaných květináčů | ✅ Done |
+| **[Houpačka](/work/houpacka)** | Instalace houpačky na opuštěném sušáku — aktivace prostoru | ✅ Done |
+| **[Street Art Gallery](/work/street-art-gallery)** | Pouliční galerie — paste-upy, stickery, linoryty | 🔄 In Progress |
+| **[ChompAR](/work/chompar)** | Street artová AR hra — gamifikace + ekologie pozornosti | 🔄 In Progress |
+| **Parklety** | Tactical urbanism — dočasné přeměny parkovišť | 📋 Planned |
+| **Solární světla** | Recyklované LED světla na tmavá místa | 📋 Planned |
 
 ---
 
 ## 🎨 ANALOG
 
-Fyzická tvorba, VJing, analogová fotografie, objekty.
+*Fyzická tvorba, VJing, analogová fotografie, objekty.*
 
-| Projekt | Subtitle | Status | Rok |
-|---------|----------|--------|-----|
-| **VJing** | Live Video Performance | 🔄 In Progress | 2023-2025 |
-| **Original Copy** | Bakalářský film | ✅ Done | 2023 |
-| **35mm Photography** | Analog Film | 🔄 In Progress | 2024-2025 |
-| **Betonové banány** | Lavičky / Mobiliář | 📋 Planned | 2026 |
-| **Hlasovací popelníky** | Interaktivní mobiliář | 📋 Planned | 2026 |
-
-### Detaily projektů:
-
-**VJing**
-- 30+ shows na klubových, festivalových a galerijních scénách
-- GLSL shaders, Computer Vision, Analog video
-- Open-source nástroje (ResolumeFX, CV/YOLO)
-
-**Original Copy**
-- Bakalářský film kombinující 3D animaci a glitch art
-- FAMU 2023
-
-**35mm Photography**
-- Vlastní vyvolávání v temné komoře
-- Kodak, Ilford, Fuji
-- Meditativní proces, omezený počet snímků
+| Projekt | Popis | Status |
+|---------|-------|--------|
+| **[VJing](/work/vjing)** | 30+ shows — live video performance, GLSL, CV | 🔄 In Progress |
+| **[Original Copy](/work/original-copy)** | Bakalářský film — 3D animace + glitch art | ✅ Done |
+| **[35mm Photography](/work/35mm-photo)** | Analog film — vlastní vyvolávání | 🔄 In Progress |
+| **[Scanner Series](/work/scanner-series)** | 14 experimentálních skenů — A3 print série | ✅ Done |
+| **Betonové banány** | Lavičky ve tvaru banánů — Tropical Palmbeach | 📋 Planned |
+| **Hlasovací popelníky** | Gamifikace likvidace nedopalků | 📋 Planned |
 
 ---
 
 ## 🎮 GAME JAM
 
-Herní projekty z game jamů a experimentální hry.
+*Herní projekty z game jamů.*
 
-| Projekt | Subtitle | Status | Rok |
-|---------|----------|--------|-----|
-| **Untitled Roach Game** | Ludum Dare 54 | ✅ Done | 2024 |
-| **Profesor Chaos** | FAMU Game Jam | ✅ Done | 2024 |
-| **Běsnění** | Experimentální hra | ✅ Done | 2024 |
-| **Interaktivní kamerová hra** | Game Design x Veřejný prostor | 📋 Planned | 2026 |
+| Projekt | Popis | Status |
+|---------|-------|--------|
+| **[Untitled Roach Game](/work/untitled-roach-game)** | Ludum Dare 54 — animace + visual design | ✅ Done |
+| **[Agent Chaos](/work/agent-chaos)** | FAMU Game Jam — technický ředitel | ✅ Done |
+| **[Běsnění](/work/besneni)** | Experimentální hra — hratelná přímo na webu | ✅ Done |
+| **Kamerová hra** | Computer vision + veřejný prostor | 📋 Planned |
 
-### Detaily projektů:
-
-**Untitled Roach Game**
-- Ludum Dare 54 (48h game jam)
-- Dvoučlenný tým
-- Role: Kompletní animace a vizuální styl
-
-**Profesor Chaos**
-- FAMU Game Jam
-- Role: Technický ředitel a animace
-
-**Běsnění**
-- Experimentální herní projekt
-- Hranice mezi hrou a interaktivním uměním
+**Itch.io:** [jamiiethetrashman.itch.io](https://jamiiethetrashman.itch.io/)
 
 ---
 
 ## 👥 COLLECTIVE
 
-Kolaborativní projekty.
+*Kolaborativní projekty.*
 
-| Projekt | Subtitle | Status | Rok |
-|---------|----------|--------|-----|
-| **AniJam** | Collaborative Animation | ✅ Done | 2024 |
-
-### Detaily projektů:
-
-**AniJam**
-- Kolaborativní animovaný film
-- Každý účastník přispívá unikátní sekvencí
-- Představeno na Anifilm Festivalu
+| Projekt | Popis | Status |
+|---------|-------|--------|
+| **[AniJam](/work/anijam)** | Kolaborativní animace — Anifilm Festival | ✅ Done |
+| **[Flatprint](/work/flatprint)** | Kolektivní tisk — experimentální techniky | ✅ Done |
+| **[Bolex Module](/work/bolex-module)** | 16mm analog film collective — FAMU | ✅ Done |
 
 ---
 
 ## Exhibitions
 
-- **Chomps at Divine** — Gallery G18 Poděbrady, kurátor Luboš Hradec
-- **Glitch Interactive** — Festival Kontinent, kurátor Ondřej Klimpar
+| Výstava | Místo | Kurátor |
+|---------|-------|---------|
+| **Chomps at Divine** | Gallery G18 Poděbrady | Luboš Hradec |
+| **Glitch Interactive** | Festival Kontinent | Ondřej Klimpar |
 
 ## Workshops
 
-- **Glitch Analog Art** — Festival Kontinent
-- AI Tools / Analog VJing
+| Workshop | Kontext |
+|----------|---------|
+| **Glitch Analog Art** | Festival Kontinent |
+| **AI Tools** | Různé |
+| **Analog VJing** | Různé |
 
 ## Festival Collaborations
 
-Future Gate / Konťák / Marienbad Film Festival / Kontinent
+Future Gate / Konťák / Marienbad Film Festival / Kontinent / Anifilm
+
+---
+
+## Struktura souborů
+
+```
+src/data/projects/
+├── guerilla/
+│   ├── slunecnice.js
+│   ├── houpacka.js
+│   ├── street-art-gallery.js
+│   ├── chompar.js
+│   └── index.js
+├── analog/
+│   ├── vjing.js
+│   ├── original-copy.js
+│   ├── 35mm-photo.js
+│   ├── scanner-series.js
+│   └── index.js
+├── gamejam/
+│   ├── untitled-roach-game.js
+│   ├── agent-chaos.js
+│   ├── besneni.js
+│   └── index.js
+└── collective/
+    ├── anijam.js
+    ├── flatprint.js
+    ├── bolex-module.js
+    └── index.js
+```
+
+Každý projekt má vlastní soubor pro snadné editování.
 
 ---
 
 ## Status Legend
 
-- ✅ **Done** - Dokončeno
-- 🔄 **In Progress** - Probíhá
-- 📋 **Planned** - V plánu
+| Symbol | Význam |
+|--------|--------|
+| ✅ | Done — Dokončeno |
+| 🔄 | In Progress — Probíhá |
+| 📋 | Planned — V plánu |
 
 ---
 
-*Portfolio URL: https://martintomekvfx.github.io/*
+*Poslední aktualizace: 2025-12-20*
