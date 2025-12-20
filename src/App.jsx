@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/martintomekvfx">
       <ScrollToHash />
       <Routes>
         <Route path="/" element={<Layout />}>
