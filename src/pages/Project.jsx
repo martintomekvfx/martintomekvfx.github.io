@@ -425,7 +425,7 @@ function StreetArtLayout({ project, getStatusLabel, getGalleryClass }) {
                         <p className="street-art-section-desc">{sub.description}</p>
 
                         {sub.images && sub.images.length > 0 && (
-                            <div className="gallery-masonry">
+                            <div className={`project-gallery gallery-${project.galleryLayout || 'mixed'}`}>
                                 {sub.images.map((image, j) => {
                                     const imgUrl = typeof image === 'string' ? image : image.url;
                                     const imgTitle = typeof image === 'string' ? null : image.title;

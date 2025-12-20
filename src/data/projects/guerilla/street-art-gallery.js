@@ -18,6 +18,7 @@ export default {
 
   // Custom layout flag
   customLayout: 'street-art',
+  galleryLayout: 'mixed',
 
   fullDescription: `Projekt vychází z premisy, že město samo o sobě představuje galerii a jeho ulice jsou výstavními stěnami. Pracuji s množstvím opuštěných informačních prostor, které ztratily původní účel.
 
@@ -29,48 +30,47 @@ Výrazným prvkem projektu jsou "Chomps" – postavičky, které propojují fyzi
   subcategories: [
     {
       title: 'Paste-upy a Chomps',
-      description: 'Vylepované grafické práce a postavičky Chomp. Tato sekce je přímo propojena s AR hrou Chomp AR. Každý paste-up funguje jako marker pro rozšířenou realitu. Fotky zachycují proces vylepování i finální umístění v urbanistickém kontextu.',
+      description: 'Vylepované grafické práce a postavičky Chomp. Tato sekce je přímo propojena s AR hrou Chomp AR. Každý paste-up funguje jako marker pro rozšířenou realitu.',
       images: [
-        '/projects/streetart/IMG_4740_web.jpg', // První je street art
-        '/projects/gallery/IMG_5449_web.jpg',   // Chomp přesunutý z instalací
-        '/projects/gallery/IMG_5462_web.jpg',   // Chomp přesunutý z instalací
-        '/projects/gallery/IMG_6184_2_web.jpg', // První z bývalého spray artu (taky Chomp)
-        '/projects/gallery/IMG_6190_web.jpg',
-        '/projects/gallery/IMG_6192_web.jpg',
-        '/projects/gallery/IMG_6203_web.jpg',
-        '/projects/gallery/IMG_5328_web.jpg',
-        '/projects/gallery/IMG_5335_web.jpg',
-        '/projects/gallery/IMG_5565_web.jpg',
-        '/projects/gallery/IMG_5568_web.jpg',
+        { url: '/projects/streetart/IMG_4740_web.jpg', title: 'Klasický street art v interakci s městem' },
+        { url: '/projects/gallery/IMG_5449_web.jpg', title: 'Chomp v urbanistickém detailu' },
+        { url: '/projects/gallery/IMG_5462_web.jpg', title: 'Vylepování postaviček' },
+        { url: '/projects/gallery/IMG_6184_2_web.jpg', title: 'Chomp stencil v šedé zóně' },
+        { url: '/projects/gallery/IMG_6190_web.jpg', title: 'Detail sprejového artu' },
+        { url: '/projects/gallery/IMG_6192_web.jpg', title: 'Barevná intervence' },
+        { url: '/projects/gallery/IMG_6203_web.jpg', title: 'Chomp na nečekaném místě' },
+        { url: '/projects/gallery/IMG_5328_web.jpg', title: 'Paste-up proces' },
+        { url: '/projects/gallery/IMG_5335_web.jpg', title: 'Finální vylepení' },
+        { url: '/projects/gallery/IMG_5565_web.jpg', title: 'Dialog s okolím' },
+        { url: '/projects/gallery/IMG_5568_web.jpg', title: 'Street art fragment' }
       ]
     },
     {
       title: 'Skener - Anifilm',
-      description: 'Dokumentace samolepek, které byly naskenovány a transformovány pro interakci s diváky. Tento proces zkoumá přenos pouličního umění do digitální a kurátorské podoby festivalu.',
+      description: 'Stickers naskenované pro návštěvníky festivalu Anifilm. Projekt zkoumá přenos syrového street artu do formátu festivalového dárku.',
       images: [
-        '/projects/gallery/IMG_1719_web.jpg', // Původně třetí v paste-upech
-        '/projects/gallery/F6A9BAC1-8AB4-4E93-9032-B338D0CE4676_web.jpg',
+        { url: '/projects/gallery/IMG_1719_web.jpg', title: 'Skenování jako metoda zachování artu' },
+        { url: '/projects/gallery/F6A9BAC1-8AB4-4E93-9032-B338D0CE4676_web.jpg', title: 'Digitální archivace nálepky' }
       ]
     },
     {
       title: 'Instalace z recyklovaných materiálů',
-      description: 'Využití nalezeného materiálu k vytvoření site-specific intervencí. Práce s tím, co město samo nabízí – nálezové objekty, textilní prvky a geometrické struktury vpletené do plotů.',
+      description: 'Site-specific intervence z nalezených materiálů. Práce s nálezovými objekty a geometrickými strukturami.',
       images: [
-        '/projects/gallery/IMG_5464_web.jpg',
-        '/projects/gallery/E168AFDE-5124-411C-BCE3-3EEF4737634B_web.jpg',
-        '/projects/gallery/IMG_4788_web.jpg',
-        '/projects/gallery/IMG_4842_web.jpg',
-        '/projects/gallery/IMG_5016_web.jpg',
-        '/projects/gallery/IMG_5134_web.jpg',
-        '/projects/gallery/IMG_5760_web.jpg',
-        '/projects/gallery/IMG_5776_web.jpg',
+        { url: '/projects/gallery/IMG_5464_web.jpg', title: 'Recyklovaná instalace' },
+        { url: '/projects/gallery/E168AFDE-5124-411C-BCE3-3EEF4737634B_web.jpg', title: 'Textilní zásah do plotu' },
+        { url: '/projects/gallery/IMG_4788_web.jpg', title: 'Nalezený objekt jako umění' },
+        { url: '/projects/gallery/IMG_4842_web.jpg', title: 'Intervence v detailu' },
+        { url: '/projects/gallery/IMG_5016_web.jpg', title: 'Práce s odpadem' },
+        { url: '/projects/gallery/IMG_5134_web.jpg', title: 'Geometrie v ulici' },
+        { url: '/projects/gallery/IMG_5760_web.jpg', title: 'Instalace na Palmovce' },
+        { url: '/projects/gallery/IMG_5776_web.jpg', title: 'Urbanistický dialog' }
       ]
     }
   ],
 
   materials: [
-    'Grafické tisky vlastní i od přátel',
-    'Linorytové matrice',
+    'Grafické tisky',
     'Samolepky',
     'Paste-upy',
     'Recyklovaný materiál'
@@ -79,7 +79,7 @@ Výrazným prvkem projektu jsou "Chomps" – postavičky, které propojují fyzi
   timeline: 'Průběžně',
 
   videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
-  videoDescription: 'Video dokumentace stickerů, které byly naskenované a rozdávané návštěvníkům festivalu Anifilm. Záznam zachycuje jejich reakce při objevování umění a snahu o zprostředkování syrového pocitu ze street artu v prostředí festivalu. Video mělo premiéru na akci Prase-ní.',
+  videoDescription: 'Video dokumentace stickerů, které byly naskenované a rozdávané návštěvníkům festivalu Anifilm. Záznam zachycuje jejich reakce při objevování a snahu o zprostředkování syrového pocitu ze street artu. Video mělo premiéru na akci Prase-ní.',
 
   image: '/projects/streetart/IMG_4740_thumb.jpg',
   images: [],
