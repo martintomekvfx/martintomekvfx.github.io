@@ -34,6 +34,7 @@ Jedna slunečnice dosáhla úžasných 3 metrů výšky - byla viditelná z cel�
       '/projects/slunecnice/IMG_4421_thumb.jpg',
       '/projects/slunecnice/IMG_4702_thumb.jpg',
     ],
+    videoUrl: 'https://www.youtube.com/watch?v=AKgS2maI94k',
   },
   {
     id: 'houpacka',
