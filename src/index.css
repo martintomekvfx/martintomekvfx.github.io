@@ -501,6 +501,28 @@ a:hover {
   border: none;
 }
 
+/* Local video files */
+.project-videos {
+  padding: var(--space-xl) 0;
+}
+
+.project-video-item {
+  margin-bottom: var(--space-md);
+}
+
+.local-video {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+  background: #000;
+}
+
+.project-videos .video-description {
+  margin-top: var(--space-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
 /* Image gallery */
 .gallery {
   display: grid;

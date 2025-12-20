@@ -166,23 +166,46 @@ function Project() {
                             )}
 
                             {/* Render multiple videos from array */}
-                            {project.videos && project.videos.map((video, idx) => (
-                                <div key={idx} className="project-video-item">
-                                    <div className="project-video">
-                                        <div className="video-container">
-                                            <iframe
-                                                src={video.url.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
-                                                title={`${project.title} video ${idx + 1}`}
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen
-                                            />
-                                        </div>
-                                        {video.description && (
-                                            <p className="video-description">{video.description}</p>
+                            {project.videos && project.videos.map((video, idx) => {
+                                // Support both string paths and object format
+                                const videoPath = typeof video === 'string' ? video : video.url;
+                                const videoDesc = typeof video === 'string' ? null : video.description;
+                                const isLocalVideo = videoPath.endsWith('.mp4') || videoPath.endsWith('.webm') || videoPath.endsWith('.mov');
+
+                                return (
+                                    <motion.div
+                                        key={idx}
+                                        className="project-video-item"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.4, delay: idx * 0.1 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        {isLocalVideo ? (
+                                            <video
+                                                controls
+                                                preload="metadata"
+                                                className="local-video"
+                                            >
+                                                <source src={videoPath} type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        ) : (
+                                            <div className="video-container">
+                                                <iframe
+                                                    src={videoPath.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/').split('&')[0]}
+                                                    title={`${project.title} video ${idx + 1}`}
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen
+                                                />
+                                            </div>
                                         )}
-                                    </div>
-                                </div>
-                            ))}
+                                        {videoDesc && (
+                                            <p className="video-description">{videoDesc}</p>
+                                        )}
+                                    </motion.div>
+                                );
+                            })}
                         </section>
                     )
                 );
