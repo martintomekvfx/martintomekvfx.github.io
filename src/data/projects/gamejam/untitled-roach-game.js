@@ -30,8 +30,15 @@ Výsledná hra demonstruje možnosti spojení animačních dovedností s interak
     budget: 'N/A',
     timeline: '48 hodin',
 
-    image: '/projects/roach-game.jpg',
-    images: [],
+    image: '/projects/roach-game/frame_01.jpg',
+    images: [
+        '/projects/roach-game/frame_01.jpg',
+        '/projects/roach-game/frame_02.jpg',
+        '/projects/roach-game/frame_03.jpg',
+        '/projects/roach-game/frame_04.jpg',
+        '/projects/roach-game/frame_05.jpg',
+        '/projects/roach-game/frame_06.jpg',
+    ],
     thumbs: [],
 
     videoUrl: 'https://www.youtube.com/watch?v=FdrGPoGjr8A',
