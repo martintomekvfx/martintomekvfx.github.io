@@ -1,94 +1,35 @@
 // Project data - organized by medium: analog, digital, guerilla
 // All projects from Martin Tomek's portfolio
 
-// Helper to get thumbnail path
-const thumb = (path) => path.replace(/\.(jpeg|jpg|png)$/, '_thumb.jpg');
-
 export const analogProjects = [
   {
-    id: 'slunecnice',
-    title: 'Slunečnice na Palmovce',
-    subtitle: 'Guerilla Gardening',
+    id: 'sticker-art',
+    title: 'Sticker Art',
+    subtitle: 'Participativní linoryt',
     category: 'analog',
-    description: 'Guerillová výsadba 120 sazenic slunečnic do zanedbaných betonových květináčů',
+    description: 'Participativní sticker art z linorytu, který se šíří městem rukama diváků.',
     artist: 'Martin Tomek',
     status: 'done',
-    year: '2025',
-    location: '12 betonových záhonů, Palmovka',
-    details: ['120 sazenic', 'Recyklace', '12 lokalit'],
-    fullDescription: `Realizace 2025 - Testovací intervence
+    year: '2024-2025',
+    location: 'Veřejný prostor, Anifilm, Prasení',
+    details: ['Linoryt', 'Sticker art', 'Happening', 'Site-specific'],
+    fullDescription: `Participativní sticker art z linorytu, který se šíří městem rukama diváků a vrcholí videem pro otevřenou projekci „Prasení" — hybrid happeningu, site-specific a videa.
 
-V roce 2025 jsem realizoval testovací intervenci - výsadbu slunečnic a dalších květin do zanedbaných betonových květináčů na Palmovce.
+Projekt rozšiřuje linoryt do roviny post-graffiti sticker artu a pracuje s participací publika. Autorské motivy digitalizuji, tisknu jako samolepky a uvádím do oběhu ve veřejném prostoru i na festivalu Anifilm.
 
-V lokalitě Palmovka je řada velkých záhonů a květináčů, které jsou však léta prázdné. Přitom v 90. letech při vzniku pěší zóny Palmovky tam byla vysázena zeleň. Dnes nic.
+Společenskou distribuci završuje video-sestřih z motivů stickerek uvedený v otevřené projekci „Prasení". Výsledkem je hybrid mezi happeningem, site-specific intervencí a videem.
 
-Jedna slunečnice dosáhla úžasných 3 metrů výšky - byla viditelná z celé Palmovky!`,
-    materials: ['Semena/sazenice slunečnic', 'Recyklované kelímky', 'Hlína', 'Kravské hnojivo'],
-    budget: '~800 Kč',
-    timeline: 'Jaro 2025 → Léto 2025',
-    image: '/projects/slunecnice/IMG_4417_thumb.jpg',
-    images: [
-      '/projects/slunecnice/IMG_4417.jpeg',
-      '/projects/slunecnice/IMG_4421.jpeg',
-      '/projects/slunecnice/IMG_4702.jpeg',
-    ],
-    thumbs: [
-      '/projects/slunecnice/IMG_4417_thumb.jpg',
-      '/projects/slunecnice/IMG_4421_thumb.jpg',
-      '/projects/slunecnice/IMG_4702_thumb.jpg',
-    ],
-  },
-  {
-    id: 'houpacka',
-    title: 'Houpačka',
-    subtitle: 'Aktivace prostoru',
-    category: 'analog',
-    description: 'Instalace houpačky na opuštěném kovové sušáku ve vnitrobloku - intervence která motivovala obyvatele k trvalé proměně místa',
-    artist: 'Ptáček',
-    status: 'done',
-    year: '2025',
-    location: 'Vnitroblok, Libeň',
-    details: ['První intervence', 'Komunitní odezva', 'DIY', 'Trvalý efekt'],
-    fullDescription: `Jedním z prvních zásahů byla instalace houpačky ve vnitrobloku libeňského sídliště, na konstrukci starých kovových sušáků na prádlo.
-
-Tyto sušáky už dnes obyvatelé nevyužívali; stály opuštěné. Napadlo mě propůjčit jim nový smysl.
-
-Z odložené dřevěné palety jsem vyrobil pevné prkno na sezení, musel jsem se naučit správné uzly pro bezpečné zavěšení.
-
-Během dvou dnů někdo z místních houpačku okamžitě použil a dokonce poopravil její zavěšení. Prostor začal žít!
-
-Po delší době: Celý kovový mobiliář sušáků byl obroušen a nově natřen. Má intervence otevřela oči místním.`,
-    materials: ['Dřevěná paleta', 'Pevné lano', 'Nátěr'],
-    budget: '~200 Kč',
-    timeline: 'Víkend → Trvalá proměna',
-    image: '/projects/houpacka/IMG_2332_thumb.jpg',
-    images: ['/projects/houpacka/IMG_2332.png'],
-    thumbs: ['/projects/houpacka/IMG_2332_thumb.jpg'],
-  },
-  {
-    id: 'hlasovaci-popelniky',
-    title: 'Hlasovací popelníky',
-    subtitle: 'Interaktivní mobiliář',
-    category: 'analog',
-    description: 'Experiment s veřejným zapojením skrze herní mechanismus "hlasování nedopalky"',
-    artist: 'Martin Tomek, Tomáš Koníček',
-    status: 'planned',
-    year: '2026',
-    location: 'Palmovka, Praha',
-    details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
-    fullDescription: `Pozorování a problém: Cigaretové nedopalky jsou jedním z nejběžnějších odpadků na ulici. Mnoho lidí ani nevnímá nedopalky jako odpad – odhodit ho na zem je pro ně normální.
-
-Koncept hlasovacího popelníku: Popelník rozdělený na dvě přihrádky s otázkou, na kterou kuřák "hlasuje" tím, že vhodí nedopalek do jedné či druhé části.
-
-Příklad: "Je lepší káva, nebo čaj?" – jedna strana "káva", druhá "čaj"; lidé házejí špačky podle svého názoru.
-
-Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, a zároveň je to anketa.`,
-    materials: ['Dřevo/kov pro konstrukci', 'Průhledný plexisklo', 'Popisky/otázky', 'Montážní materiál'],
-    budget: '~1500 Kč',
-    timeline: 'Zima 2025 → Jaro 2026',
-    image: '/projects/hlasovaci-popelnik/design_thumb.jpg',
-    images: ['/projects/hlasovaci-popelnik/design.jpeg'],
-    thumbs: ['/projects/hlasovaci-popelnik/design_thumb.jpg'],
+Média: linoryt (matrice), samolepky (sticker art), video (projekce)
+Formát: happening / site-specific / participativní distribuce
+Kontext uvedení: veřejný prostor; Anifilm; otevřená projekce „Prasení"
+Role autora: koncept, tisk, distribuce, kamera, střih, projekce`,
+    materials: ['Linoryt matrice', 'Samolepky', 'Video projekce'],
+    budget: '~1000 Kč',
+    timeline: '2024-2025',
+    image: '/projects/sticker-art.jpg',
+    images: [],
+    thumbs: [],
+    videoUrl: '',
   },
   {
     id: 'betonove-banany',
@@ -114,57 +55,29 @@ Série betonových laviček ve tvaru banánů jako funkční urbánní mobiliá�
     thumbs: [],
   },
   {
-    id: 'parklety',
-    title: 'Parklety',
-    subtitle: 'Tactical Urbanism',
+    id: 'hlasovaci-popelniky',
+    title: 'Hlasovací popelníky',
+    subtitle: 'Interaktivní mobiliář',
     category: 'analog',
-    description: 'Dočasná přeměna parkovacích míst na prostor pro setkávání - kompletní obývací pokoj pod širým nebem',
+    description: 'Experiment s veřejným zapojením skrze herní mechanismus "hlasování nedopalky"',
     artist: 'Martin Tomek, Tomáš Koníček',
     status: 'planned',
     year: '2026',
-    location: 'Před pobočkou KB, Palmovka',
-    details: ['Dřevěné palety', 'Komunitní náměstí', 'Reversibilní'],
-    fullDescription: `Parklet a komunitní mikronáměstí
+    location: 'Palmovka, Praha',
+    details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
+    fullDescription: `Pozorování a problém: Cigaretové nedopalky jsou jedním z nejběžnějších odpadků na ulici. Mnoho lidí ani nevnímá nedopalky jako odpad – odhodit ho na zem je pro ně normální.
 
-Palmovce chybí příjemný veřejný prostor k posezení a setkávání. Identifikoval jsem místo před pobočkou Komerční banky, kde je široký chodník a asfaltová plocha.
+Koncept hlasovacího popelníku: Popelník rozdělený na dvě přihrádky s otázkou, na kterou kuřák "hlasuje" tím, že vhodí nedopalek do jedné či druhé části.
 
-Realizace by spočívala v tom, že bych na jeden den „obsadil" pár parkovacích míst a vybavil je dočasným mobiliářem: paletové lavičky, stoly, květináče s rostlinami, deštníky pro stín.
+Příklad: "Je lepší káva, nebo čaj?" – jedna strana "káva", druhá "čaj"; lidé házejí špačky podle svého názoru.
 
-Cílem je na vlastní oči vidět, jak lidé reagují, když najednou mají možnost se v místě zastavit.`,
-    materials: ['EURO palety', 'Venkovní koberec', 'Stolek', 'Polštáře', 'Květináč'],
-    budget: '~3500 Kč',
-    timeline: 'Léto 2026',
-    image: '/projects/parklety.jpg',
-    images: [],
-    thumbs: [],
-  },
-  {
-    id: 'solarni-svetla',
-    title: 'Dočasná solární světla',
-    subtitle: 'Tactical Urbanism',
-    category: 'analog',
-    description: 'Instalace recyklovaných LED světel na tmavá místa - kritika konzumní kultury a zlepšení bezpečnosti',
-    artist: 'Ptáček',
-    status: 'planned',
-    year: '2026',
-    location: 'Podchody, schody metra, Palmovka',
-    details: ['Recyklace baterií', 'Bezpečnost', 'Ekologický aktivismus'],
-    fullDescription: `Instalace dočasných pouličních světel na tmavá místa.
-
-Některé podchody, vchody do metra nebo zákoutí jsou nedostatečně osvětlené.
-
-Zároveň jsem si všiml: jednorázové elektronické cigarety obsahují malé Li-ion akumulátory, ale po jednom použití se vyhazují. Tyto baterie lze přitom znovu využít.
-
-Trojí motivace:
-1. Zlepšit bezpečnost a orientaci v nočním prostoru
-2. Prakticky demonstrovat možnosti recyklace
-3. Kriticky poukázat na absurditu konzumní kultury`,
-    materials: ['Recyklované baterie', 'LED diody', 'Solární panely', 'Krabičky'],
-    budget: '~750 Kč',
+Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, a zároveň je to anketa.`,
+    materials: ['Dřevo/kov pro konstrukci', 'Průhledný plexisklo', 'Popisky/otázky', 'Montážní materiál'],
+    budget: '~1500 Kč',
     timeline: 'Zima 2025 → Jaro 2026',
-    image: '/projects/solarni-svetla.jpg',
-    images: [],
-    thumbs: [],
+    image: '/projects/hlasovaci-popelnik/design_thumb.jpg',
+    images: ['/projects/hlasovaci-popelnik/design.jpeg'],
+    thumbs: ['/projects/hlasovaci-popelnik/design_thumb.jpg'],
   },
 ];
 
@@ -295,6 +208,66 @@ Hra podporuje objevování street artu v místech, kam by se běžný návštěv
 
 export const guerillaProjects = [
   {
+    id: 'slunecnice',
+    title: 'Slunečnice na Palmovce',
+    subtitle: 'Guerilla Gardening',
+    category: 'guerilla',
+    description: 'Guerillová výsadba 120 sazenic slunečnic do zanedbaných betonových květináčů',
+    artist: 'Martin Tomek',
+    status: 'done',
+    year: '2025',
+    location: '12 betonových záhonů, Palmovka',
+    details: ['120 sazenic', 'Recyklace', '12 lokalit'],
+    fullDescription: `Realizace 2025 - Testovací intervence
+
+V roce 2025 jsem realizoval testovací intervenci - výsadbu slunečnic a dalších květin do zanedbaných betonových květináčů na Palmovce.
+
+V lokalitě Palmovka je řada velkých záhonů a květináčů, které jsou však léta prázdné. Přitom v 90. letech při vzniku pěší zóny Palmovky tam byla vysázena zeleň. Dnes nic.
+
+Jedna slunečnice dosáhla úžasných 3 metrů výšky - byla viditelná z celé Palmovky!`,
+    materials: ['Semena/sazenice slunečnic', 'Recyklované kelímky', 'Hlína', 'Kravské hnojivo'],
+    budget: '~800 Kč',
+    timeline: 'Jaro 2025 → Léto 2025',
+    image: '/projects/slunecnice/IMG_4417_thumb.jpg',
+    images: [
+      '/projects/slunecnice/IMG_4417.jpeg',
+      '/projects/slunecnice/IMG_4421.jpeg',
+      '/projects/slunecnice/IMG_4702.jpeg',
+    ],
+    thumbs: [
+      '/projects/slunecnice/IMG_4417_thumb.jpg',
+      '/projects/slunecnice/IMG_4421_thumb.jpg',
+      '/projects/slunecnice/IMG_4702_thumb.jpg',
+    ],
+  },
+  {
+    id: 'houpacka',
+    title: 'Houpačka',
+    subtitle: 'Aktivace prostoru',
+    category: 'guerilla',
+    description: 'Instalace houpačky na opuštěném kovové sušáku ve vnitrobloku - intervence která motivovala obyvatele k trvalé proměně místa',
+    artist: 'Ptáček',
+    status: 'done',
+    year: '2025',
+    location: 'Vnitroblok, Libeň',
+    details: ['První intervence', 'Komunitní odezva', 'DIY', 'Trvalý efekt'],
+    fullDescription: `Jedním z prvních zásahů byla instalace houpačky ve vnitrobloku libeňského sídliště, na konstrukci starých kovových sušáků na prádlo.
+
+Tyto sušáky už dnes obyvatelé nevyužívali; stály opuštěné. Napadlo mě propůjčit jim nový smysl.
+
+Z odložené dřevěné palety jsem vyrobil pevné prkno na sezení, musel jsem se naučit správné uzly pro bezpečné zavěšení.
+
+Během dvou dnů někdo z místních houpačku okamžitě použil a dokonce poopravil její zavěšení. Prostor začal žít!
+
+Po delší době: Celý kovový mobiliář sušáků byl obroušen a nově natřen. Má intervence otevřela oči místním.`,
+    materials: ['Dřevěná paleta', 'Pevné lano', 'Nátěr'],
+    budget: '~200 Kč',
+    timeline: 'Víkend → Trvalá proměna',
+    image: '/projects/houpacka/IMG_2332_thumb.jpg',
+    images: ['/projects/houpacka/IMG_2332.png'],
+    thumbs: ['/projects/houpacka/IMG_2332_thumb.jpg'],
+  },
+  {
     id: 'street-art',
     title: 'Street Art',
     subtitle: 'Obrazy v ulicích',
@@ -357,33 +330,57 @@ Tak vznikla malá venkovní galerie: obrazy v ulici, které denně míjely desí
     ],
   },
   {
-    id: 'sticker-art',
-    title: 'Sticker Art',
-    subtitle: 'Participativní linoryt',
+    id: 'parklety',
+    title: 'Parklety',
+    subtitle: 'Tactical Urbanism',
     category: 'guerilla',
-    description: 'Participativní sticker art z linorytu, který se šíří městem rukama diváků.',
-    artist: 'Martin Tomek',
-    status: 'done',
-    year: '2024-2025',
-    location: 'Veřejný prostor, Anifilm, Prasení',
-    details: ['Linoryt', 'Sticker art', 'Happening', 'Site-specific'],
-    fullDescription: `Participativní sticker art z linorytu, který se šíří městem rukama diváků a vrcholí videem pro otevřenou projekci „Prasení" — hybrid happeningu, site-specific a videa.
+    description: 'Dočasná přeměna parkovacích míst na prostor pro setkávání - kompletní obývací pokoj pod širým nebem',
+    artist: 'Martin Tomek, Tomáš Koníček',
+    status: 'planned',
+    year: '2026',
+    location: 'Před pobočkou KB, Palmovka',
+    details: ['Dřevěné palety', 'Komunitní náměstí', 'Reversibilní'],
+    fullDescription: `Parklet a komunitní mikronáměstí
 
-Projekt rozšiřuje linoryt do roviny post-graffiti sticker artu a pracuje s participací publika. Autorské motivy digitalizuji, tisknu jako samolepky a uvádím do oběhu ve veřejném prostoru i na festivalu Anifilm.
+Palmovce chybí příjemný veřejný prostor k posezení a setkávání. Identifikoval jsem místo před pobočkou Komerční banky, kde je široký chodník a asfaltová plocha.
 
-Společenskou distribuci završuje video-sestřih z motivů stickerek uvedený v otevřené projekci „Prasení". Výsledkem je hybrid mezi happeningem, site-specific intervencí a videem.
+Realizace by spočívala v tom, že bych na jeden den „obsadil" pár parkovacích míst a vybavil je dočasným mobiliářem: paletové lavičky, stoly, květináče s rostlinami, deštníky pro stín.
 
-Média: linoryt (matrice), samolepky (sticker art), video (projekce)
-Formát: happening / site-specific / participativní distribuce
-Kontext uvedení: veřejný prostor; Anifilm; otevřená projekce „Prasení"
-Role autora: koncept, tisk, distribuce, kamera, střih, projekce`,
-    materials: ['Linoryt matrice', 'Samolepky', 'Video projekce'],
-    budget: '~1000 Kč',
-    timeline: '2024-2025',
-    image: '/projects/sticker-art.jpg',
+Cílem je na vlastní oči vidět, jak lidé reagují, když najednou mají možnost se v místě zastavit.`,
+    materials: ['EURO palety', 'Venkovní koberec', 'Stolek', 'Polštáře', 'Květináč'],
+    budget: '~3500 Kč',
+    timeline: 'Léto 2026',
+    image: '/projects/parklety.jpg',
     images: [],
     thumbs: [],
-    videoUrl: '',
+  },
+  {
+    id: 'solarni-svetla',
+    title: 'Dočasná solární světla',
+    subtitle: 'Tactical Urbanism',
+    category: 'guerilla',
+    description: 'Instalace recyklovaných LED světel na tmavá místa - kritika konzumní kultury a zlepšení bezpečnosti',
+    artist: 'Ptáček',
+    status: 'planned',
+    year: '2026',
+    location: 'Podchody, schody metra, Palmovka',
+    details: ['Recyklace baterií', 'Bezpečnost', 'Ekologický aktivismus'],
+    fullDescription: `Instalace dočasných pouličních světel na tmavá místa.
+
+Některé podchody, vchody do metra nebo zákoutí jsou nedostatečně osvětlené.
+
+Zároveň jsem si všiml: jednorázové elektronické cigarety obsahují malé Li-ion akumulátory, ale po jednom použití se vyhazují. Tyto baterie lze přitom znovu využít.
+
+Trojí motivace:
+1. Zlepšit bezpečnost a orientaci v nočním prostoru
+2. Prakticky demonstrovat možnosti recyklace
+3. Kriticky poukázat na absurditu konzumní kultury`,
+    materials: ['Recyklované baterie', 'LED diody', 'Solární panely', 'Krabičky'],
+    budget: '~750 Kč',
+    timeline: 'Zima 2025 → Jaro 2026',
+    image: '/projects/solarni-svetla.jpg',
+    images: [],
+    thumbs: [],
   },
 ];
 
