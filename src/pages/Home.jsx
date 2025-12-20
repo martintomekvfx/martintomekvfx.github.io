@@ -151,7 +151,7 @@ function Home() {
                         </motion.div>
                     </div>
 
-                    {/* Festivals */}
+                    {/* Exhibitions */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -159,9 +159,24 @@ function Home() {
                         viewport={{ once: true }}
                         style={{ marginTop: 'var(--space-2xl)' }}
                     >
+                        <h3 style={{ marginBottom: 'var(--space-md)' }}>EXHIBITIONS</h3>
+                        <div style={{ opacity: 0.8 }}>
+                            <p><strong>Chomps at Divine</strong> — Gallery G18 Poděbrady, kurátor Luboš Hradec</p>
+                            <p style={{ marginTop: 'var(--space-sm)' }}><strong>Glitch Interactive</strong> — Festival Kontinent, kurátor Ondřej Klimpar</p>
+                        </div>
+                    </motion.div>
+
+                    {/* Festivals */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.25 }}
+                        viewport={{ once: true }}
+                        style={{ marginTop: 'var(--space-xl)' }}
+                    >
                         <h3 style={{ marginBottom: 'var(--space-md)' }}>FESTIVAL COLLABORATIONS</h3>
                         <p style={{ opacity: 0.8 }}>
-                            Future Gate / Konťák / Marienbad Film Festival
+                            Future Gate / Konťák / Marienbad Film Festival / Kontinent
                         </p>
                     </motion.div>
 
@@ -174,9 +189,10 @@ function Home() {
                         style={{ marginTop: 'var(--space-xl)' }}
                     >
                         <h3 style={{ marginBottom: 'var(--space-md)' }}>WORKSHOPS</h3>
-                        <p style={{ opacity: 0.8 }}>
-                            AI Tools / Analog VJing
-                        </p>
+                        <div style={{ opacity: 0.8 }}>
+                            <p><strong>Glitch Analog Art</strong> — Festival Kontinent</p>
+                            <p style={{ marginTop: 'var(--space-sm)' }}>AI Tools / Analog VJing</p>
+                        </div>
                     </motion.div>
                 </div>
             </section>
