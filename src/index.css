@@ -1064,8 +1064,15 @@ a:hover {
 .gallery-video-masonry .gallery-item {
   aspect-ratio: auto;
   overflow: hidden;
-  background: #000;
-  border-radius: 4px;
+  background: #111;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-video-masonry .gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-video-masonry .gallery-item img,
@@ -1073,12 +1080,12 @@ a:hover {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
 }
 
 .gallery-video-masonry .gallery-item video {
-  max-height: 400px;
-  object-fit: contain;
-  background: #000;
+  object-fit: cover;
+  background: #111;
 }
 
 @media (max-width: 768px) {

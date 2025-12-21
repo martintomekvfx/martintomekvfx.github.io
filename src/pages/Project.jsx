@@ -162,10 +162,12 @@ function Project() {
                                         viewport={{ once: true }}
                                     >
                                         <video
-                                            controls
-                                            preload="metadata"
-                                            playsInline
+                                            autoPlay
+                                            loop
                                             muted
+                                            playsInline
+                                            preload="auto"
+                                            poster={`${videoPath}#t=0.5`}
                                         >
                                             <source src={videoPath} type="video/mp4" />
                                         </video>

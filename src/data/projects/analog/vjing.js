@@ -31,6 +31,9 @@ Technicky pracuji s autorskými GLSL shadery v prostředí Resolume, které umo�
     budget: 'N/A',
     timeline: '2023 až současnost',
 
+    // Use video masonry for natural aspect ratio videos
+    galleryLayout: 'video-masonry',
+
     image: '/projects/vjing/ai_party.jpg',
     images: [
         '/projects/vjing/ai_party.jpg',
