@@ -144,7 +144,10 @@ function Home() {
                             </div>
                             <div className="about-block">
                                 <h4>Contact</h4>
-                                <p><a href="mailto:martin.tomek@famu.cz">martin.tomek@famu.cz</a></p>
+                                <p>
+                                    <a href="tel:+420774630132">+420 774 630 132</a><br />
+                                    <a href="mailto:martintomek.vfx@gmail.com">martintomek.vfx@gmail.com</a>
+                                </p>
                             </div>
                         </motion.div>
                     </div>
