@@ -118,9 +118,44 @@ function Project() {
             {(() => {
                 // For video-masonry layout, combine images and videos in one gallery
                 const isVideoMasonry = project.galleryLayout === 'video-masonry';
+                const hasImages = project.images && project.images.length > 0;
+                const hasVideos = project.videos && project.videos.length > 0;
+
+                // For video-only galleries (video-masonry with no images)
+                const videoOnlyGallery = isVideoMasonry && !hasImages && hasVideos && (
+                    <section className={`project-gallery gallery-video-masonry`}>
+                        {project.videos.map((video, idx) => {
+                            const videoPath = typeof video === 'string' ? video : video.url;
+                            const isLocalVideo = videoPath.endsWith('.mp4') || videoPath.endsWith('.webm');
+
+                            if (!isLocalVideo) return null;
+
+                            return (
+                                <motion.div
+                                    key={`vid-${idx}`}
+                                    className="gallery-item"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.4, delay: idx * 0.03 }}
+                                    viewport={{ once: true, margin: "100px" }}
+                                >
+                                    <video
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        preload="none"
+                                    >
+                                        <source src={videoPath} type="video/mp4" />
+                                    </video>
+                                </motion.div>
+                            );
+                        })}
+                    </section>
+                );
 
                 const gallerySection = (
-                    (project.images && project.images.length > 0) && (
+                    hasImages && (
                         <section className={`project-gallery ${project.mobileGame ? 'gallery-phone' : getGalleryClass()}`}>
                             {project.images.map((image, index) => {
                                 const imgUrl = typeof image === 'string' ? image : image.url;
@@ -166,8 +201,7 @@ function Project() {
                                             loop
                                             muted
                                             playsInline
-                                            preload="auto"
-                                            poster={`${videoPath}#t=0.5`}
+                                            preload="none"
                                         >
                                             <source src={videoPath} type="video/mp4" />
                                         </video>
@@ -243,6 +277,10 @@ function Project() {
                         </section>
                     )
                 );
+
+                if (videoOnlyGallery) {
+                    return videoOnlyGallery;
+                }
 
                 if (project.videoFirst) {
                     return (

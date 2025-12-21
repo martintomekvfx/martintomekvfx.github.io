@@ -31,22 +31,11 @@ Video feedback série využívá rekurzivní smyčky mezi kamerou a monitorem, k
     budget: 'N/A',
     timeline: 'Ongoing od 2024',
 
-    // Use video masonry gallery layout for mixed images/videos
+    // Use video masonry gallery layout - videos only
     galleryLayout: 'video-masonry',
 
     image: '/projects/glitch/glitch_1.jpg',
-    images: [
-        '/projects/glitch/glitch_1.jpg',
-        '/projects/glitch/glitch_3.jpg',
-        '/projects/glitch/glitch_6.jpg',
-        '/projects/glitch/glitch_7.jpg',
-        '/projects/glitch/glitch_9.jpg',
-        '/projects/glitch/glitch_12.jpg',
-        '/projects/glitch/Still_2025-05-27_213014_1_1_2.jpg',
-        '/projects/glitch/Still_2025-05-27_213239_1_2_1.jpg',
-        '/projects/glitch/Still_2025-05-27_213938_1_3_1.jpg',
-        '/projects/glitch/Still_2025-05-27_214039_2_1_1.jpg'
-    ],
+    images: [],
     videos: [
         '/projects/glitch/240225_Feedback_1.mp4',
         '/projects/glitch/240225_Feedback_2.mp4',
