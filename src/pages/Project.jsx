@@ -65,24 +65,6 @@ function Project() {
 
                     <h1 className="project-main-title">{project.title}</h1>
                     <p className="project-subtitle-simple">{project.subtitle}</p>
-
-                    <div className="project-meta-simple">
-                        <span>{project.year}</span>
-                        <span>•</span>
-                        <span>{project.location}</span>
-                        <span>•</span>
-                        <span className={`status-tag status-${project.status}`}>
-                            {getStatusLabel(project.status)}
-                        </span>
-                    </div>
-
-                    {project.details && (
-                        <div className="project-tags">
-                            {project.details.map((tag, i) => (
-                                <span key={i} className="project-tag">{tag}</span>
-                            ))}
-                        </div>
-                    )}
                 </motion.div>
             </section>
 
