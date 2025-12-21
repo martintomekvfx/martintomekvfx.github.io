@@ -32,14 +32,22 @@ Projekt byl obhájen v roce 2023 jako bakalářská práce na Filmové a televiz
     budget: 'N/A',
     timeline: '2023',
 
-    image: '/projects/original-copy/frame_03.jpg',
+    // Use grid layout for square frames
+    galleryLayout: 'grid',
+
+    image: '/projects/original-copy/frame_05.jpg',
     images: [
         '/projects/original-copy/frame_01.jpg',
         '/projects/original-copy/frame_02.jpg',
         '/projects/original-copy/frame_03.jpg',
         '/projects/original-copy/frame_04.jpg',
-        '/projects/original-copy/frame_05.jpg',
         '/projects/original-copy/frame_06.jpg',
+        '/projects/original-copy/frame_07.jpg',
+        '/projects/original-copy/frame_08.jpg',
+        '/projects/original-copy/frame_09.jpg',
+        '/projects/original-copy/frame_10.jpg',
+        '/projects/original-copy/frame_11.jpg',
+        '/projects/original-copy/frame_12.jpg',
     ],
     thumbs: [],
 
