@@ -36,18 +36,20 @@ Technicky pracuji s autorskými GLSL shadery v prostředí Resolume, které umo�
 
     image: '/projects/vjing/ai_party.jpg',
     images: [
+        // Sorted by event chronology
         '/projects/vjing/ai_party.jpg',
         '/projects/vjing/future_party.jpg',
         '/projects/vjing/workshop_1.jpg',
         '/projects/vjing/workshop_2.jpg'
     ],
     videos: [
+        // Sorted by event chronology
         '/projects/vjing/ai_1.mp4',
         '/projects/vjing/ai_2.mp4',
         '/projects/vjing/ai_3.mp4',
         '/projects/vjing/future.mp4',
-        '/projects/vjing/kontatk_projekce_1.mp4',
-        '/projects/vjing/kontatk_workshop.mp4'
+        '/projects/vjing/kontatk_workshop.mp4',
+        '/projects/vjing/kontatk_projekce_1.mp4'
     ],
     thumbs: [],
 };
