@@ -41,8 +41,18 @@ Houpačka nyní čeká u mě doma na další umístění. Tento koloběh interve
     budget: '~200 Kč',
     timeline: 'Víkend → Trvalá proměna',
 
+    // Photo gallery for natural aspect ratio
+    galleryLayout: 'photo',
+
     image: '/projects/houpacka/IMG_2332_thumb.jpg',
-    images: ['/projects/houpacka/IMG_2332_web.jpg'],
+    images: [
+        // Sorted by creation date (IMG number)
+        '/projects/houpacka/IMG_2332_web.jpg',
+        '/projects/houpacka/IMG_3421.jpg',
+        '/projects/houpacka/IMG_3423.jpg',
+        '/projects/houpacka/IMG_3599_2.jpg',
+        '/projects/houpacka/IMG_3600_2.jpg'
+    ],
     thumbs: ['/projects/houpacka/IMG_2332_thumb.jpg'],
 
     references: [
