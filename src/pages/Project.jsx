@@ -319,12 +319,22 @@ function Project() {
                 </section>
             )}
 
-            {/* Related Project */}
-            {project.relatedProject && (
+            {/* Related Projects - support both single and array */}
+            {(project.relatedProject || project.relatedProjects) && (
                 <section className="project-related">
-                    <Link to={`/work/${project.relatedProject}`} className="related-link">
-                        → Související projekt
-                    </Link>
+                    <h3 className="related-title">Související projekty</h3>
+                    <div className="related-links">
+                        {project.relatedProject && (
+                            <Link to={`/work/${project.relatedProject}`} className="related-link">
+                                → {project.relatedProject}
+                            </Link>
+                        )}
+                        {project.relatedProjects && project.relatedProjects.map((relId, idx) => (
+                            <Link key={idx} to={`/work/${relId}`} className="related-link">
+                                → {relId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                            </Link>
+                        ))}
+                    </div>
                 </section>
             )}
         </div>

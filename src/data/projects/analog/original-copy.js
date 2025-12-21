@@ -52,4 +52,7 @@ Projekt byl obhájen v roce 2023 jako bakalářská práce na Filmové a televiz
     thumbs: [],
 
     videoUrl: 'https://www.youtube.com/watch?v=M6bm6yRKshA',
+
+    // Related projects in the same thematic area
+    relatedProjects: ['vjing', 'glitch-art'],
 };

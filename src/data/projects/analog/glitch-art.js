@@ -62,4 +62,7 @@ Video feedback série využívá rekurzivní smyčky mezi kamerou a monitorem, k
         '/projects/glitch/250524_CAPTURE_AVE5_090.mp4'
     ],
     thumbs: [],
+
+    // Related projects in the same thematic area
+    relatedProjects: ['vjing', 'original-copy'],
 };
