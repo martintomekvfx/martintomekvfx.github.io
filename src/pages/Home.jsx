@@ -20,17 +20,17 @@ function Home() {
 
     const CategorySection = ({ title, projects }) => (
         projects.length > 0 && (
-            <div style={{ marginBottom: 'var(--space-2xl)' }}>
+            <div style={{ marginBottom: 'var(--space-xl)' }}>
                 <motion.h3
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                     style={{
-                        marginBottom: 'var(--space-md)',
-                        fontSize: '0.875rem',
+                        marginBottom: 'var(--space-sm)',
+                        fontSize: '0.7rem',
                         letterSpacing: '0.15em',
-                        opacity: 0.6
+                        opacity: 0.5
                     }}
                 >
                     {title}
