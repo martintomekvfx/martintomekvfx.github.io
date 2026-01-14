@@ -1986,3 +1986,234 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ==================== HYBAJ FILM LAYOUT ==================== */
+/* Artistic, black & white, festival-ready presentation */
+
+.hybaj-layout {
+  background: #000 !important;
+  color: #fff;
+  min-height: 100vh;
+  padding: 0;
+  padding-bottom: 20rem;
+  overflow-x: hidden;
+}
+
+/* Override global border-radius for this layout */
+.hybaj-layout,
+.hybaj-layout * {
+  border-radius: 0 !important;
+}
+
+.hybaj-layout .hybaj-video-container {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+/* Frameless Video Hero */
+.hybaj-video-hero {
+  width: 100%;
+  padding: 80px 5% 0;
+}
+
+.hybaj-video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  overflow: hidden;
+}
+
+.hybaj-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Title */
+.hybaj-title-section {
+  text-align: center;
+  padding: 4rem 5% 2rem;
+}
+
+.hybaj-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+/* Text Section */
+.hybaj-text-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 5% 4rem;
+}
+
+.hybaj-text-block {
+  margin-bottom: 3rem;
+}
+
+.hybaj-text-block:last-child {
+  margin-bottom: 0;
+}
+
+.hybaj-paragraph {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.hybaj-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.hybaj-primary {
+  font-style: normal;
+}
+
+.hybaj-secondary {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hybaj-secondary .hybaj-paragraph {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+/* Content Section - Two Column Layout */
+.hybaj-content-section {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 5% 4rem;
+  align-items: start;
+}
+
+.hybaj-text-column {
+  max-width: 700px;
+}
+
+.hybaj-text-block {
+  margin-bottom: 2rem;
+}
+
+.hybaj-text-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Chips Column - Right Side */
+.hybaj-chips-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 100px;
+}
+
+.hybaj-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hybaj-chip-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.hybaj-chip-value {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Back Link */
+.hybaj-back-section {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.hybaj-back-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50% !important;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hybaj-back-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hybaj-video-hero {
+    padding: 60px 3% 0;
+  }
+
+  .hybaj-title {
+    letter-spacing: 0.15em;
+  }
+
+  .hybaj-content-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 5% 3rem;
+  }
+
+  .hybaj-chips-column {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+  }
+
+  .hybaj-paragraph {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .hybaj-chip-label {
+    font-size: 0.6rem;
+  }
+
+  .hybaj-chip-value {
+    font-size: 0.75rem;
+  }
+
+  .hybaj-back-section {
+    top: 15px;
+    left: 15px;
+  }
+
+  .hybaj-back-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}

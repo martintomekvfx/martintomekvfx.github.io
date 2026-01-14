@@ -52,6 +52,11 @@ function Project() {
         return <StreetArtLayout project={project} getStatusLabel={getStatusLabel} getGalleryClass={getGalleryClass} />;
     }
 
+    // Hybaj Film - artistic festival presentation
+    if (project.customLayout === 'hybaj-film') {
+        return <HybajFilmLayout project={project} />;
+    }
+
     return (
         <div className="project-detail">
             {/* Header */}
@@ -648,4 +653,135 @@ function StreetArtLayout({ project, getStatusLabel, getGalleryClass }) {
     );
 }
 
+// Hybaj Film - Artistic Festival Layout
+function HybajFilmLayout({ project }) {
+    // Extract YouTube video ID
+    const getYouTubeId = (url) => {
+        const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
+        return match ? match[1] : null;
+    };
+
+    const videoId = project.videoUrl ? getYouTubeId(project.videoUrl) : null;
+
+    return (
+        <div className="hybaj-layout">
+            {/* Frameless Video Hero */}
+            <section className="hybaj-video-hero">
+                {videoId && (
+                    <div className="hybaj-video-container">
+                        <iframe
+                            src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&controls=1&showinfo=0&color=white`}
+                            title={project.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+                )}
+            </section>
+
+            {/* Title */}
+            <section className="hybaj-title-section">
+                <motion.h1
+                    className="hybaj-title"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                >
+                    {project.title}
+                </motion.h1>
+            </section>
+
+            {/* Content: Text + Chips Sidebar */}
+            <section className="hybaj-content-section">
+                {/* Text on the left */}
+                <motion.div
+                    className="hybaj-text-column"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
+                    <div className="hybaj-text-block">
+                        {project.descriptionEn && project.descriptionEn.split('\n\n').map((para, i) => (
+                            <p key={`en-${i}`} className="hybaj-paragraph hybaj-primary">
+                                {para}
+                            </p>
+                        ))}
+                    </div>
+
+                    <div className="hybaj-text-block hybaj-secondary">
+                        {project.descriptionCz && project.descriptionCz.split('\n\n').map((para, i) => (
+                            <p key={`cz-${i}`} className="hybaj-paragraph">
+                                {para}
+                            </p>
+                        ))}
+                    </div>
+                </motion.div>
+
+                {/* Chips on the right */}
+                {project.filmDetails && (
+                    <motion.div
+                        className="hybaj-chips-column"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        {project.filmDetails.technique && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Technique</span>
+                                <span className="hybaj-chip-value">{project.filmDetails.technique}</span>
+                            </div>
+                        )}
+                        {project.filmDetails.director && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Director</span>
+                                <span className="hybaj-chip-value">{project.filmDetails.director}</span>
+                            </div>
+                        )}
+                        {project.filmDetails.camera && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Camera</span>
+                                <span className="hybaj-chip-value">{project.filmDetails.camera}</span>
+                            </div>
+                        )}
+                        {project.filmDetails.duration && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Duration</span>
+                                <span className="hybaj-chip-value">{project.filmDetails.duration}</span>
+                            </div>
+                        )}
+                        {project.year && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Year</span>
+                                <span className="hybaj-chip-value">{project.year}</span>
+                            </div>
+                        )}
+                        {project.filmDetails.country && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Country</span>
+                                <span className="hybaj-chip-value">{project.filmDetails.country}</span>
+                            </div>
+                        )}
+                        {project.filmDetails.color && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Color</span>
+                                <span className="hybaj-chip-value">{project.filmDetails.color}</span>
+                            </div>
+                        )}
+                    </motion.div>
+                )}
+            </section>
+
+            {/* Back Link */}
+            <section className="hybaj-back-section">
+                <Link to="/#work" className="hybaj-back-link">
+                    ←
+                </Link>
+            </section>
+        </div>
+    );
+}
+
 export default Project;
+
