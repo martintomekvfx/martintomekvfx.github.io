@@ -729,11 +729,11 @@ function HybajFilmLayout({ project }) {
                         ))}
                     </div>
 
-                    {/* GitHub Source Code Links */}
+                    {/* GitHub Source Code - Minimal inline links */}
                     {project.sourceCode && (
                         <div className="hybaj-source-code">
-                            <h3 className="hybaj-source-title">Source Code</h3>
-                            <div className="hybaj-source-links">
+                            <span className="hybaj-source-label">Source</span>
+                            <div className="hybaj-source-inline">
                                 {Array.isArray(project.sourceCode) ? (
                                     project.sourceCode.map((repo, i) => (
                                         <a
@@ -743,8 +743,7 @@ function HybajFilmLayout({ project }) {
                                             rel="noopener noreferrer"
                                             className="hybaj-source-link"
                                         >
-                                            <span className="hybaj-source-name">{repo.name}</span>
-                                            <span className="hybaj-source-desc">{repo.description}</span>
+                                            {repo.name} →
                                         </a>
                                     ))
                                 ) : (
@@ -754,7 +753,7 @@ function HybajFilmLayout({ project }) {
                                         rel="noopener noreferrer"
                                         className="hybaj-source-link"
                                     >
-                                        View on GitHub →
+                                        GitHub →
                                     </a>
                                 )}
                             </div>

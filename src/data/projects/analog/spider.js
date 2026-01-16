@@ -1,8 +1,8 @@
 // Spider - Conceptual Short Film
-// https://martintomekvfx.github.io/work/scraping-the-internet
+// https://martintomekvfx.github.io/work/spider
 
 export default {
-    id: 'scraping-the-internet',
+    id: 'spider',
     title: 'Spider',
     subtitle: 'Seed',
     category: 'analog',
