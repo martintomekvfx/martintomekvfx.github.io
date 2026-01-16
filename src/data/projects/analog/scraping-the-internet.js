@@ -1,10 +1,10 @@
-// Scraping the Internet - Conceptual Short Film
+// Spider - Conceptual Short Film
 // https://martintomekvfx.github.io/work/scraping-the-internet
 
 export default {
     id: 'scraping-the-internet',
-    title: 'Scraping the Internet',
-    subtitle: 'Seed / Spider',
+    title: 'Spider',
+    subtitle: 'Seed',
     category: 'analog',
 
     description: 'A short film visualizing the architecture of algorithmic recommendation through the act of web scraping itself.',
