@@ -31,7 +31,7 @@ The network structure references the original promise of decentralization, from 
 
 The source code of the scraper and visualization tool is part of the work. Data flows in the opposite direction. Each node in the network is also a reminder of the possibility of becoming an endpoint oneself. Not returning to the center, but building one's own archive. The film is a trace of this process.
 
-The tools are published as open source — Privateer for downloading and archiving content, and the visualization renderer that transforms crawl data into moving image. Releasing the code is not an afterthought but integral to the work. The film documents a process; the repositories enable its replication. Anyone can build their own archive, run their own spider, render their own portrait of a platform.`,
+The tools are published as open source - Privateer for downloading and archiving content, and the visualization renderer that transforms crawl data into moving image. Releasing the code is not an afterthought but integral to the work. The film documents a process; the repositories enable its replication. Anyone can build their own archive, run their own spider, render their own portrait of a platform.`,
 
     fullDescription: `Spider zachycuje procházení. Webový crawler prochází databází streamovací platformy Oneplay a film vykresluje tento pohyb. Televizní pořady se zjevují jako uzly, propojení mezi nimi tvoří síť doporučení. Pavouk nerozlišuje mezi dokumentem a reality show, mezi původní tvorbou a licencovaným formátem. Všechno je ekvivalentní datový bod.
 
@@ -41,7 +41,7 @@ Struktura sítě odkazuje k původnímu slibu decentralizace, od kterého se sou
 
 Zdrojový kód scraperu i vizualizačního nástroje je součástí díla. Data putují opačným směrem. Každý uzel v síti je také připomínkou možnosti stát se koncovým bodem sám. Nebýt závislý na platformě, ale budovat vlastní archiv. Film je stopou tohoto procesu.
 
-Nástroje jsou zveřejněny jako open source — Privateer pro stahování a archivaci obsahu, a vizualizační renderer, který transformuje data z crawlování do pohyblivého obrazu. Zveřejnění kódu není dodatečný nápad, ale integrální součást díla. Film dokumentuje proces; repozitáře umožňují jeho replikaci. Kdokoli si může vybudovat vlastní archiv, spustit vlastního pavouka, vykreslit vlastní portrét platformy.`,
+Nástroje jsou zveřejněny jako open source - Privateer pro stahování a archivaci obsahu, a vizualizační renderer, který transformuje data z crawlování do pohyblivého obrazu. Zveřejnění kódu není dodatečný nápad, ale integrální součást díla. Film dokumentuje proces; repozitáře umožňují jeho replikaci. Kdokoli si může vybudovat vlastní archiv, spustit vlastního pavouka, vykreslit vlastní portrét platformy.`,
 
     // YouTube video
     videoUrl: 'https://www.youtube.com/watch?v=gQzE46PQ524',
