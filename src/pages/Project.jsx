@@ -728,37 +728,6 @@ function HybajFilmLayout({ project }) {
                             </p>
                         ))}
                     </div>
-
-                    {/* GitHub Source Code - Minimal inline links */}
-                    {project.sourceCode && (
-                        <div className="hybaj-source-code">
-                            <span className="hybaj-source-label">Source</span>
-                            <div className="hybaj-source-inline">
-                                {Array.isArray(project.sourceCode) ? (
-                                    project.sourceCode.map((repo, i) => (
-                                        <a
-                                            key={i}
-                                            href={repo.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="hybaj-source-link"
-                                        >
-                                            {repo.name} →
-                                        </a>
-                                    ))
-                                ) : (
-                                    <a
-                                        href={project.sourceCode}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="hybaj-source-link"
-                                    >
-                                        GitHub →
-                                    </a>
-                                )}
-                            </div>
-                        </div>
-                    )}
                 </motion.div>
 
                 {/* Chips on the right */}
@@ -816,6 +785,39 @@ function HybajFilmLayout({ project }) {
                             <div className="hybaj-chip">
                                 <span className="hybaj-chip-label">Color</span>
                                 <span className="hybaj-chip-value">{project.filmDetails.color}</span>
+                            </div>
+                        )}
+
+                        {/* Source Code Links - in chips column */}
+                        {project.sourceCode && (
+                            <div className="hybaj-source-section">
+                                <div className="hybaj-chip hybaj-chip-source">
+                                    <span className="hybaj-chip-label">Source Code</span>
+                                    <div className="hybaj-chip-links">
+                                        {Array.isArray(project.sourceCode) ? (
+                                            project.sourceCode.map((repo, i) => (
+                                                <a
+                                                    key={i}
+                                                    href={repo.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="hybaj-chip-link"
+                                                >
+                                                    {repo.name}
+                                                </a>
+                                            ))
+                                        ) : (
+                                            <a
+                                                href={project.sourceCode}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hybaj-chip-link"
+                                            >
+                                                GitHub
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
                             </div>
                         )}
                     </motion.div>

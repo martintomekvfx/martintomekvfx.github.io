@@ -4,14 +4,14 @@
 export default {
     id: 'spider',
     title: 'Spider',
-    subtitle: 'Seed',
+    subtitle: 'Conceptual Short Film',
     category: 'analog',
 
     description: 'A short film visualizing the architecture of algorithmic recommendation through the act of web scraping itself.',
 
     artist: 'Martin Tomek',
     status: 'done',
-    year: '2025',
+    year: '2026',
     location: 'Praha',
 
     // Custom artistic layout for film presentation
@@ -23,7 +23,7 @@ export default {
     descriptionEn: `A short film visualizing the architecture of algorithmic recommendation through the act of web scraping itself. A crawler traverses a Czech streaming platform, each show appearing as a node in a growing network. The spider moves, links, captures. What appears is not content but the skeleton of its delivery. A portrait of attention infrastructure.`,
 
     // Full descriptions - Long
-    fullDescriptionEn: `Seed / Spider captures traversal. A web crawler moves through the database of the streaming platform Oneplay and the film renders this movement. Television programs appear as nodes, connections between them form a network of recommendations. The spider does not distinguish between documentary and reality show, between original production and licensed format. Everything is an equivalent data point.
+    fullDescriptionEn: `Spider captures traversal. A web crawler moves through the database of the streaming platform Oneplay and the film renders this movement. Television programs appear as nodes, connections between them form a network of recommendations. The spider does not distinguish between documentary and reality show, between original production and licensed format. Everything is an equivalent data point.
 
 We see the architecture of selection that precedes our decision-making. Streaming interfaces present content as a neutral offering, but the structure of this offering is itself a curatorial gesture. The film makes this structure visible by rendering it literally.
 
@@ -33,7 +33,7 @@ The source code of the scraper and visualization tool is part of the work. Data 
 
 The tools are published as open source — Privateer for downloading and archiving content, and the visualization renderer that transforms crawl data into moving image. Releasing the code is not an afterthought but integral to the work. The film documents a process; the repositories enable its replication. Anyone can build their own archive, run their own spider, render their own portrait of a platform.`,
 
-    fullDescription: `Seed / Spider zachycuje procházení. Webový crawler prochází databází streamovací platformy Oneplay a film vykresluje tento pohyb. Televizní pořady se zjevují jako uzly, propojení mezi nimi tvoří síť doporučení. Pavouk nerozlišuje mezi dokumentem a reality show, mezi původní tvorbou a licencovaným formátem. Všechno je ekvivalentní datový bod.
+    fullDescription: `Spider zachycuje procházení. Webový crawler prochází databází streamovací platformy Oneplay a film vykresluje tento pohyb. Televizní pořady se zjevují jako uzly, propojení mezi nimi tvoří síť doporučení. Pavouk nerozlišuje mezi dokumentem a reality show, mezi původní tvorbou a licencovaným formátem. Všechno je ekvivalentní datový bod.
 
 Vidíme architekturu výběru, která předchází našemu rozhodování. Rozhraní streamovacích služeb prezentují obsah jako neutrální nabídku, ale struktura této nabídky je už sama o sobě kurátorským gestem. Film tuto strukturu zviditelňuje tím, že ji doslovně vykresluje.
 
