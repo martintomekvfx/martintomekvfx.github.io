@@ -689,11 +689,21 @@ function HybajFilmLayout({ project }) {
                 >
                     {project.title}
                 </motion.h1>
+                {project.subtitle && (
+                    <motion.p
+                        className="hybaj-subtitle"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                    >
+                        {project.subtitle}
+                    </motion.p>
+                )}
             </section>
 
             {/* Content: Text + Chips Sidebar */}
             <section className="hybaj-content-section">
-                {/* Text on the left */}
+                {/* Text on the left - USE LONG DESCRIPTIONS */}
                 <motion.div
                     className="hybaj-text-column"
                     initial={{ opacity: 0, y: 20 }}
@@ -701,21 +711,55 @@ function HybajFilmLayout({ project }) {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
+                    {/* English long description first */}
                     <div className="hybaj-text-block">
-                        {project.descriptionEn && project.descriptionEn.split('\n\n').map((para, i) => (
+                        {(project.fullDescriptionEn || project.descriptionEn || '').split('\n\n').map((para, i) => (
                             <p key={`en-${i}`} className="hybaj-paragraph hybaj-primary">
                                 {para}
                             </p>
                         ))}
                     </div>
 
+                    {/* Czech long description */}
                     <div className="hybaj-text-block hybaj-secondary">
-                        {project.descriptionCz && project.descriptionCz.split('\n\n').map((para, i) => (
+                        {(project.fullDescription || project.descriptionCz || '').split('\n\n').map((para, i) => (
                             <p key={`cz-${i}`} className="hybaj-paragraph">
                                 {para}
                             </p>
                         ))}
                     </div>
+
+                    {/* GitHub Source Code Links */}
+                    {project.sourceCode && (
+                        <div className="hybaj-source-code">
+                            <h3 className="hybaj-source-title">Source Code</h3>
+                            <div className="hybaj-source-links">
+                                {Array.isArray(project.sourceCode) ? (
+                                    project.sourceCode.map((repo, i) => (
+                                        <a
+                                            key={i}
+                                            href={repo.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hybaj-source-link"
+                                        >
+                                            <span className="hybaj-source-name">{repo.name}</span>
+                                            <span className="hybaj-source-desc">{repo.description}</span>
+                                        </a>
+                                    ))
+                                ) : (
+                                    <a
+                                        href={project.sourceCode}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hybaj-source-link"
+                                    >
+                                        View on GitHub →
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                    )}
                 </motion.div>
 
                 {/* Chips on the right */}
@@ -743,6 +787,12 @@ function HybajFilmLayout({ project }) {
                             <div className="hybaj-chip">
                                 <span className="hybaj-chip-label">Camera</span>
                                 <span className="hybaj-chip-value">{project.filmDetails.camera}</span>
+                            </div>
+                        )}
+                        {project.filmDetails.tools && (
+                            <div className="hybaj-chip">
+                                <span className="hybaj-chip-label">Tools</span>
+                                <span className="hybaj-chip-value">{project.filmDetails.tools}</span>
                             </div>
                         )}
                         {project.filmDetails.duration && (
