@@ -8,7 +8,6 @@ import scannerSeries from './scanner-series.js';
 import glitchArt from './glitch-art.js';
 import hybaj from './hybaj.js';
 import spider from './spider.js';
-import trees from './trees.js';
 
 // Planned projects
 const betonoveBanany = {
@@ -38,7 +37,6 @@ Umístění je plánováno na křižovatku před pobočkou Komerční banky, kte
 export const analogProjects = [
     hybaj,
     spider,
-    trees,
     vjing,
     originalCopy,
     photo35mm,

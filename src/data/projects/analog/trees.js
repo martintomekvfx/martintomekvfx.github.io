@@ -5,7 +5,7 @@ export default {
     id: 'trees',
     title: 'Stromy',
     subtitle: 'Trees',
-    category: 'analog',
+    category: 'guerilla',
 
     description: 'Site-specific intervention marking discarded Christmas trees as burial grounds using red beetroot dye.',
 
@@ -57,9 +57,6 @@ Společnost už přehodnocuje některé rituály. Ohňostroje ustupují. Proč n
         '/projects/trees/IMG_6845.jpg',
         '/projects/trees/IMG_6856.jpg',
     ],
-
-    // Animated texture
-    animatedTexture: '/projects/trees/texture.gif',
 
     // Primary image
     image: '/projects/trees/IMG_6816.jpg',

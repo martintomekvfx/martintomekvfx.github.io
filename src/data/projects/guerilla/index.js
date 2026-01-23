@@ -6,6 +6,7 @@ import houpacka from './houpacka.js';
 import streetArtGallery from './street-art-gallery.js';
 import chompar from './chompar.js';
 import panak from './panak.js';
+import trees from '../analog/trees.js';
 
 // Planned projects
 const parklety = {
@@ -83,6 +84,7 @@ Pro ověření efektivity je plánován kontrolovaný experiment. Na dvou srovna
 };
 
 export const guerillaProjects = [
+    trees,
     slunecnice,
     streetArtGallery,
     chompar,
