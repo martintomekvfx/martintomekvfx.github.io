@@ -377,16 +377,6 @@ function ChompARLayout({ project, getStatusLabel }) {
                             <h1 className="chompar-title">{project.title}</h1>
                             <p className="chompar-description">{project.description}</p>
 
-                            {project.gameUrl && (
-                                <a
-                                    href={project.gameUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="chompar-play-btn"
-                                >
-                                    ▶ HRÁT
-                                </a>
-                            )}
                         </div>
                     </div>
                 </motion.div>
@@ -480,7 +470,7 @@ function ChompARLayout({ project, getStatusLabel }) {
                             rel="noopener noreferrer"
                             className="chompar-play-btn chompar-play-btn-large"
                         >
-                            ▶ HRÁT
+                            ▶ PLAY GAME
                         </a>
                     </div>
                 </section>
