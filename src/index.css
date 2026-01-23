@@ -2011,6 +2011,17 @@ a:hover {
   overflow-x: hidden;
 }
 
+/* Custom cursor - hide system cursor */
+.hybaj-layout.custom-cursor-active,
+.hybaj-layout.custom-cursor-active * {
+  cursor: none !important;
+}
+
+.hybaj-layout.custom-cursor-active a,
+.hybaj-layout.custom-cursor-active button {
+  cursor: none !important;
+}
+
 /* Override global border-radius for this layout */
 .hybaj-layout,
 .hybaj-layout * {

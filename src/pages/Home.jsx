@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
     guerillaProjects,
+    shortfilmsProjects,
     analogProjects,
     gamejamProjects,
     collectiveProjects
@@ -14,6 +15,7 @@ function Home() {
     );
 
     const activeGuerilla = filterActive(guerillaProjects);
+    const activeShortfilms = filterActive(shortfilmsProjects);
     const activeAnalog = filterActive(analogProjects);
     const activeGamejam = filterActive(gamejamProjects);
     const activeCollective = filterActive(collectiveProjects);
@@ -212,6 +214,7 @@ function Home() {
                     </motion.h2>
 
                     <CategorySection title="GUERILLA" projects={activeGuerilla} />
+                    <CategorySection title="SHORT FILMS" projects={activeShortfilms} />
                     <CategorySection title="ANALOG" projects={activeAnalog} />
                     <CategorySection title="GAME JAM" projects={activeGamejam} />
                     <CategorySection title="COLLECTIVE" projects={activeCollective} />

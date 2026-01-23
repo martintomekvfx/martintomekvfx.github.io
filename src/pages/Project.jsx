@@ -697,8 +697,8 @@ function HybajFilmLayout({ project }) {
     }, [project.customCursor]);
 
     return (
-        <div className="hybaj-layout">
-            {/* Animated Cursor - decorative only, doesn't block clicks */}
+        <div className={`hybaj-layout ${project.customCursor ? 'custom-cursor-active' : ''}`}>
+            {/* Animated Cursor - follows mouse, hides system cursor */}
             {project.customCursor && cursorVisible && (
                 <div
                     className="animated-cursor"
@@ -710,11 +710,9 @@ function HybajFilmLayout({ project }) {
                         height: 32,
                         pointerEvents: 'none',
                         zIndex: 9999,
-                        borderRadius: '50%',
-                        overflow: 'hidden',
                     }}
                 >
-                    <img src={project.customCursor} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={project.customCursor} alt="" style={{ width: '100%', height: '100%' }} />
                 </div>
             )}
             {/* Frameless Video Hero */}
