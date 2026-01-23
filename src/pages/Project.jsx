@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getProjectById } from '../data/projects';
 import ChompMap from '../components/ChompMap';
+import TreesMap from '../components/TreesMap';
 
 function Project() {
     const { projectId } = useParams();
@@ -873,6 +874,20 @@ function HybajFilmLayout({ project }) {
                     </motion.div>
                 )}
             </section>
+
+            {/* Map Section - for projects with location data */}
+            {project.showMap && (
+                <section className="hybaj-map-section">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <TreesMap />
+                    </motion.div>
+                </section>
+            )}
 
             {/* Photo Gallery - for image-based projects */}
             {project.images && project.images.length > 0 && (

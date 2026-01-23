@@ -2301,6 +2301,34 @@ a:hover {
   }
 }
 
+/* Map Section for Hybaj Layout */
+.hybaj-map-section {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.hybaj-map-section .trees-map-container {
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hybaj-map-section .leaflet-container {
+  background: #1a1a1a;
+}
+
+.beetroot-marker {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+  .hybaj-map-section .trees-map-container {
+    height: 350px;
+  }
+}
+
 /* Photo Gallery for Hybaj Layout */
 .hybaj-gallery-section {
   padding: 2rem 5%;
