@@ -20,8 +20,8 @@ export default {
     // Custom animated cursor using small optimized version
     customCursor: '/projects/trees/cursor_animated.gif',
 
-    // Show map with intervention locations
-    showMap: true,
+    // Show map with intervention locations (disabled for now)
+    showMap: false,
 
     // Bilingual descriptions - Short
     descriptionCz: `Vánoční stromek roste dvanáct let. V domácnosti stráví několik týdnů. Pak leží u popelnic. Intervence zviditelňuje tato místa jako pohřebiště. Červený odvar z řepy na čerstvých řezech. Obraz nevyžaduje vysvětlení.`,
