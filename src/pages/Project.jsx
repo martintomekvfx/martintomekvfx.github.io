@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getProjectById } from '../data/projects';
@@ -663,8 +664,56 @@ function HybajFilmLayout({ project }) {
 
     const videoId = project.videoUrl ? getYouTubeId(project.videoUrl) : null;
 
+    // Animated cursor state
+    const [cursorPos, setCursorPos] = React.useState({ x: 0, y: 0 });
+    const [cursorVisible, setCursorVisible] = React.useState(false);
+
+    React.useEffect(() => {
+        if (!project.customCursor) return;
+
+        const handleMouseMove = (e) => {
+            setCursorPos({ x: e.clientX, y: e.clientY });
+            setCursorVisible(true);
+        };
+
+        const handleMouseLeave = () => setCursorVisible(false);
+        const handleMouseEnter = () => setCursorVisible(true);
+
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseleave', handleMouseLeave);
+        document.addEventListener('mouseenter', handleMouseEnter);
+
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseleave', handleMouseLeave);
+            document.removeEventListener('mouseenter', handleMouseEnter);
+        };
+    }, [project.customCursor]);
+
     return (
-        <div className="hybaj-layout">
+        <div
+            className="hybaj-layout"
+            style={project.customCursor ? { cursor: 'none' } : undefined}
+        >
+            {/* Animated Cursor */}
+            {project.customCursor && cursorVisible && (
+                <div
+                    className="animated-cursor"
+                    style={{
+                        position: 'fixed',
+                        left: cursorPos.x - 32,
+                        top: cursorPos.y - 32,
+                        width: 64,
+                        height: 64,
+                        pointerEvents: 'none',
+                        zIndex: 9999,
+                        borderRadius: '50%',
+                        overflow: 'hidden',
+                    }}
+                >
+                    <img src={project.customCursor} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+            )}
             {/* Frameless Video Hero */}
             <section className="hybaj-video-hero">
                 {videoId && (
@@ -823,6 +872,41 @@ function HybajFilmLayout({ project }) {
                     </motion.div>
                 )}
             </section>
+
+            {/* Photo Gallery - for image-based projects */}
+            {project.images && project.images.length > 0 && (
+                <section className="hybaj-gallery-section">
+                    <div className="hybaj-gallery">
+                        {project.images.map((img, i) => (
+                            <motion.div
+                                key={i}
+                                className="hybaj-gallery-item"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: i * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <img src={img} alt={`${project.title} - ${i + 1}`} />
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {/* Animated Texture - if present */}
+            {project.animatedTexture && (
+                <section className="hybaj-texture-section">
+                    <motion.div
+                        className="hybaj-texture"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                    >
+                        <img src={project.animatedTexture} alt="Animated texture" />
+                    </motion.div>
+                </section>
+            )}
 
             {/* Back Link */}
             <section className="hybaj-back-section">

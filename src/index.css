@@ -2271,4 +2271,48 @@ a:hover {
     flex-direction: row;
     gap: 1rem;
   }
+
+  .hybaj-gallery {
+    gap: 1rem;
+  }
+}
+
+/* Photo Gallery for Hybaj Layout */
+.hybaj-gallery-section {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hybaj-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hybaj-gallery-item {
+  width: 100%;
+}
+
+.hybaj-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animated Texture */
+.hybaj-texture-section {
+  padding: 3rem 5%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hybaj-texture {
+  width: 100%;
+}
+
+.hybaj-texture img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
