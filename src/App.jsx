@@ -15,12 +15,22 @@ function ScrollToHash() {
 
   useEffect(() => {
     if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      // Small delay to ensure content is rendered after navigation
+      const scrollToElement = () => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+      // Try immediately, then again after a short delay for route transitions
+      scrollToElement();
+      const timeout = setTimeout(scrollToElement, 100);
+      return () => clearTimeout(timeout);
+    } else {
+      // No hash - scroll to top
+      window.scrollTo(0, 0);
     }
-  }, [location]);
+  }, [location.pathname, location.hash]);
 
   return null;
 }

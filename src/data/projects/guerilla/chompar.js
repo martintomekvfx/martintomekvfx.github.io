@@ -23,8 +23,8 @@ export default {
   heroAnimation: '/projects/chomps/eat.gif',
   scanAnimation: '/projects/chomps/scan.gif',
 
-  // Game URL  
-  gameUrl: 'https://chompar.vercel.app',
+  // Game URL
+  gameUrl: 'https://postptacek.github.io/chomps/',
 
   // Lore / Story
   lore: {

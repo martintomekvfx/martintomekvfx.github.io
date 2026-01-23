@@ -1717,6 +1717,18 @@ a:hover {
   transform: translateY(-2px);
 }
 
+/* Play Section - prominent CTA above gallery */
+.chompar-play-section {
+  padding: 4rem 2rem;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.chompar-play-btn-large {
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+}
+
 /* Lore Section */
 .chompar-lore {
   padding: 6rem 2rem;

@@ -470,6 +470,22 @@ function ChompARLayout({ project, getStatusLabel }) {
                 </section>
             )}
 
+            {/* Play Section - above gallery */}
+            {project.gameUrl && (
+                <section className="chompar-play-section">
+                    <div className="chompar-container">
+                        <a
+                            href={project.gameUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="chompar-play-btn chompar-play-btn-large"
+                        >
+                            ▶ HRÁT
+                        </a>
+                    </div>
+                </section>
+            )}
+
             {/* Gallery - Street Chomps + App Screenshots */}
             {project.galleryImages && project.galleryImages.length > 0 && (
                 <section className="chompar-gallery-section">
@@ -691,20 +707,17 @@ function HybajFilmLayout({ project }) {
     }, [project.customCursor]);
 
     return (
-        <div
-            className="hybaj-layout"
-            style={project.customCursor ? { cursor: 'none' } : undefined}
-        >
-            {/* Animated Cursor */}
+        <div className="hybaj-layout">
+            {/* Animated Cursor - decorative only, doesn't block clicks */}
             {project.customCursor && cursorVisible && (
                 <div
                     className="animated-cursor"
                     style={{
                         position: 'fixed',
-                        left: cursorPos.x - 32,
-                        top: cursorPos.y - 32,
-                        width: 64,
-                        height: 64,
+                        left: cursorPos.x - 16,
+                        top: cursorPos.y - 16,
+                        width: 32,
+                        height: 32,
                         pointerEvents: 'none',
                         zIndex: 9999,
                         borderRadius: '50%',
@@ -886,7 +899,7 @@ function HybajFilmLayout({ project }) {
                                 transition={{ duration: 0.6, delay: i * 0.1 }}
                                 viewport={{ once: true }}
                             >
-                                <img src={img} alt={`${project.title} - ${i + 1}`} />
+                                <img src={img} alt={`${project.title} - ${i + 1}`} loading="lazy" />
                             </motion.div>
                         ))}
                     </div>
