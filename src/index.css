@@ -685,6 +685,7 @@ a:hover {
 .back-link {
   display: inline-block;
   margin-bottom: var(--space-xl);
+  padding: 12px 16px;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -2177,9 +2178,9 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  font-size: 1.5rem;
+  width: 64px;
+  height: 64px;
+  font-size: 1.75rem;
   color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.05);
   border-radius: 50% !important;
@@ -2235,9 +2236,9 @@ a:hover {
   }
 
   .hybaj-back-link {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
   }
 }
 
