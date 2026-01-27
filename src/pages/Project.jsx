@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { getProjectById } from '../data/projects';
 import ChompMap from '../components/ChompMap';
 import TreesMap from '../components/TreesMap';
+import FootprintVisualization from '../components/visualizations/FootprintVisualization';
 
 function Project() {
     const { projectId } = useParams();
@@ -874,6 +875,30 @@ function HybajFilmLayout({ project }) {
                     </motion.div>
                 )}
             </section>
+
+            {/* Footprint Visualization */}
+            {project.id === 'footprint' && (
+                <section className="hybaj-visualization-section" style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    padding: 'var(--space-xl) var(--space-md)',
+                    marginBottom: 'var(--space-xxl)'
+                }}>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <FootprintVisualization
+                            width={window.innerWidth < 850 ? window.innerWidth - 40 : 800}
+                            height={600}
+                            autoPlay={true}
+                            soundEnabled={true}
+                        />
+                    </motion.div>
+                </section>
+            )}
 
             {/* Map Section - for projects with location data */}
             {project.showMap && (
