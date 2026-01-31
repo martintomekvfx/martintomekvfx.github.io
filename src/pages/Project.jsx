@@ -699,7 +699,7 @@ function HybajFilmLayout({ project }) {
     }, [project.customCursor]);
 
     return (
-        <div className={`hybaj-layout ${project.customCursor ? 'custom-cursor-active' : ''}`}>
+        <div className={`hybaj-layout ${project.customCursor ? 'custom-cursor-active' : ''} ${project.id === 'footprint' ? 'footprint-white-theme' : ''}`}>
             {/* Animated Cursor - follows mouse, hides system cursor */}
             {project.customCursor && cursorVisible && (
                 <div
@@ -876,13 +876,16 @@ function HybajFilmLayout({ project }) {
                 )}
             </section>
 
-            {/* Footprint Visualization */}
+            {/* Footprint Visualization - Full width white section */}
             {project.id === 'footprint' && (
                 <section className="hybaj-visualization-section" style={{
                     display: 'flex',
                     justifyContent: 'center',
+                    alignItems: 'center',
                     padding: 'var(--space-xl) var(--space-md)',
-                    marginBottom: 'var(--space-xxl)'
+                    marginBottom: 'var(--space-xxl)',
+                    background: '#fff',
+                    minHeight: '70vh',
                 }}>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -893,7 +896,6 @@ function HybajFilmLayout({ project }) {
                         <FootprintVisualization
                             width={window.innerWidth < 850 ? window.innerWidth - 40 : 800}
                             height={600}
-                            autoPlay={true}
                             soundEnabled={true}
                         />
                     </motion.div>

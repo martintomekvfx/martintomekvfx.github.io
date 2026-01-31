@@ -29,11 +29,6 @@ const DEMO_TRACKERS = [
   { company: 'TikTok', category: 'social', domains: ['tiktok.com', 'tiktokcdn.com'] },
 ];
 
-const DEMO_SITES = [
-  'news-site.com', 'shopping-store.com', 'social-app.com', 'blog-platform.com',
-  'video-streaming.com', 'travel-booking.com', 'recipe-site.com', 'sports-news.com',
-];
-
 const BASS_COMPANIES = ['google', 'facebook', 'meta', 'amazon', 'microsoft', 'apple', 'doubleclick'];
 
 function hashString(str) {
@@ -149,12 +144,11 @@ function createAudioEngine() {
   return { resume, playNode };
 }
 
-export default function FootprintVisualization({ width = 800, height = 600, autoPlay = true, soundEnabled = true }) {
+export default function FootprintVisualization({ width = 800, height = 600, soundEnabled = true }) {
   const svgRef = useRef(null);
   const simulationRef = useRef(null);
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [stats, setStats] = useState({ sites: 0, trackers: 0, requests: 0 });
+  const [hasStarted, setHasStarted] = useState(false);
   const nodesRef = useRef([]);
   const edgesRef = useRef([]);
   const nodeMapRef = useRef(new Map());
@@ -166,17 +160,10 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
     const svg = d3.select(svgRef.current);
     svg.selectAll('*').remove();
 
-    const zoomGroup = svg.append('g').attr('class', 'zoom-group');
-    const edgeGroup = zoomGroup.append('g').attr('class', 'edges');
-    const nodeGroup = zoomGroup.append('g').attr('class', 'nodes');
-
-    const zoom = d3.zoom()
-      .scaleExtent([0.3, 3])
-      .on('zoom', (event) => {
-        zoomGroup.attr('transform', event.transform);
-      });
-
-    svg.call(zoom);
+    // No zoom - fixed view
+    const mainGroup = svg.append('g').attr('class', 'main-group');
+    const edgeGroup = mainGroup.append('g').attr('class', 'edges');
+    const nodeGroup = mainGroup.append('g').attr('class', 'nodes');
 
     const simulation = d3.forceSimulation()
       .force('link', d3.forceLink().id(d => d.id).distance(80).strength(0.4))
@@ -196,31 +183,32 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
 
     simulationRef.current = { simulation, nodeGroup, edgeGroup, svg };
 
-    // Add user node
+    // Add user node (besk.cz)
     const userNode = {
-      id: 'user',
+      id: 'besk.cz',
       type: 'user',
+      label: 'besk.cz',
       x: width / 2,
       y: height / 2,
       fx: width / 2,
       fy: height / 2,
     };
     nodesRef.current = [userNode];
-    nodeMapRef.current.set('user', userNode);
+    nodeMapRef.current.set('besk.cz', userNode);
     edgesRef.current = [];
 
     updateGraph();
   }, [width, height]);
 
   function getRadius(node) {
-    if (node.type === 'user') return 12;
+    if (node.type === 'user') return 14;
     if (node.type === 'site') return 6;
     return Math.min(8 + (node.connectionCount || 1) * 2, 35);
   }
 
   function getColor(node) {
-    if (node.type === 'user') return '#666666';
-    if (node.type === 'site') return '#000000';
+    if (node.type === 'user') return '#000000';
+    if (node.type === 'site') return '#333333';
     if (node.category) return CATEGORY_COLORS[node.category] || '#9E9E9E';
     return '#9E9E9E';
   }
@@ -244,7 +232,12 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
 
     const nodeEnter = nodeSel.enter()
       .append('g')
-      .attr('class', 'node');
+      .attr('class', 'node')
+      .attr('cursor', 'grab')
+      .call(d3.drag()
+        .on('start', dragStarted)
+        .on('drag', dragged)
+        .on('end', dragEnded));
 
     nodeEnter.append('circle')
       .attr('r', d => getRadius(d))
@@ -252,13 +245,13 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
       .attr('stroke', '#333')
       .attr('stroke-width', 1);
 
-    nodeEnter.filter(d => d.type === 'tracker')
+    nodeEnter.filter(d => d.type === 'tracker' || d.type === 'user')
       .append('text')
       .attr('dy', d => getRadius(d) + 14)
       .attr('text-anchor', 'middle')
       .attr('font-size', '10px')
       .attr('fill', '#333')
-      .text(d => d.company?.slice(0, 12) || '');
+      .text(d => d.label || d.company?.slice(0, 12) || '');
 
     // Update existing
     nodeSel.select('circle')
@@ -267,33 +260,33 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
     simulation.nodes(nodesRef.current);
     simulation.force('link').links(edgesRef.current);
     simulation.alpha(0.3).restart();
+
+    // Drag functions
+    function dragStarted(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+      d3.select(this).attr('cursor', 'grabbing');
+    }
+
+    function dragged(event, d) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
+
+    function dragEnded(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      // Keep user node fixed, release others
+      if (d.type !== 'user') {
+        d.fx = null;
+        d.fy = null;
+      }
+      d3.select(this).attr('cursor', 'grab');
+    }
   }
 
   function addEvent() {
-    const siteIndex = Math.floor(Math.random() * DEMO_SITES.length);
-    const site = DEMO_SITES[siteIndex];
-
-    // Add site if new
-    if (!nodeMapRef.current.has(site)) {
-      const siteNode = {
-        id: site,
-        type: 'site',
-        domain: site,
-        x: width / 2 + (Math.random() - 0.5) * 100,
-        y: height / 2 + (Math.random() - 0.5) * 100,
-        connectionCount: 1,
-      };
-      nodesRef.current.push(siteNode);
-      nodeMapRef.current.set(site, siteNode);
-
-      setStats(s => ({ ...s, sites: s.sites + 1 }));
-
-      if (soundEnabled && audioRef.current) {
-        audioRef.current.playNode(siteNode);
-      }
-    }
-
-    // Add tracker
+    // Add tracker directly connected to besk.cz
     const tracker = DEMO_TRACKERS[Math.floor(Math.random() * DEMO_TRACKERS.length)];
     const trackerId = tracker.company;
 
@@ -310,8 +303,6 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
       nodesRef.current.push(trackerNode);
       nodeMapRef.current.set(trackerId, trackerNode);
 
-      setStats(s => ({ ...s, trackers: s.trackers + 1 }));
-
       if (soundEnabled && audioRef.current) {
         audioRef.current.playNode(trackerNode);
       }
@@ -320,25 +311,24 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
       existing.connectionCount = (existing.connectionCount || 1) + 1;
     }
 
-    // Add edge from site to tracker
-    const edgeId = `${site}->${trackerId}`;
+    // Add edge from besk.cz to tracker
+    const edgeId = `besk.cz->${trackerId}`;
     const existingEdge = edgesRef.current.find(e => e.id === edgeId);
     if (existingEdge) {
       existingEdge.weight++;
     } else {
       edgesRef.current.push({
         id: edgeId,
-        source: site,
+        source: 'besk.cz',
         target: trackerId,
         weight: 1,
       });
     }
 
-    setStats(s => ({ ...s, requests: s.requests + 1 }));
     updateGraph();
   }
 
-  const startSimulation = useCallback(() => {
+  const startBrowsing = useCallback(() => {
     if (intervalRef.current) return;
 
     if (soundEnabled) {
@@ -346,36 +336,15 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
       audioRef.current.resume();
     }
 
-    setIsPlaying(true);
+    setHasStarted(true);
     intervalRef.current = setInterval(() => {
       addEvent();
     }, 300 + Math.random() * 400);
   }, [soundEnabled]);
 
-  const stopSimulation = useCallback(() => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-    setIsPlaying(false);
-  }, []);
-
-  const resetSimulation = useCallback(() => {
-    stopSimulation();
-    nodesRef.current = [];
-    edgesRef.current = [];
-    nodeMapRef.current.clear();
-    setStats({ sites: 0, trackers: 0, requests: 0 });
-    initGraph();
-  }, [initGraph, stopSimulation]);
-
   useEffect(() => {
     initGraph();
-    if (autoPlay) {
-      const timeout = setTimeout(startSimulation, 1000);
-      return () => clearTimeout(timeout);
-    }
-  }, [initGraph, autoPlay, startSimulation]);
+  }, [initGraph]);
 
   useEffect(() => {
     return () => {
@@ -386,68 +355,42 @@ export default function FootprintVisualization({ width = 800, height = 600, auto
   }, []);
 
   return (
-    <div style={{ position: 'relative', width, height, background: '#fff', borderRadius: 8, overflow: 'hidden' }}>
+    <div style={{ position: 'relative', width, height, background: '#fff', overflow: 'hidden' }}>
       <svg
         ref={svgRef}
         width={width}
         height={height}
-        style={{ display: 'block' }}
+        style={{ display: 'block', background: '#fff' }}
       />
-      
-      {/* Stats overlay */}
-      <div style={{
-        position: 'absolute',
-        top: 12,
-        left: 12,
-        background: 'rgba(255,255,255,0.9)',
-        padding: '8px 12px',
-        borderRadius: 4,
-        fontFamily: 'monospace',
-        fontSize: 12,
-        border: '1px solid #ccc',
-      }}>
-        <div><strong>Sites:</strong> {stats.sites}</div>
-        <div><strong>Trackers:</strong> {stats.trackers}</div>
-        <div><strong>Requests:</strong> {stats.requests}</div>
-      </div>
 
-      {/* Controls */}
-      <div style={{
-        position: 'absolute',
-        bottom: 12,
-        left: 12,
-        display: 'flex',
-        gap: 8,
-      }}>
-        <button
-          onClick={isPlaying ? stopSimulation : startSimulation}
-          style={{
-            padding: '6px 12px',
-            background: isPlaying ? '#f44336' : '#4CAF50',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 4,
-            cursor: 'pointer',
-            fontFamily: 'inherit',
-          }}
-        >
-          {isPlaying ? 'Stop' : 'Start'}
-        </button>
-        <button
-          onClick={resetSimulation}
-          style={{
-            padding: '6px 12px',
-            background: '#666',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 4,
-            cursor: 'pointer',
-            fontFamily: 'inherit',
-          }}
-        >
-          Reset
-        </button>
-      </div>
+      {/* Start button - shown until started */}
+      {!hasStarted && (
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}>
+          <button
+            onClick={startBrowsing}
+            style={{
+              padding: '16px 32px',
+              background: '#000',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 0,
+              cursor: 'pointer',
+              fontFamily: 'inherit',
+              fontSize: '14px',
+              fontWeight: 500,
+              letterSpacing: '0.05em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Start browsing besk.cz
+          </button>
+        </div>
+      )}
     </div>
   );
 }

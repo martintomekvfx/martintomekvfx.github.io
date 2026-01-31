@@ -2012,6 +2012,39 @@ a:hover {
   overflow-x: hidden;
 }
 
+/* Footprint white theme - inverts all colors */
+.hybaj-layout.footprint-white-theme {
+  background: #fff !important;
+  color: #000;
+}
+
+.hybaj-layout.footprint-white-theme .hybaj-title,
+.hybaj-layout.footprint-white-theme .hybaj-subtitle,
+.hybaj-layout.footprint-white-theme .hybaj-paragraph,
+.hybaj-layout.footprint-white-theme .hybaj-chip-label,
+.hybaj-layout.footprint-white-theme .hybaj-chip-value,
+.hybaj-layout.footprint-white-theme .hybaj-back-link {
+  color: #000;
+}
+
+.hybaj-layout.footprint-white-theme .hybaj-video-container {
+  background: #f5f5f5;
+}
+
+.hybaj-layout.footprint-white-theme .hybaj-content-section {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.hybaj-layout.footprint-white-theme .hybaj-chip-link {
+  color: #000;
+  border-color: #000;
+}
+
+.hybaj-layout.footprint-white-theme .hybaj-chip-link:hover {
+  background: #000;
+  color: #fff;
+}
+
 /* Custom cursor - hide system cursor */
 .hybaj-layout.custom-cursor-active,
 .hybaj-layout.custom-cursor-active * {
